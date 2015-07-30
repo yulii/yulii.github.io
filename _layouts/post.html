@@ -10,6 +10,11 @@ layout: default
 
   <article class="post-content">
     {{ content }}
+
+    <nav>
+    {% for category in  page.categories %}
+    {{ forloop.index }}. 投稿記事カテゴリー  {{ category }}
+    {% endfor %}
   </article>
 
 </div>
