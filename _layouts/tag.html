@@ -1,13 +1,16 @@
 ---
 layout: default
 ---
-<h1>{{ page.tag }}</h1>
-<div>
-    {% if site.tags[page.tag] %}
-        {% for post in site.tags[page.tag] %}
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        {% endfor %}
-    {% else %}
-        <p>There are no posts for this tag.</p>
-    {% endif %}
-</div>
+{% assign meta  = site.data.meta[page.tag] %}
+{% assign posts = site.tags[page.tag] %}
+
+<h1>{{ meta.face }}</h1>
+{% if posts %}
+  {% for post in posts %}
+    <article>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </article>
+  {% endfor %}
+{% else %}
+  <p>There are no posts for this tag.</p>
+{% endif %}
