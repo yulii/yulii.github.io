@@ -11,5 +11,7 @@ twitter_username: yulii
 github_username:  yulii
 
 # Build settings
+permalink: /entries/:year-:month-:day-:title.html
 markdown: kramdown
 exclude: ["vendor", "Gemfile", "Gemfile.lock"]
+
