@@ -1,5 +1,5 @@
 ---
 layout: category
-category: tex
+tag: tex
 permalink: /categories/tex.html
 ---

@@ -1,2 +1,32 @@
 #!/usr/bin/env ruby
 
+require 'yaml'
+
+config = YAML.load_file(File.expand_path('../../_data/meta.yml', __FILE__))
+config.each do |key, value|
+  case value['type']
+  when 'category'
+    page = <<-"EOS"
+---
+layout: category
+tag: #{key}
+permalink: /categories/#{key}.html
+---
+    EOS
+    file = File.expand_path("../../categories/#{key}.md", __FILE__)
+    File.write(file, page)
+  when 'tag'
+    page = <<-"EOS"
+---
+layout: tag
+tag: #{key}
+permalink: /tags/#{key}.html
+---
+    EOS
+    file = File.expand_path("../../tags/#{key}.md", __FILE__)
+    File.write(file, page)
+  else
+    raise StandardError
+  end
+end
+
