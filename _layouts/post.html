@@ -17,7 +17,12 @@ breadcrumb: category
     <ul>
       {% for tag in page.tags %}
         {% assign face = site.data.meta[tag].face %}
-        {% if face %}<li><a href="{{ site.baseurl }}/tags/{{ tag }}.html">{{ face }}</a></li>{% endif %}
+        {% if face %}
+          <li>
+            <i class="fa fa-tag"></i>
+            <a href="{{ site.baseurl }}/tags/{{ tag }}.html">{{ face }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </footer>
