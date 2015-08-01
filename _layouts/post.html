@@ -1,21 +1,17 @@
 ---
 layout: default
+breadcrumb: category
 ---
-{% include breadcrumb.html %}
-<div class="post">
+<article class="post">
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
-  <article class="post-content">
+  <section class="post-content">
     {{ content }}
-
-    {% for category in  page.categories %}
-    投稿記事カテゴリー  {{ category }}
-    {% endfor %}
-  </article>
+  </section>
 
   <footer class="">
     <ul>
@@ -25,4 +21,4 @@ layout: default
       {% endfor %}
     </ul>
   </footer>
-</div>
+</article>

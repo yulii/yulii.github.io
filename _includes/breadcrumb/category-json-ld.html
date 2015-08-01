@@ -1,0 +1,30 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "{{ site.baseurl }}",
+      "name": "yulii.net"
+    }
+  {% if page.category %}
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "{{ site.baseurl }}/categories/{{ page.category }}.html",
+      "name": "{{ site.data.meta[page.category].face }}"
+    }
+  {% endif %}
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "{{ page.url }}",
+      "name": "{{ page.title }}"
+    }
+  }]
+}
+</script>
