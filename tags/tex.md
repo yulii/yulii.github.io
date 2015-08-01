@@ -1,5 +1,5 @@
 ---
 layout: tag
 tag: tex
-permalink: /tags/tex/
+permalink: /tags/tex.html
 ---

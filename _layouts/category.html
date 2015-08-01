@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% assign meta  = site.data.meta[page.category] %}
+{% assign posts = site.categories[page.category] %}
 
 <header id="post-header">
   <h1 id="post-title">{{ page.category }}</h1>
@@ -9,7 +11,7 @@ layout: default
 
 <div id="post-content">
   <ul>
-    {% for post in site.categories[page.category] %}
+    {% for post in posts %}
        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>

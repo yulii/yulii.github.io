@@ -6,7 +6,7 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
   <article class="post-content">
@@ -17,4 +17,12 @@ layout: default
     {% endfor %}
   </article>
 
+  <footer class="">
+    <ul>
+      {% for tag in page.tags %}
+        {% assign face = site.data.meta[tag].face %}
+        {% if face %}<li><a href="{{ site.baseurl }}/tags/{{ tag }}.html">{{ face }}</a></li>{% endif %}
+      {% endfor %}
+    </ul>
+  </footer>
 </div>
