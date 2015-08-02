@@ -9,3 +9,11 @@ php:
   type: category
   face: PHP
   description: "PHP プログラミングの技術メモやスニペットコードをまとめた記事です。"
+ubuntu:
+  type: tag
+  face: Ubuntu
+  description: "Ubuntu の設定に関するメモやサーバー構築ノウハウ"
+unix:
+  type: category
+  face: Unix / Linux
+  description: "UNIXやLinuxでのサーバー設定やコマンドに関する各種メモ書き"
