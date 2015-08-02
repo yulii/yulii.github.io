@@ -18,6 +18,10 @@ memcached:
   type: tag
   face: memcached
   description: "分散メモリキャッシュシステム memcached の使い方や設定の技術記事です。memcached を利用した開発メモをまとめました。"
+network:
+  type: category
+  face: ネットワーク
+  description: "インターネットの基礎技術に関連した話題。ネットワーク周りの勉強資料まとめ。"
 pdf:
   type: tag
   face: PDF
