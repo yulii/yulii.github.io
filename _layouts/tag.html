@@ -4,11 +4,23 @@ layout: default
 {% assign meta  = site.data.meta[page.tag] %}
 {% assign posts = site.tags[page.tag] %}
 
-<h1>{{ meta.face }}</h1>
+<h1><i class="fa fa-tag"></i><span>{{ meta.face }}</span></h1>
+{% if meta.description %}
+<p>{{ meta.description }}</p>
+{% endif %}
 {% if posts %}
   {% for post in posts %}
     <article>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="muted">
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%b %-d, %Y" }}
+        </time>
+        <span>
+          Related:
+          <a href="/{{ post.category }}.html">{{ site.data.meta[post.category].face }}</a>
+        </span>
+      </p>
     </article>
   {% endfor %}
 {% else %}
