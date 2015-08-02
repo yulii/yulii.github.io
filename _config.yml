@@ -1,12 +1,16 @@
-# Site settings
+# Site
 title: by and for engineers
 email: yuliinfo@gmail.com
 description: >
   技術や気になったものを思いつきと気まぐれで書いています
 url: "https://yulii.net"
 
-# Build settings
+# Build
 permalink: /:title-:year:month:day.html
 markdown: redcarpet
 exclude: ["bin", "vendor", "Gemfile", "Gemfile.lock"]
+
+# Pagination
+paginate: 5
+paginate_path: /:num
 
