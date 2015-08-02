@@ -9,6 +9,7 @@ config.each do |key, value|
     page = <<-"EOS"
 ---
 layout: category
+title: #{value['face']}
 category: #{key}
 permalink: /#{key}.html
 ---
@@ -19,6 +20,7 @@ permalink: /#{key}.html
     page = <<-"EOS"
 ---
 layout: tag
+title: #{value['face']}
 tag: #{key}
 permalink: /tags/#{key}.html
 ---
