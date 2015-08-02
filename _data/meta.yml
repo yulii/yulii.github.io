@@ -1,3 +1,7 @@
+database:
+  type: category
+  face: "データベース"
+  description: "リレーショナルデータベースやNoSQL などストレージに関するTips や設計思想メモ"
 eclipse:
   type: tag
   face: Eclipse
