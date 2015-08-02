@@ -2,6 +2,7 @@
 layout: post
 title:  "オンメモリKVS のmemcached の使い方"
 date:   2009-04-19 12:30:21
+category: server
 tags: memcached
 ---
 
