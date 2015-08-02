@@ -14,16 +14,6 @@ breadcrumb: category
   </section>
 
   <footer class="">
-    <ul>
-      {% for tag in page.tags %}
-        {% assign face = site.data.meta[tag].face %}
-        {% if face %}
-          <li>
-            <i class="fa fa-tag"></i>
-            <a href="{{ site.baseurl }}/tags/{{ tag }}.html">{{ face }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+    {% include tags.html tags=page.tags %}
   </footer>
 </article>

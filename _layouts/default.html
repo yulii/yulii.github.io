@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 {% include head.html %}
 <body>
 {% include header.html %}
-<div class="page-content">
-  <div class="wrapper">
-    {% if page.breadcrumb %}
-      {% include breadcrumb/{{ page.breadcrumb }}.html %}
-    {% endif %}
-    {{ content }}
-  </div>
+{% if page.breadcrumb %}
+  <section class="wrapper">
+    {% include breadcrumb/{{ page.breadcrumb }}.html %}
+  </section>
+{% endif %}
+<div class="wrapper">
+  {{ content }}
 </div>
 {% include footer.html %}
 {% if page.breadcrumb %}
