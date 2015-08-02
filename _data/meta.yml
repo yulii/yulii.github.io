@@ -1,7 +1,7 @@
-tex:
-  type: category
-  face: TeX
-  description: "TeX の書き方やスタイルファイルによる独自マクロ作成などTeX による文章作成のための記事です。"
+eclipse:
+  type: tag
+  face: Eclipse
+  description: "統合開発環境 IDE のEclipse に関する設定やショートカットキーまとめ"
 pdf:
   type: tag
   face: PDF
@@ -9,6 +9,10 @@ php:
   type: category
   face: PHP
   description: "PHP プログラミングの技術メモやスニペットコードをまとめた記事です。"
+tex:
+  type: category
+  face: TeX
+  description: "TeX の書き方やスタイルファイルによる独自マクロ作成などTeX による文章作成のための記事です。"
 ubuntu:
   type: tag
   face: Ubuntu
