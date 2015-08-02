@@ -25,3 +25,8 @@ unix:
   type: category
   face: Unix / Linux
   description: "UNIXやLinuxでのサーバー設定やコマンドに関する各種メモ書き"
+windows:
+  type: category
+  face: Windows
+  description: "Windows の設定や環境構築についての記事です。バッチファイルの記述方法の技術ドキュメントをまとめました。"
+
