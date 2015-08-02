@@ -4,6 +4,7 @@
 .profile--photo {
   float: left;
   margin-right: 1em;
+  margin-bottom: 1em;
   border: 1px solid #ddd;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -13,7 +14,24 @@
   box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.1);
 }
 
-.profile--description {
+.profile--summary {
   overflow: hidden;
   display: block;
+}
+
+.profile--social {
+  margin: 0;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+
+    &:hover {
+      color: #59b1eb;
+    }
+  }
 }
