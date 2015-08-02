@@ -14,7 +14,7 @@
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "{{ site.baseurl | prepend: site.url }}/{{ page.category }}.html",
+      "@id": "{{ site.url }}/{{ page.category }}.html",
       "name": "{{ site.data.meta[page.category].face }}"
     }
   {% endif %}
@@ -22,7 +22,7 @@
     "@type": "ListItem",
     "position": {% if page.category %}3{% else %}2{% endif %},
     "item": {
-      "@id": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+      "@id": "{{ page.url | prepend: site.url }}",
       "name": "{{ page.title }}"
     }
   }]

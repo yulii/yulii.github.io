@@ -13,7 +13,7 @@ breadcrumb: category
   </section>
 
   <footer>
-    {% assign url = page.url | prepend: site.baseurl | prepend: site.url %}
+    {% assign url = page.url | prepend: site.url %}
     {% include plugins/share-buttons.html url=url %}
 
     {% include tags.html tags=page.tags %}
