@@ -5,3 +5,7 @@ tex:
 pdf:
   type: tag
   face: PDF
+php:
+  type: category
+  face: PHP
+  description: "PHP プログラミングの技術メモやスニペットコードをまとめた記事です。"
