@@ -1,0 +1,12 @@
+.share-buttons {
+  margin: 0;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .fb_iframe_widget > span {
+    vertical-align: baseline !important;
+  }
+}

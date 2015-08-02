@@ -1,0 +1,28 @@
+<ul class="share-buttons">
+  <li>
+    <a href="http://b.hatena.ne.jp/entry/{{ url }}" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加">
+      <img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
+    </a>
+  </li>
+  <li>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-url="{{ url }}" data-via="yulii">Tweet</a>
+  </li>
+  <li>
+    <div id="fb-root"></div>
+    <div class="fb-like fb_iframe_widget" data-href="{{ url }}" data-layout="button_count" data-action="like" data-show-faces="false"></div>
+  </li>
+  <li>
+    <div class="g-plusone" data-href="{{ url }}" data-size="medium"></div>
+  </li>
+</ul>
+
+<script>
+  !function(u,d,s,id,js,fjs){i=u.length;fjs=d.getElementsByTagName(s)[0];
+  while(i--){if(!d.getElementById(id+i)){js=d.createElement(s);js.id=id+i;
+  js.src=u[i];js.async=!0;fjs.parentNode.insertBefore(js,fjs);}}}([
+    '//apis.google.com/js/plusone.js',
+    '//connect.facebook.net/en_US/all.js#xfbml=1&appId=184322568438252',
+    '//platform.twitter.com/widgets.js',
+    '//b.st-hatena.com/js/bookmark_button.js'
+  ],document,'script','wjs');
+</script>
