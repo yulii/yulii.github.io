@@ -1,0 +1,26 @@
+.markdown {
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    margin-left: -16px;
+    padding-left: 16px;
+    border-left: 6px solid #424242;
+  }
+
+  h3 {
+    padding-top: $spacing-unit / 4;
+    border-top: 1px dashed $border-color-grey;
+  }
+
+  pre {
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    background-color: #f8f8f8;
+    border: 1px solid $border-color-grey;
+    overflow: auto;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+}
+

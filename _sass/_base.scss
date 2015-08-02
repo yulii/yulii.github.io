@@ -17,9 +17,8 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 300;
-    color: $text-color;
+    color: $base-text-color;
     text-shadow: -1px 1px 0 rgba(255, 255, 255, 1);
-    background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -30,7 +29,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-
 
 
 /**
@@ -48,11 +46,12 @@ figcaption {
 /**
  * Headings
  */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 4;
+}
 h1 { font-size: 1.5em; }
 h2 { font-size: 1.25em; }
-h3, h4, h5, h6 {
-}
-
 
 /**
  * Links
@@ -66,12 +65,14 @@ a {
     }
 
     &:hover {
-        color: $text-color;
+        color: $base-text-color;
         text-decoration: underline;
     }
 }
 
-
+p {
+  margin-bottom: $spacing-unit / 2;
+}
 
 /**
  * Blockquotes
@@ -88,36 +89,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
-
-
-/**
- * Code formatting
- */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
-
 
 /**
  * Wrapper
@@ -159,7 +130,7 @@ pre {
 /**
  * Common
  */
-.pubdate {
-  font-size: 0.75em;
+%muted, .pubdate {
+  font-size: $small-font-size;
   color: #999;
 }

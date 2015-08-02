@@ -6,18 +6,21 @@
 // Our variables
 $base-font-family: 'Hiragino Kaku Gothic ProN', Meiryo, Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
+$base-text-color:  #333;
+
+$small-font-size:  0.75em;
 $base-line-height: 1.8;
 
 $spacing-unit:     2.0em;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
+$background-color: #f8f8f8;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$border-color-grey: #ddd;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -40,7 +43,7 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "post",
+        "markdown",
         "profile",
         "breadcrumb",
         "tag",

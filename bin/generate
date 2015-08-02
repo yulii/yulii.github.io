@@ -10,7 +10,7 @@ config.each do |key, value|
 ---
 layout: category
 category: #{key}
-permalink: /categories/#{key}.html
+permalink: /#{key}.html
 ---
     EOS
     file = File.expand_path("../../categories/#{key}.md", __FILE__)

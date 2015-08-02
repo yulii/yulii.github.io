@@ -1,5 +1,5 @@
 ---
 layout: category
 category: tex
-permalink: /categories/tex.html
+permalink: /tex.html
 ---

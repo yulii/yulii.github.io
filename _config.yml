@@ -8,6 +8,6 @@ url: "https://yulii.net"
 
 # Build settings
 permalink: /:title-:year:month:day.html
-markdown: kramdown
+markdown: redcarpet
 exclude: ["bin", "vendor", "Gemfile", "Gemfile.lock"]
 
