@@ -7,5 +7,4 @@ tags: pdf
 ---
 
 WIP
-{% icon fa-battery-full %}
 
