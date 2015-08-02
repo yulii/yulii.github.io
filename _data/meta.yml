@@ -1,3 +1,11 @@
+apache:
+  type: tag
+  face: Apache
+  description: "Webサーバソフトウェア Apacheのインストール方法から動作確認、メンテナンス、チューニング方法などの解説記事です。"
+c-lang:
+  type: category
+  face: C言語
+  description: "C言語プログラミングの技術メモやスニペットコードをまとめた記事です。"
 database:
   type: category
   face: "データベース"
@@ -6,6 +14,10 @@ eclipse:
   type: tag
   face: Eclipse
   description: "統合開発環境 IDE のEclipse に関する設定やショートカットキーまとめ"
+memcached:
+  type: tag
+  face: memcached
+  description: "分散メモリキャッシュシステム memcached の使い方や設定の技術記事です。memcached を利用した開発メモをまとめました。"
 pdf:
   type: tag
   face: PDF
@@ -13,6 +25,14 @@ php:
   type: category
   face: PHP
   description: "PHP プログラミングの技術メモやスニペットコードをまとめた記事です。"
+server:
+  type: category
+  face: サーバー
+  description: "サーバー構築作業や設定方法の技術メモ"
+subversion:
+  type: tag
+  face: Subversion
+  description: "バージョン管理システム Subversion の使い方やサーバー設定についての技術ドキュメントです。"
 tex:
   type: category
   face: TeX
