@@ -46,6 +46,10 @@ network:
   type: category
   face: ネットワーク
   description: "インターネットの基礎技術に関連した話題。ネットワーク周りの勉強資料まとめ。"
+nginx:
+  type: tag
+  face: Nginx
+  description: "WebサーバのNginx (エンジンエックス) の設定方法まとめ。処理性能・高い並行性・省メモリがNginx 特徴らしい。"
 pdf:
   type: tag
   face: PDF
