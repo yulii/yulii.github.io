@@ -6,6 +6,10 @@ c-lang:
   type: category
   face: C言語
   description: "C言語プログラミングの技術メモやスニペットコードをまとめた記事です。"
+centos:
+  type: tag
+  face: CentOS
+  description: "CentOS に関する設定やサーバー構築メモ"
 database:
   type: category
   face: "データベース"

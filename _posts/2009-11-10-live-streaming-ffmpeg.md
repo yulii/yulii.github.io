@@ -13,7 +13,7 @@ FFmpeg (FFserver) を使って Flash Player 向けにライブ配信映像する
 ### お品書き
 
 - [エンコーダ (FFmpeg) の設定](http://yulii.net/entries/4)
-- [配信サーバー (FFserver) の設定](http://yulii.net/entries/6)
+- [配信サーバー (FFserver) の設定]({% post_url 2009-11-10-live-streaming-ffserver %})
 - [JW Player の埋め込み]({% post_url 2009-11-10-live-streaming-ffmpeg %})
 
 ## システム構成
