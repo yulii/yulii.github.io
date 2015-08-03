@@ -38,6 +38,10 @@ memcached:
   type: tag
   face: memcached
   description: "分散メモリキャッシュシステム memcached の使い方や設定の技術記事です。memcached を利用した開発メモをまとめました。"
+mysql:
+  type: tag
+  face: MySQL
+  description: "MySQL の設定やSQL チューニング、インデックス設計など気になった事をまとめました。"
 network:
   type: category
   face: ネットワーク
@@ -61,6 +65,10 @@ tex:
   type: category
   face: TeX
   description: "TeX の書き方やスタイルファイルによる独自マクロ作成などTeX による文章作成のための記事です。"
+tomcat:
+  type: tag
+  face: Tomcat
+  description: "Java サーブレット、JSP を処理するアプリケーションサーバ Tomcat の使い方や設定方法の備忘録です。"
 ubuntu:
   type: tag
   face: Ubuntu
