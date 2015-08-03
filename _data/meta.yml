@@ -14,6 +14,14 @@ eclipse:
   type: tag
   face: Eclipse
   description: "統合開発環境 IDE のEclipse に関する設定やショートカットキーまとめ"
+ffmpeg:
+  type: tag
+  face: FFmpeg
+  description: "FFmpeg / FFserver による動画エンコードやライブストリーミング配信サーバーの構築メモ"
+javascript:
+  type: category
+  face: JavaScript
+  description: "JavaScript プログラミングのスニペット、コーディングや高速化のTips まとめ。"
 memcached:
   type: tag
   face: memcached
