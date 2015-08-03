@@ -22,10 +22,18 @@ ffmpeg:
   type: tag
   face: FFmpeg
   description: "FFmpeg / FFserver による動画エンコードやライブストリーミング配信サーバーの構築メモ"
+java:
+  type: category
+  face: Java
+  description: "Java プログラミングのスニペットや環境構築のメモ"
 javascript:
   type: category
   face: JavaScript
   description: "JavaScript プログラミングのスニペット、コーディングや高速化のTips まとめ。"
+maven:
+  type: tag
+  face: Maven
+  description: "プロジェクトのライフサイクル全体を管理できる Maven の利用方法ドキュメントです。Maven は Project Object Model (POM) に基づき、プロジェクトのビルド、テスト、ドキュメンテーション、成果物の配備が出来ます。"
 memcached:
   type: tag
   face: memcached
