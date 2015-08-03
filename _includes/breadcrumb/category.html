@@ -8,5 +8,5 @@
       <span>&nbsp;/&nbsp;</span>
     </li>
   {% endif %}
-  <li><strong>{{ page.title }}</strong></li>
+  <li><strong>{{ page.title | truncate: 30 }}</strong></li>
 </ol>
