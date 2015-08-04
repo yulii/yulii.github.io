@@ -22,6 +22,13 @@ ffmpeg:
   type: tag
   face: FFmpeg
   description: "FFmpeg / FFserver による動画エンコードやライブストリーミング配信サーバーの構築メモ"
+haskell:
+  type: category
+  face: Haskell
+  description: "純粋関数型言語のHaskell についての技術メモ"
+http:
+  type: tag
+  face: HTTP
 java:
   type: category
   face: Java
@@ -113,4 +120,8 @@ windows:
   type: category
   face: Windows
   description: "Windows の設定や環境構築についての記事です。バッチファイルの記述方法の技術ドキュメントをまとめました。"
+yesod:
+  type: tag
+  face: Yesod
+  description: "Haskell で書かれたWebフレームワーク Yesod の開発について"
 
