@@ -1,6 +1,6 @@
 ---
 layout: category
-title: 
+title: エンジニアリング・カルチャー
 category: culture
 permalink: /culture.html
 ---
