@@ -38,6 +38,14 @@ memcached:
   type: tag
   face: memcached
   description: "分散メモリキャッシュシステム memcached の使い方や設定の技術記事です。memcached を利用した開発メモをまとめました。"
+mongodb:
+  type: tag
+  face: MongoDB
+  description: "ドキュメント指向データベース MongoDB の使い方や設定方法からクエリチューニングに関する記事です。"
+munin:
+  type: tag
+  face: Munin
+  description: "リソース監視ツール Munin の設定やカスタマイズについての記事まとめ"
 mysql:
   type: tag
   face: MySQL
@@ -50,6 +58,14 @@ nginx:
   type: tag
   face: Nginx
   description: "WebサーバのNginx (エンジンエックス) の設定方法まとめ。処理性能・高い並行性・省メモリがNginx 特徴らしい。"
+nodejs:
+  type: tag
+  face: Node.js
+  description: "Node.js でのアプリケーション開発や npm パッケージについての記事です。"
+performance:
+  type: tag
+  face: パフォーマンスチューニング
+  description: "ミドルウェアやアプリケーションのパフォーマンスに影響する設計や設定などのチューニングに関するTips 紹介です。"
 pdf:
   type: tag
   face: PDF
@@ -57,6 +73,10 @@ php:
   type: category
   face: PHP
   description: "PHP プログラミングの技術メモやスニペットコードをまとめた記事です。"
+ruby:
+  type: category
+  face: Ruby
+  description: "Ruby でのプログラミングや環境構築のメモ書き"
 server:
   type: category
   face: サーバー
@@ -65,6 +85,10 @@ subversion:
   type: tag
   face: Subversion
   description: "バージョン管理システム Subversion の使い方やサーバー設定についての技術ドキュメントです。"
+supervision:
+  type: tag
+  face: システム監視
+  description: "死活監視やリソース監視などのシステム監視ツールの導入、設定の紹介です。"
 tex:
   type: category
   face: TeX
@@ -81,6 +105,10 @@ unix:
   type: category
   face: Unix / Linux
   description: "UNIXやLinuxでのサーバー設定やコマンドに関する各種メモ書き"
+websocket:
+  type: tag
+  face: WebSocket
+  description: "双方向通信を実現するためのプロトコル WebSocket の技術メモ"
 windows:
   type: category
   face: Windows
