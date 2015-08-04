@@ -2,6 +2,10 @@ apache:
   type: tag
   face: Apache
   description: "Webサーバソフトウェア Apacheのインストール方法から動作確認、メンテナンス、チューニング方法などの解説記事です。"
+aws:
+  type: tag
+  face: Amazon Web Service
+  description: "Amazon Web Service の構築・設計、ツール関連の技術記事です。"
 c-lang:
   type: category
   face: C言語
@@ -10,6 +14,10 @@ centos:
   type: tag
   face: CentOS
   description: "CentOS に関する設定やサーバー構築メモ"
+ci:
+  type: tag
+  face: "継続的インテグレーション (CI)"
+  description: "テスト自動化、コード静的解析ツールなど継続的インテグレーション (Continuous Integration) に関連した技術基盤の記事です。"
 database:
   type: category
   face: "データベース"
@@ -26,6 +34,10 @@ haskell:
   type: category
   face: Haskell
   description: "純粋関数型言語のHaskell についての技術メモ"
+hubot:
+  type: tag
+  face: Hubot
+  description: "Github 社製のBot フレームワークで作ったもの"
 http:
   type: tag
   face: HTTP
@@ -69,6 +81,10 @@ nodejs:
   type: tag
   face: Node.js
   description: "Node.js でのアプリケーション開発や npm パッケージについての記事です。"
+note:
+  type: category
+  face: もやもや
+  description: "もやもや思考したことをとっ散らかしておくチラシの裏"
 performance:
   type: tag
   face: パフォーマンスチューニング
@@ -84,10 +100,16 @@ ruby:
   type: category
   face: Ruby
   description: "Ruby でのプログラミングや環境構築のメモ書き"
+security:
+  type: tag
+  face: セキュリティー・脆弱性
 server:
   type: category
   face: サーバー
   description: "サーバー構築作業や設定方法の技術メモ"
+shell:
+  type: tag
+  face: シェルスクリプト
 subversion:
   type: tag
   face: Subversion
