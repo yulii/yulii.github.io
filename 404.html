@@ -1,0 +1,31 @@
+---
+layout: default
+title: 404 Not Found
+programmings:
+  - ruby
+  - haskell
+  - shell
+databases:
+  - mysql
+  - mongodb
+cultures:
+  - code-review
+  - ci
+---
+<article class="content">
+  <h1>Oops! Outdated Tech</h1>
+  <p>お探しのコンテンツは見つかりませんでした。技術カテゴリーもしくはタグから探してみてください。</p>
+
+  <h2>プログラミング</h2>
+  <ul class="category">
+    {% for key in page.programmings %}
+      <li>{% include link/category.html category=key %}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>データベース</h2>
+  {% include tags.html tags=page.databases %}
+
+  <h2>エンジニアリング・カルチャー</h2>
+  {% include tags.html tags=page.cultures %}
+</article>

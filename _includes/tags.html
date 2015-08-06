@@ -1,11 +1,8 @@
 <ul class="tag">
   {% for tag in include.tags %}
-    {% assign face = site.data.meta[tag].face %}
-    {% if face %}
+    {% if site.data.meta[tag].face %}
       <li>
-        <a href="/tags/{{ tag }}.html">
-          <i class="fa fa-tag"></i><span>{{ face }}</span>
-        </a>
+        {% include link/tag.html tag=tag %}
       </li>
     {% endif %}
   {% endfor %}
