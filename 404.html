@@ -4,7 +4,11 @@ title: 404 Not Found
 programmings:
   - ruby
   - haskell
+servers:
   - shell
+  - aws
+  - nginx
+  - performance
 databases:
   - mysql
   - mongodb
@@ -22,6 +26,9 @@ cultures:
       <li>{% include link/category.html category=key %}</li>
     {% endfor %}
   </ul>
+
+  <h2>サーバー関連</h2>
+  {% include tags.html tags=page.servers %}
 
   <h2>データベース</h2>
   {% include tags.html tags=page.databases %}
