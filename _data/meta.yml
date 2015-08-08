@@ -103,6 +103,10 @@ php:
   type: category
   face: PHP
   description: "PHP プログラミングの技術メモやスニペットコードをまとめた記事です。"
+rails:
+  type: tag
+  face: Ruby on Rails
+  description: "Ruby on Rails の機能やアプリケーション開発の際の設計などを紹介した記事です。"
 ruby:
   type: category
   face: Ruby
