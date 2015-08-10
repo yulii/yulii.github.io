@@ -29,6 +29,9 @@ database:
   type: category
   face: "データベース"
   description: "リレーショナルデータベースやNoSQL などストレージに関するTips や設計思想メモ"
+dns:
+  type: tag
+  face: "DNS"
 eclipse:
   type: tag
   face: Eclipse
