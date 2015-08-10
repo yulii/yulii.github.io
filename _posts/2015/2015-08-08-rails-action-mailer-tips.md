@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Action Mailer で覚えておくと便利な機能"
-date:   2015-08-08 20:12:46
+date:   2015-08-08 20:12:46 UTC+9
 category: ruby
 tags: rails
 ---

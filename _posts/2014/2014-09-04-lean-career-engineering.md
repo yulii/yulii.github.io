@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "リーン思考によるエンジニアキャリア"
-date:   2014-09-04 05:26:30
+date:   2014-09-04 05:26:30 UTC+9
 category: note
 ---
 

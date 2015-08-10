@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Persistent インストールエラー対処 #Haskell"
-date:   2014-01-17 13:03:32
+date:   2014-01-17 13:03:32 UTC+9
 category: haskell
 ---
 

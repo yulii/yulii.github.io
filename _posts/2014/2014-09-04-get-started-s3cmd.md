@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Amazon S3 をコマンドラインから操作する s3cmd"
-date:   2014-09-04 19:51:15
+date:   2014-09-04 19:51:15 UTC+9
 category: server
 tags: aws
 ---

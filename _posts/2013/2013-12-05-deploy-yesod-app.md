@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Yesod アプリケーションの本番環境デプロイ"
-date:   2013-12-05 04:22:12
+date:   2013-12-05 04:22:12 UTC+9
 category: haskell
 tags: yesod
 ---

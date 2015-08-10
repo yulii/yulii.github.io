@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Munin ではじめる複数台構成のサーバ監視"
-date:   2013-03-27 15:53:14
+date:   2013-03-27 15:53:14 UTC+9
 category: server
 tags: munin supervision
 ---

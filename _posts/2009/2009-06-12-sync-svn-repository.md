@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Subversion リポジトリの同期設定"
-date:   2009-06-12 16:56:13
+date:   2009-06-12 16:56:13 UTC+9
 category: server
 tags: subversion
 ---

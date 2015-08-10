@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MongoDB の実行計画 explain() を読んでみる"
-date:   2012-06-27 16:48:23
+date:   2012-06-27 16:48:23 UTC+9
 category: database
 tags: mongodb performance
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MySQL で問い合わせ結果の行番号 ROWNUM を取得する"
-date:   2010-09-22 14:10:09
+date:   2010-09-22 14:10:09 UTC+9
 category: database
 tags: mysql
 ---

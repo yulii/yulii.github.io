@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "コマンド実行結果のdiff を取るといろいろ捗る"
-date:   2015-06-27 23:08:12
+date:   2015-06-27 23:08:12 UTC+9
 category: unix
 tags: dns
 ---

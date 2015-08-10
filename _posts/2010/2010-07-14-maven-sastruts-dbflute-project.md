@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Maven から SAStruts + DBFlute のプロジェクトを新規作成"
-date:   2010-07-14 06:16:19
+date:   2010-07-14 06:16:19 UTC+9
 category: java
 tags: maven eclipse
 ---

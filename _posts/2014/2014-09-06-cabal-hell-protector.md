@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "うっかりさんのための Cabal Hell プロテクター"
-date:   2014-09-06 13:21:30
+date:   2014-09-06 13:21:30 UTC+9
 category: haskell
 ---
 

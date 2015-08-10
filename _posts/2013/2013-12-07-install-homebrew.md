@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "パッケージ管理ツール Homebrew のインストール"
-date:   2013-12-07 11:00:13
+date:   2013-12-07 11:00:13 UTC+9
 ---
 
 ## Homebrew のインストール手順

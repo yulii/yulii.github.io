@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Haskell 製 WebフレームワークYesod はじめました"
-date:   2013-10-25 13:03:12
+date:   2013-10-25 13:03:12 UTC+9
 category: haskell
 tags: yesod
 ---

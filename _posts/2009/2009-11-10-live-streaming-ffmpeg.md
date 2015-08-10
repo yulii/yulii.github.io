@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ライブ配信サーバー構築 〜 エンコーダ (FFmpeg) の設定 〜"
-date:   2009-11-10 08:16:32
+date:   2009-11-10 08:16:32 UTC+9
 category: server
 tags: ffmpeg ubuntu
 ---

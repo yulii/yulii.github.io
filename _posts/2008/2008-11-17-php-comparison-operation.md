@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "PHP の比較演算子 '==' の妙"
-date:   2008-11-17 12:07:38
+date:   2008-11-17 12:07:38 UTC+9
 category: php
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MySQL でインデックスのチューニング入門"
-date:   2013-03-08 06:43:05
+date:   2013-03-08 06:43:05 UTC+9
 category: database
 tags: mysql performance
 ---

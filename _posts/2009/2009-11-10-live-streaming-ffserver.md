@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ライブ配信サーバー構築 〜 配信サーバー (FFserver) の設定 〜"
-date:   2009-11-10 08:04:03
+date:   2009-11-10 08:04:03 UTC+9
 category: server
 tags: ffmpeg centos
 ---

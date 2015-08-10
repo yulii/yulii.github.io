@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "コードレビューの心構え"
-date:   2015-04-22 14:21:23
+date:   2015-04-22 14:21:23 UTC+9
 category: culture
 tags: code-review
 ---

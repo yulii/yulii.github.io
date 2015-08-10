@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Nginx に SSL 証明書を入れて HTTPS の設定"
-date:   2011-04-14 16:34:24
+date:   2011-04-14 16:34:24 UTC+9
 category: server
 tags: nginx
 ---

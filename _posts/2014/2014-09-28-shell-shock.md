@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bash 脆弱性の対応 #ShellShock (Mac OS X)"
-date:   2014-09-28 14:47:54
+date:   2014-09-28 14:47:54 UTC+9
 category: unix
 tags: shell security
 ---

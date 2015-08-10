@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MySQL ユーザの設定方法"
-date:   2010-07-30 00:30:01
+date:   2010-07-30 00:30:01 UTC+9
 category: database
 tags: mysql
 ---

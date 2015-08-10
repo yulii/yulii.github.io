@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "カッコいいグラフを描けるJavaScript ライブラリまとめ"
-date:   2014-12-14 15:10:54
+date:   2014-12-14 15:10:54 UTC+9
 category: javascript
 ---
 

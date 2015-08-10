@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "分散Key/ValueストアKai のインストール"
-date:   2009-03-06 07:59:46
+date:   2009-03-06 07:59:46 UTC+9
 category: database
 ---
 

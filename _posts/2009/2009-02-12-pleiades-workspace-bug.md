@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Eclipse (Pleiades) が起動しない時の処方箋"
-date:   2009-02-12 04:53:18
+date:   2009-02-12 04:53:18 UTC+9
 tags: eclipse
 ---
 

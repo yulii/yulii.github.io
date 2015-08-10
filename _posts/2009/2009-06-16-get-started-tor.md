@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "匿名プロキシ Tor の導入方法"
-date:   2009-06-16 11:15:29
+date:   2009-06-16 11:15:29 UTC+9
 category: network
 ---
 

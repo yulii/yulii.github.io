@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Windows で Ruby のバージョン管理 (pik) を使う"
-date:   2013-02-24 11:19:23
+date:   2013-02-24 11:19:23 UTC+9
 category: ruby
 ---
 

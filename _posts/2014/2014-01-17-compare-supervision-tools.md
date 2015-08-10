@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "プロセス監視とデーモン化ツールまとめ"
-date:   2014-01-17 15:15:23
+date:   2014-01-17 15:15:23 UTC+9
 category: server
 tags: supervision
 ---

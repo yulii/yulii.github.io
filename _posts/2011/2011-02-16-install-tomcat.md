@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Apache Tomcat のインストールと設定"
-date:   2011-02-16 03:26:09
+date:   2011-02-16 03:26:09 UTC+9
 category: server
 tags: tomcat
 ---

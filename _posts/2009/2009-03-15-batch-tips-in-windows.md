@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Windows のバッチファイルを使った小技"
-date:   2009-03-15 03:59:42
+date:   2009-03-15 03:59:42 UTC+9
 category: windows
 ---
 
