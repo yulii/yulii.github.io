@@ -5,6 +5,9 @@ description: >
   技術や気になったものを思いつきと気まぐれで書いています
 url: "https://yulii.github.io"
 
+# Config
+timezone: "Asia/Tokyo"
+
 # Build
 permalink: /:title-:year:month:day.html
 markdown: redcarpet
