@@ -9,9 +9,15 @@ url: "https://yulii.github.io"
 timezone: "Asia/Tokyo"
 
 # Build
+exclude: ["bin", "vendor", "Gemfile", "Gemfile.lock"]
 permalink: /:title-:year:month:day.html
 markdown: redcarpet
-exclude: ["bin", "vendor", "Gemfile", "Gemfile.lock"]
+redcarpet:
+  extensions: [
+    "footnotes",
+    "strikethrough",
+    "tables"
+  ]
 
 # Pagination
 paginate: 5

@@ -23,6 +23,22 @@
     margin-bottom: 0;
   }
 
+  table {
+    border-bottom: 2px solid $border-color-dark;
+    line-height: 1.4;
+  }
+
+  th {
+    padding: $spacing-unit / 8 $spacing-unit / 4 $spacing-unit / 8 $spacing-unit / 4;
+    border-top:    2px solid $border-color-dark;
+    border-bottom: 2px solid $border-color-dark;
+  }
+
+  td {
+    padding: $spacing-unit / 4;
+    vertical-align: top;
+  }
+
   pre {
     margin-bottom: 1em;
     padding: 0.5em 1em;
