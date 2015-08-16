@@ -3,7 +3,9 @@
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "{{ page.title | escape }}",
-  "image": [],
+  "image": [
+  "{{ "/img/icon/apple-touch-icon-256.png" | prepend: site.url }}"
+  ],
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "articleBody": "{{ page.content | strip_newlines | strip_html | escape }}",
   "url": "{{ page.url | prepend: site.url }}"
