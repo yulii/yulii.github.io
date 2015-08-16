@@ -15,7 +15,7 @@
     "position": 2,
     "item": {
       "@id": "{{ site.url }}/{{ page.category }}.html",
-      "name": "{{ site.data.meta[page.category].face }}"
+      "name": "{{ site.data.meta[page.category].face | escape }}"
     }
   {% endif %}
   },{
@@ -23,7 +23,7 @@
     "position": {% if page.category %}3{% else %}2{% endif %},
     "item": {
       "@id": "{{ page.url | prepend: site.url }}",
-      "name": "{{ page.title }}"
+      "name": "{{ page.title | escape }}"
     }
   }]
 }

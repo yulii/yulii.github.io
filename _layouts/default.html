@@ -13,8 +13,10 @@
   </section>
 {% endif %}
 {% include footer.html %}
-{% if page.breadcrumb %}
-  {% include breadcrumb/{{ page.breadcrumb }}-json-ld.html %}
+{% if page.schema %}
+  {% for name in page.schema %}
+    {% include schema/{{ name }}.json-ld.html %}
+  {% endfor %}
 {% endif %}
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </body>

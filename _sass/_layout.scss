@@ -162,32 +162,3 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-/**
- * Page content
- */
-.page-heading {
-    font-size: 20px;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
-    display: block;
-    font-size: 24px;
-}
-
-
-
