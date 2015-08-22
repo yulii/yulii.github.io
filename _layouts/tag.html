@@ -16,10 +16,12 @@ layout: default
         <time datetime="{{ post.date | date_to_xmlschema }}">
           {{ post.date | date: "%b %-d, %Y" }}
         </time>
+        {% if post.category %}
         <span>
           Related:
           <a href="/{{ post.category }}.html">{{ site.data.meta[post.category].face }}</a>
         </span>
+        {% endif %}
       </p>
     </article>
   {% endfor %}
