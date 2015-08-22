@@ -10,6 +10,8 @@
   <meta name="description" content="{{ page.content | strip_newlines | strip_html | truncate: 96 }}">
   {% endif %}
 
+  {% include meta/ogp.html %}
+
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
