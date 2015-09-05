@@ -7,7 +7,7 @@
   {% if page.description %}
   <meta name="description" content="{{ page.description }}">
   {% elsif page.content != blank %}
-  <meta name="description" content="{{ page.content | strip_newlines | strip_html | truncate: 96 }}">
+  <meta name="description" content="{{ page.content | strip_newlines | strip_html | truncate: 96 | xml_escape }}">
   {% endif %}
 
   {% include meta/ogp.html %}
