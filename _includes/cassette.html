@@ -1,5 +1,5 @@
 <article class="cassette">
-  <span>{{ post.date | date: "%b %-d, %Y" }}</span>
   <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
   <p>{{ post.content | strip_newlines | strip_html | truncate: 96 }}</p>
+  <span class="muted">{{ post.date | date: "%b %-d, %Y" }}</span>
 </article>
