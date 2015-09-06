@@ -6,13 +6,6 @@ description: 技術や気になったものを思いつきと気まぐれで書�
 <h1>チラシの裏に書いたポエム</h1>
 
 {% for post in paginator.posts %}
-<article class="cassette">
-  <span>{{ post.date | date: "%b %-d, %Y" }}</span>
-  <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-  <p>{{ post.content | strip_newlines | strip_html | truncate: 96 }}</p>
-</article>
+{% include cassette.html post=post %}
 {% endfor %}
 {% include pagination.html %}
-
-<!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
-
