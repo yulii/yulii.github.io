@@ -1,8 +1,11 @@
+{% assign url = page.url | prepend: site.baseurl %}
 <article class="cassette">
   {% if post.image %}
-  <img src="/img/posts/{{ page.date | date: '%Y/%Y-%m-%d' }}-kv-800x450.png" width="800" height="450" class="photo-box">
+  <a href="{{ url }}"><img src="/img/posts/{{ post.date | date: '%Y/%Y-%m-%d' }}-kv-800x450.png"></a>
   {% endif %}
-  <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-  <p>{{ post.content | strip_newlines | strip_html | truncate: 96 }}</p>
-  <span class="muted">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <section>
+    <h2><a href="{{ url }}">{{ post.title }}</a></h2>
+    <p>{{ post.content | strip_newlines | strip_html | truncate: 96 }}</p>
+    <span class="muted">{{ post.date | date: "%b %-d, %Y" }}</span>
+  </section>
 </article>

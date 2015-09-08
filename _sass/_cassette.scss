@@ -1,2 +1,28 @@
 .cassette {
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 2px;
+  -moz-border-radius:    2px;
+  border-radius:         2px;
+  -webkit-box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow:    0 8px 4px -4px rgba(0, 0, 0, 0.1);
+  box-shadow:         0 8px 4px -4px rgba(0, 0, 0, 0.1);
+
+  img {
+    @extend %box-shadow;
+
+    &:hover {
+      opacity: 0.75;
+      filter: alpha(opacity=75);
+    }
+  }
+
+  section {
+    padding: 1em;
+  }
+
+  h2 {
+    margin: 0;
+  }
 }
+
