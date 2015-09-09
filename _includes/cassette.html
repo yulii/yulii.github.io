@@ -7,5 +7,6 @@
     <h2><a href="{{ url }}">{{ post.title }}</a></h2>
     <p>{{ post.content | strip_newlines | strip_html | truncate: 96 }}</p>
     <span class="muted">{{ post.date | date: "%b %-d, %Y" }}</span>
+    {% include tags.html tags=post.tags %}
   </section>
 </article>

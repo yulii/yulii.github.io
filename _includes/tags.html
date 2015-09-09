@@ -1,9 +1,9 @@
+{% if include.tags.size > 0 %}
 <ul class="tag">
-  {% for tag in include.tags %}
-    {% if site.data.meta[tag].face %}
-      <li>
-        {% include link/tag.html tag=tag %}
-      </li>
-    {% endif %}
-  {% endfor %}
+{% for tag in include.tags %}
+  {% if site.data.meta[tag].face %}
+  <li>{% include link/tag.html tag=tag %}</li>
+  {% endif %}
+{% endfor %}
 </ul>
+{% endif %}
