@@ -1,7 +1,7 @@
 {% assign url = post.url | prepend: site.baseurl %}
 <article class="cassette">
   {% if post.image %}
-  <a href="{{ url }}"><img src="/img/posts/{{ post.date | date: '%Y/%Y-%m-%d' }}-kv-800x450.png"></a>
+  <a href="{{ url }}">{% include cover_photo.html date=post.date %}</a>
   {% endif %}
   <section>
     <h2><a href="{{ url }}">{{ post.title }}</a></h2>
