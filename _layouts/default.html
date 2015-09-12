@@ -1,3 +1,6 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html lang="ja">
 {% include head.html %}
@@ -8,9 +11,9 @@
   {{ content }}
 </div>
 {% if page.breadcrumb %}
-  <section class="wrapper">
-    {% include breadcrumb/{{ page.breadcrumb }}.html %}
-  </section>
+<div class="wrapper">
+  {% include breadcrumb/{{ page.breadcrumb }}.html %}
+</div>
 {% endif %}
 {% include footer.html %}
 {% if page.schema %}

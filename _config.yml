@@ -18,6 +18,10 @@ redcarpet:
     "strikethrough",
     "tables"
   ]
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
 
 # Pagination
 paginate: 5
