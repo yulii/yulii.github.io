@@ -8,16 +8,12 @@
   @extend %photo-box;
 }
 
-.profile--summary {
-  overflow: hidden;
-  display: block;
-}
-
 .profile--social {
   margin: 0;
 
   li {
     display: inline-block;
+    margin-right: 0.5em;
   }
 
   a {
