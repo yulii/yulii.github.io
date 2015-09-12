@@ -1,6 +1,10 @@
 {% assign image_path = include.date | date: '/%Y/%Y-%m-%d-cover.png' | prepend: '/img/posts' %}
 {% for file in site.static_files %}
   {% if file.path == image_path %}
+    {% if include.url %}
+<a href="{{ include.url }}"><img src="{{ image_path }}" alt=""></a>
+    {% else %}
 <img src="{{ image_path }}" alt="">
+    {% endif %}
   {% endif %}
 {% endfor %}

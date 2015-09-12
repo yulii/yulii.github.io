@@ -1,10 +1,10 @@
 {% assign url = post.url | prepend: site.baseurl %}
 <article class="cassette">
-  <a href="{{ url }}">{% include post/cover.html date=post.date %}</a>
-  <section>
+  {% include post/cover.html date=post.date url=url %}
+  <div class="cassette--wrapper">
     <h2><a href="{{ url }}">{{ post.title }}</a></h2>
     <p>{{ post.content | strip_newlines | strip_html | truncate: 96 }}</p>
     <span class="muted">{{ post.date | date: "%b %-d, %Y" }}</span>
     {% include tags.html tags=post.tags %}
-  </section>
+  </div>
 </article>
