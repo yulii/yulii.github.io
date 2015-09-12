@@ -21,7 +21,7 @@ redcarpet:
 compress_html:
   clippings: all
   comments:  ["<!-- ", " -->"]
-  endings:   all
+  endings:   []
 
 # Pagination
 paginate: 5
