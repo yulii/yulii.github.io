@@ -5,7 +5,7 @@
 
   <title>{% if page.title %}{{ page.title }} :: {{ site.title }}{% else %}{{ site.title }}{% endif %}{% if paginator.page > 1 %} (p. {{ paginator.page }}){% endif %}</title>
   {% if page.description %}
-  <meta name="description" content="{{ page.description }}">
+  <meta name="description" content="{{ page.description }}{% if paginator.page > 1 %} (p. {{ paginator.page }}){% endif %}">
   {% elsif page.content != blank %}
   <meta name="description" content="{{ page.content | strip_newlines | strip_html | truncate: 96 | xml_escape }}">
   {% endif %}
