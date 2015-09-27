@@ -9,7 +9,7 @@ layout: default
   {% if meta.description %}
   <p>{{ meta.description }}</p>
   {% endif %}
-  <p>{{ site.categories[page.category] | size }}&nbsp;<span class="muted">記事</span></p>
+  <p>{{ posts | size }}&nbsp;<span class="muted">記事</span></p>
 </section>
 
 {% if posts %}
