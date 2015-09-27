@@ -4,10 +4,13 @@ layout: default
 {% assign meta  = site.data.meta[page.tag] %}
 {% assign posts = site.tags[page.tag] %}
 
-<h1><i class="fa fa-tag"></i><span>{{ meta.face }}</span></h1>
-{% if meta.description %}
-<p>{{ meta.description }}</p>
-{% endif %}
+<section>
+  <h1><i class="fa fa-tag"></i><span>{{ meta.face }}</span></h1>
+  {% if meta.description %}
+  <p>{{ meta.description }}</p>
+  {% endif %}
+  <p>{{ posts | size }}&nbsp;<span class="muted">記事</span></p>
+</section>
 {% if posts %}
   {% for post in posts %}
     <article>
