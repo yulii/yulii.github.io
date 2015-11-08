@@ -161,7 +161,7 @@ pre, code {
   border-radius: 1.5em;
 }
 
-%photo-box {
+%photo-box, .photo-box {
   border: 1px solid #ddd;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -176,4 +176,3 @@ pre, code {
   -moz-box-shadow:    0 4px 2px -2px rgba(0, 0, 0, 0.1);
   box-shadow:         0 4px 2px -2px rgba(0, 0, 0, 0.1);
 }
-
