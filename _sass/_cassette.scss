@@ -1,4 +1,5 @@
 .cassette {
+  margin-top:    0.5em;
   margin-bottom: 1em;
   border: 1px solid #ddd;
   -webkit-border-radius: 2px;
@@ -21,8 +22,9 @@
     padding: 1em;
   }
 
-  h2 {
+  h1 {
     margin: 0;
+    font-size: 1.25em;
   }
 }
 
