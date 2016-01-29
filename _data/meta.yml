@@ -21,6 +21,9 @@ ci:
 code-review:
   type: tag
   face: "コードレビュー"
+communication:
+  type: tag
+  face: "コミュニケーション"
 culture:
   type: category
   face: "エンジニアリング・カルチャー"
@@ -160,4 +163,3 @@ yesod:
   type: tag
   face: Yesod
   description: "Haskell で書かれたWebフレームワーク Yesod の開発について"
-

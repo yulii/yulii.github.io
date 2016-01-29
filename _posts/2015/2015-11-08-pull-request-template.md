@@ -3,7 +3,7 @@ layout: post
 title:  "Pull Request に「もやもや」で思いの丈を綴るとコードレビューが捗る"
 date:   2015-11-08 13:14:01 UTC+9
 category: culture
-tag: code-review
+tags: code-review communication
 ---
 
 コードレビューはプロダクトの品質向上にとても良い習慣だけど、なかなか効率良くできない。

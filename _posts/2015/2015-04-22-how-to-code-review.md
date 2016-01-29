@@ -3,7 +3,7 @@ layout: post
 title:  "コードレビューの心構え"
 date:   2015-04-22 14:21:23 UTC+9
 category: culture
-tags: code-review
+tags: code-review communication
 ---
 
 ## コードレビューする人・される人のためのドキュメント
@@ -68,4 +68,3 @@ _cf. [thoughtbot/guides #Code Review](https://github.com/thoughtbot/guides/tree/
 - コードを見たら、「 :+1: 」するか、 "Ready to merge" と署名しよう！
 
 __みんなで清く正しくコードレビューしよう！__
-
