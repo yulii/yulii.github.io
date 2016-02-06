@@ -43,6 +43,10 @@ ffmpeg:
   type: tag
   face: FFmpeg
   description: "FFmpeg / FFserver による動画エンコードやライブストリーミング配信サーバーの構築メモ"
+git:
+  type: tag
+  face: Git
+  description: "分散型バージョン管理システムGit に関するメモ"
 haskell:
   type: category
   face: Haskell
