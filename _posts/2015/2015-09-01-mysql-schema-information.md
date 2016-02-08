@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MySQL でテーブルやカラムの定義内容を確認する方法まとめ"
+title:  "MySQL のテーブル定義、カラム定義を確認する方法まとめ"
 date:   2015-09-01 23:42:42 UTC+9
 category: database
 tags: mysql
@@ -134,6 +134,3 @@ ORDER BY
 >「[INFORMATION_SCHEMA クエリーの最適化](http://dev.mysql.com/doc/refman/5.6/ja/information-schema-optimization.html)」を参照してください。
 >
 > _cf. [第21章 INFORMATION_SCHEMA テーブル](http://dev.mysql.com/doc/refman/5.6/ja/information-schema.html)_
-
-
-
