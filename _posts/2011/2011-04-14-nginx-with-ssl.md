@@ -12,21 +12,21 @@ tags: nginx
 
 暗号化アルゴリズムと鍵のビット長を指定する。1024 ビットより強度を高く設定する事をお勧めします。
 
-```sh
+~~~sh
 openssl genrsa -des3 -out <yulii.net>.key 2048
-```
+~~~
 
 ### 署名要求
 
 作成した鍵を利用してサーバーの情報を設定する。
 
-```sh
+~~~sh
 openssl req -new -key <yulii.net>.key -out <yulii.net>.csr
-```
+~~~
 
 コマンド実行後にサーバー情報の入力を求められるので、適宜設定する。
 
-```
+~~~
 Country Name (2 letter code) [GB]:JP
 State or Province Name (full name) [Berkshire]:Tokyo
 Locality Name (eg, city) [Newbury]:Shinjuku-ku
@@ -39,23 +39,23 @@ Please enter the following 'extra' attributes
 to be sent with your certificate request
 A challenge password []:
 An optional company name []:
-```
+~~~
 
 ### 証明書
 中間証明書を直接指定するディレクティブが用意されていないので，サーバ証明書と中間証明書を結合したものを `ssl_certificate` で指定する。
 
-```sh
+~~~sh
 cat server.cer cacert.cer > cert.pem
-```
+~~~
 
 #### 証明書の結合イメージ
 
-```
+~~~
 -----BEGIN CERTIFICATE-----
 [サーバ証明書]
 -----END CERTIFICATE-----
 -----BEGIN CERTIFICATE-----
 [中間証明書]
 -----END CERTIFICATE-----
-```
+~~~
 

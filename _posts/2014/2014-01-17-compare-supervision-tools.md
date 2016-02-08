@@ -36,11 +36,11 @@ tags: supervision
 
 PID ファイルのパスと起動・停止方法を設定する。
 
-```
+~~~
 check process sshd with pidfile /var/run/sshd.pid
 start program = "/etc/init.d/sshd start" with timeout 3 seconds
 stop  program = "/etc/init.d/sshd stop"
-```
+~~~
 
 ### Supervisor
 
@@ -55,7 +55,7 @@ stop  program = "/etc/init.d/sshd stop"
 
 起動コマンドや起動ユーザを設定する。デーモン起動ではなく、フォアグラウンドで通常起動するコマンドを設定すること。
 
-```
+~~~
 [program:sshd]
 command=/usr/sbin/sshd -D
 process_name=%(program_name)s
@@ -64,7 +64,7 @@ autostart=true
 autorestart=true
 user=root
 directory=/tmp
-```
+~~~
 
 リモート経由で設定する時は、一度 SSHD を停止して Supervisor 経由で立ち上げ直す必要があるので、サーバーから閉め出されないように注意。
 
@@ -86,7 +86,7 @@ Haskell 製のプロセスのデーモン化ツール。`cabal` からインス�
 
 CentOS 6 で、SysVinit から upstart へ以降など起こっているらしい。
 
-```sh
+~~~sh
 $ cat /etc/inittab
 # inittab is only used by upstart for the default runlevel.
 #
@@ -114,7 +114,7 @@ $ cat /etc/inittab
 #   6 - reboot (Do NOT set initdefault to this)
 #
 id:3:initdefault:
-```
+~~~
 
 ### 外部サービスの監視ツール UptimeRobot
 

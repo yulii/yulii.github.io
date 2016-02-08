@@ -18,10 +18,10 @@ tags: http
 
 HTTP/1.0 キャッシュは、`Cache-Control` を実装せず、`Pragma: no-cache` しか実装していないかもしれないので合わせて指定しておくと良さそう。
 
-```
+~~~
 Cache-Control: private, no-store, no-cache, must-revalidate
 Pragma: no-cache
-```
+~~~
 
 `Expires` や `Last-Modified` で過去時刻を指定する方法も無くはないが、キャッシュをさせない指定として必要なのは上記の2つ。
 
@@ -36,11 +36,11 @@ HTTP レスポンスヘッダーと同様に HTML の meta タグで設定でき
 
 #### 設定例
 
-```html
+~~~html
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="expires" content="-1">
-```
+~~~
 
 ### 入力フォームのキャッシュ制御
 
@@ -48,15 +48,15 @@ HTTP レスポンスヘッダーと同様に HTML の meta タグで設定でき
 
 #### フォーム全体に設定する場合
 
-```html
+~~~html
 <form method="post" action="example.cgi" autocomplete="off"></form>
-```
+~~~
 
 #### 特定のフォームのみに設定する場合
 
-```html
+~~~html
 <input type="text" name="name" autocomplete="off" />
-```
+~~~
 
 #### 参考URL
 

@@ -14,22 +14,22 @@ Tomcat のインストールと公開サーバーで動かすための準備に�
 
 Java SE DownloadsのサイトからJDKのRPMをダウンロードしてインストールする。
 
-```sh
+~~~sh
 cd /usr/local/src
 wget http://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/VerifyItem-Start/jdk-6u24-linux-i586-rpm.bin?BundledLineItemUUID=5aOJ_hCunKwAAAEuhUVZCyxN&OrderID=C5iJ_hCuq2IAAAEubkVZCyxN&ProductID=xpeJ_hCwsEQAAAEtAMoADqmS&FileName=/jdk-6u24-linux-i586-rpm.bin
 chmod +x jdk-6u24-linux-i586-rpm.bin
 ./jdk-6u24-linux-i586-rpm.bin
-```
+~~~
 
 #### 環境変数の設定
 
 `/etc/profile` に必要な変数を定義する。
 
-```sh
+~~~sh
 export JAVA_HOME=/usr/java/default
 export PATH=$PATH:$JAVA_HOME/bin
 export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
-```
+~~~
 
 default は jdk1.6.0_24 と明示的に指定しても OK.
 
@@ -37,20 +37,20 @@ default は jdk1.6.0_24 と明示的に指定しても OK.
 
 Tomcat プロセスの起動用ユーザを作成する。
 
-```sh
+~~~sh
 useradd -d /opt/tomcat -s /sbin/nologin tomcat
-```
+~~~
 
 ### インストール
 
 Tomcat ユーザのホームディレクトリにファイルをダウンロードして展開する。
 
-```sh
+~~~sh
 cd /opt/tomcat
 wget http://ftp.jaist.ac.jp/pub/apache/tomcat/tomcat-6/v6.0.32/bin/apache-tomcat-6.0.32.tar.gz
 tar -xvzf apache-tomcat-6.0.32.tar.gz
 mv apache-tomcat-6.0.32.tar.gz tomcat_webapp
-```
+~~~
 
 ### Apache Commons Daemon
 
@@ -60,7 +60,7 @@ Tomcat の `/bin` ディレクトリにあるファイルを取り出す。
 
 圧縮ファイルを展開して `make` する。
 
-```sh
+~~~sh
 cd /opt/tomcat/tomcat_webapp/bin
 mv commons-daemon-native.tar.gz /usr/local/src
 tar -xzvf commons-daemon-native.tar.gz
@@ -68,5 +68,5 @@ cd commons-daemon-1.0.5-native-src/unix/
 ./configure --with-java=/usr/java/default
 make
 cp jsvc /opt/tomcat/tomcat_webapp/bin
-```
+~~~
 

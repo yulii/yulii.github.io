@@ -19,29 +19,29 @@ tags: memcached
 
 memcached は libev ではなく libevent を使っているらしい。
 
-```sh
+~~~sh
 sudo apt-get install libevent1 libevent-dev
-```
+~~~
 
 libevent を入れた後，memcached をインストールする。
 
-```sh
+~~~sh
 wget http://www.danga.com/memcached/dist/memcached-1.2.6.tar.gz
 tar zxvf memcached-1.2.6.tar.gz
 cd memcached-1.2.6
 ./configure
 make
 sudo make install
-```
+~~~
 
 #### gcc 関連のエラー対処
 
 gcc がインストールされていない場合、以下のようなエラーが出るので別途インストール (`sudo apt-get install gcc`) をする。
 
-```
+~~~
 checking build system type...
 Invalid configuration `i686-pc-linux-oldld': machine `i686-pc-linux' not recognized
-```
+~~~
 
 
 ### memcached の起動と使い方
@@ -55,21 +55,21 @@ Invalid configuration `i686-pc-linux-oldld': machine `i686-pc-linux' not recogni
 
 #### フォアグラウンド
 
-```sh
+~~~sh
 memcached -p 11211 -m 64 -vv
-```
+~~~
 
 #### バックグラウンド (デーモン)
 
-```sh
+~~~sh
 memcached -p 11211 -m 64 -d
-```
+~~~
 
 ### 接続 (telnet) テスト
 
 `telnet` コマンドで起動した memcached へ通信できるかテストする。
 
-```sh
+~~~sh
 $ telnet 127.0.0.1 11211
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
@@ -100,11 +100,11 @@ STAT threads 1
 END
 quit
 Connection closed by foreign host.
-```
+~~~
 
 memcached 側の出力はこんな感じ。
 
-```sh
+~~~sh
 $ memcached -p 11211 -m 64m -vv
 <6 server listening
 <7 send buffer was 110592, now 268435456
@@ -137,7 +137,7 @@ STAT threads 1
 END
 <8 quit
 <8 connection closed.
-```
+~~~
 
 ### memcached のコマンド
 
@@ -145,20 +145,20 @@ END
 
 #### SET (保存)
 
-```
+~~~
 set <key> <flags> <exptime> <bytes>
 <data>
-```
+~~~
 
 #### GET (取得)
 
-```
+~~~
 get <key>
-```
+~~~
 
 #### SET したデータを GET する例
 
-```sh
+~~~sh
 $ telnet localhost 11211
 Trying 127.0.0.1…
 Connected to localhost.localdomain (127.0.0.1).
@@ -169,5 +169,5 @@ STORED
 get key
 VALUE key 0 5
 value
-```
+~~~
 

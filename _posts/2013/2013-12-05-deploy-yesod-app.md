@@ -14,12 +14,12 @@ tags: yesod
 
 `cabal build` するだけだが、依存モジュールを追加したり変更が色々あったりするので、以下のコマンドを順に実行する。個人的な運用方法としては、シェルスクリプトで `&&` 結合して実行している。
 
-```sh
+~~~sh
 cabal clean
 cabal install --only-dependencies
 cabal configure
 cabal build
-```
+~~~
 
 これで、`./dist/build/${app_name}/${app_name}` という実行ファイルが生成される。
 
@@ -27,9 +27,9 @@ cabal build
 
 `Production` を引数に指定して実行するだけ。
 
-```sh
+~~~sh
 ./dist/build/${app_name}/${app_name} Production --port 8080
-```
+~~~
 
 デフォルトのポート番号は4321 です。プロセスをデーモン化するには、Angel を利用できる。
 
@@ -37,9 +37,9 @@ cabal build
 
 Angel を利用して、プロセス管理を行う。インストールは Cabal から出来る。
 
-```sh
+~~~sh
 cabal install angel
-```
+~~~
 
 ### Angel で管理するプロセスの設定ファイルを作成する
 
@@ -47,7 +47,7 @@ cabal install angel
 
 #### config/angel.conf
 
-```
+~~~
 workers {
   directory = "/var/www/%{APP_NAME}"
   exec      = "./dist/build/%{APP_NAME}/%{APP_NAME} Production --port 8080"
@@ -55,13 +55,13 @@ workers {
   stdout    = "/var/log/yesod/%{APP_NAME}.stdout.log"
   stderr    = "/var/log/yesod/%{APP_NAME}.stderr.log"
 }
-```
+~~~
 
 #### Angel の実行
 
-```sh
+~~~sh
 angel ./config/angel.conf
-```
+~~~
 
 これで、設定ファイルの内容の exec のコマンドを実行してくれる。また、プロセスが落ちていたら再起動してくれる。
 
@@ -77,7 +77,7 @@ angel ./config/angel.conf
 
 `proxy_pass` で起動した Yesod アプリケーションを指定するだけ。
 
-```
+~~~
 upstream yesod_backend {
   server 127.0.0.1:8080;
 }
@@ -104,7 +104,7 @@ server {
     root %{APP_ROOT};
   }
 }
-```
+~~~
 
 アプリケーションのROOT ディレクトリを Nginx の root に指定すると気持ち悪い（配下に設定ファイルとかある）ので、 `/static` を設定している。
 
@@ -117,16 +117,16 @@ server {
 
 `angel` というユーザを作成する
 
-```sh
+~~~sh
 useradd -d /var/opt/angel -s /sbin/nologin angel
-```
+~~~
 
 Haskell や Cabal が使えるように `/var/opt/angel/.bash_profile` へパスを追加して、Angel をインストールする。
 
-```sh
+~~~sh
 su - -s /bin/bash angel -c "cabal update"
 su - -s /bin/bash angel -c "cabal install angel"
-```
+~~~
 
 以上で、Yesod を動かす準備ができるので、`su - -s /bin/bash angel` でビルド&デプロイを実行する。
 
@@ -136,25 +136,25 @@ su - -s /bin/bash angel -c "cabal install angel"
 
 #### tasks/update-sources.sh
 
-```sh
+~~~sh
 su - -s /bin/bash angel -c "cd $APP_ROOT && git pull"
-```
+~~~
 
 #### tasks/build-production.sh
 
-```sh
+~~~sh
 su - -s /bin/bash angel -c "cd $APP_ROOT && cabal clean && cabal install --only-dependencies && cabal configure && cabal build"
-```
+~~~
 
 #### tasks/deploy-production.sh
 
 Angel からWeb アプリケーションを起動するが、Angel 自体を `nohup` で起動する。
 
-```sh
+~~~sh
 CONFIG_FILE="$APP_ROOT/config/angel.conf"
 LOG_DIR="/var/log/yesod"
 su - -s /bin/bash angel -c "nohup angel $CONFIG_FILE > $LOG_DIR/angel.stdout.log 2> $LOG_DIR/angel.stderr.log < /dev/null &"
-```
+~~~
 
 リロードするときは、アプリケーションをビルドした後、Angel ではなくアプリケーションのプロセスを `kill` すると立ち上げ直してくれる。
 

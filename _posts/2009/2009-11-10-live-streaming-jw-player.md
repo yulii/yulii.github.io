@@ -14,20 +14,20 @@ tags: ffmpeg
 
 JW Player で再生させる場合は、HTML の表示したい場所に要素を追加する。
 
-```html
+~~~html
 <div id="flashStreaming">Loading ...</div>
-```
+~~~
 
 #### Player の読み込みスクリプト
 
 URL 部分は、配信サーバー (FFserver) の設定に合わせる。 `write` で DOM の `id` を指定する。
 
-```javascript
+~~~javascript
 window.onload = function() {
     var fs = new SWFObject('jwplayer.swf','fsplayer','640','480','9');
     fs.addParam('allowfullscreen','true');
     fs.addParam('flashvars','file=http://127.0.0.1:8090/streaming.flv');
     fs.write('flashStreaming');
 };
-```
+~~~
 

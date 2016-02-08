@@ -20,7 +20,7 @@ Haskell を使うときは Cabal だよね。でも、`cabal` でパッケージ
 Haskell Platform をインストールした後、`cabal update` でパッケージ一覧の情報を取得する必要がある。
 黒い画面を眺めていると下記のようなメッセージが出力される。
 
-```
+~~~
 Config file path source is default config file.
 Config file /Users/yulii/.cabal/config not found.
 Writing default configuration to /Users/yulii/.cabal/config
@@ -28,7 +28,7 @@ Downloading the latest package list from hackage.haskell.org
 Note: there is a new version of cabal-install available.
 To upgrade, run: cabal install cabal-install
 
-```
+~~~
 
 
 「新しいバージョンの `cabal-install` があるよ！`cabal install cabal-install` しちゃいなよ。」と言われるので、言われた通り `cabal install cabal-install` を黒い画面に打ち込むと Welcome to cabal hell! するという罠。
@@ -48,7 +48,7 @@ To upgrade, run: cabal install cabal-install
 
 `.bash_profile` で `cabal` コマンドをラップしてみた。
 
-```sh
+~~~sh
 cabal() {
   if [ $# -ge 2 ] && [ "$1" = "install" ]; then
     if expr $2 : "^cabal-install.*$" > /dev/null; then
@@ -64,7 +64,7 @@ cabal() {
   /usr/local/bin/cabal $@
 }
 
-```
+~~~
 
 これで、`cabal install cabal-install` するときに確認してくれます。Happy Haskelling and Happy Holidays!
 

@@ -12,7 +12,7 @@ timezone: "Asia/Tokyo"
 # Build
 exclude: ["bin", "vendor", "Gemfile", "Gemfile.lock"]
 permalink: /:title-:year:month:day.html
-markdown: redcarpet
+markdown: kramdown
 redcarpet:
   extensions: [
     "footnotes",
@@ -30,4 +30,5 @@ paginate_path: /:num/
 
 # Gem
 gems:
+  - jekyll-paginate
   - jemoji

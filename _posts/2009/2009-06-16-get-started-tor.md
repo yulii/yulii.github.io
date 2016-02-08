@@ -19,11 +19,11 @@ Tor 用のユーザとグループをあらかじめ作成して、インスト�
 
 以下のコマンドでインストールを実行する。
 
-```sh
+~~~sh
 ./configure --with-tor-user=tor --with-tor-group=tor
 make
 make install
-```
+~~~
 `--with-libevent-dir=libevent` で libevent ディレクトリを指定した方が良いかもしれない。
 
 
@@ -31,19 +31,19 @@ make install
 
 適当な場所に専用のディレクトリを作成し、所有権限を設定する。
 
-```sh
+~~~sh
 mkdir /var/run/tor
 chown tor:tor /var/run/tor
-```
+~~~
 
 ### ブラウザで利用する
 
 ブラウザで使うためには Privoxy を入れる。(DNS リクエストの匿名性)
 
-```sh
+~~~sh
 autoheader && autoconf
 ./configure --with-user=privoxy --with-group=privoxy
 make
 make install
-```
+~~~
 

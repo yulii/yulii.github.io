@@ -13,16 +13,16 @@ Amazon S3 に対する作業は Management Console や AWS SDK (PHP, Java, Ruby,
 `GPG` が必要なので一緒にインストールする。
 
 
-```
+~~~
 brew install s3cmd gpg
-```
+~~~
 
 ### S3 への接続設定
 
 アクセスキーとシークレットキーをAWS コンソールからあらかじめ発行しておき、`s3cmd --configure` を実行する
 
 
-```
+~~~
 $ s3cmd --configure
 
 Enter new values or accept defaults in brackets with Enter.
@@ -60,15 +60,15 @@ Success. Encryption and decryption worked fine :-)
 
 Save settings? [y/N] y
 Configuration saved to '/Users/yulii/.s3cfg'
-```
+~~~
 
 #### 参考：GPG をインストールしていない時のエラー
 
-```
+~~~
 Now verifying that encryption works...
 ERROR: Test failed: GPG program not found
 
-```
+~~~
 
 
 ## S3 の操作方法
@@ -79,10 +79,10 @@ ERROR: Test failed: GPG program not found
 
 Middleman でビルド処理を行い、`build/` ディレクトリを丸ごとアップロードする。
 
-```
+~~~
 bundle exec middleman build
 s3cmd put -r build/ s3://<bucket-name>/path/to/file
-```
+~~~
 
 適宜シェルスクリプトにまとめて置くなどすると運用が楽。
 

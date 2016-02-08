@@ -14,9 +14,9 @@ DB の中にテーブルとして情報が保存されているので、レコ�
 
 定義済みのユーザは、`mysql` データベースの `user` テーブルの情報を `SELECT` して確認できる。
 
-```sql
+~~~sql
 SELECT user, host, password FROM mysql.user;
-```
+~~~
 
 ### ユーザ設定の変更
 
@@ -24,9 +24,9 @@ SELECT user, host, password FROM mysql.user;
 
 ユーザ名とホスト名を指定してパスワードを設定する。
 
-```sql
+~~~sql
 SET PASSWORD FOR <user>@<host>=PASSWORD('<password>');
-```
+~~~
 
 ### ユーザの追加
 
@@ -34,21 +34,21 @@ SET PASSWORD FOR <user>@<host>=PASSWORD('<password>');
 
 ユーザに対して権限を設定する `GRANT` 権限は付与されないです。
 
-```sql
+~~~sql
 GRANT ALL ON *.* TO <user>@<host> IDENTIFIED BY '<password>';
 FLUSH PRIVILEGES;
-```
+~~~
 
 `GRANT` 権限も含めて付与する場合は `WITH GRANT OPTION` を指定する。
 
-```sql
+~~~sql
 GRANT ALL ON *.* TO <user>@<host> IDENTIFIED BY '<password>' WITH GRANT OPTION;
-```
+~~~
 
 #### 特定の権限を指定してユーザ作成
 
-```sql
+~~~sql
 GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP ON *.* TO <user>@<host> IDENTIFIED BY '<password>';
 FLUSH PRIVILEGES;
-```
+~~~
 

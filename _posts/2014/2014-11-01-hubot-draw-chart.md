@@ -28,17 +28,17 @@ npm では配布していないので、下記の方法でインストールし�
 
 ### package.json の依存ライブラリに追記
 
-```
+~~~
 "dependencies": {
   "libinc-hubot": "libinc/hubot-scripts"
 }
-```
+~~~
 
 ### external-scripts.json に追記
 
-```
+~~~
 ["libinc-hubot"]
-```
+~~~
 
 ## Hubot コマンドの使い方
 
@@ -46,9 +46,9 @@ npm では配布していないので、下記の方法でインストールし�
 
 ### コマンド形式
 
-```
+~~~
 hubot chart <type> <data>
-```
+~~~
 
 #### 引数
 
@@ -61,9 +61,9 @@ hubot chart <type> <data>
 
 例えば、棒グラフを描くには
 
-```
+~~~
 hubot chart bar {"labels":["January","February","March","April","May","June","July"],"datasets":[{"label":"My First dataset","fillColor":"rgba(220,220,220,0.5)","strokeColor":"rgba(220,220,220,0.8)","highlightFill":"rgba(220,220,220,0.75)","highlightStroke":"rgba(220,220,220,1)","data":[65,59,80,81,56,55,40]},{"label":"My Second dataset","fillColor":"rgba(151,187,205,0.5)","strokeColor":"rgba(151,187,205,0.8)","highlightFill":"rgba(151,187,205,0.75)","highlightStroke":"rgba(151,187,205,1)","data":[28,48,40,19,86,27,90]}]}
-```
+~~~
 
 という感じです。
 
@@ -81,7 +81,7 @@ API などで取得したデータをグラフ画像にして返却する場合�
 
 という処理イメージです。
 
-```
+~~~
 ChartImage = require('../node_modules/libinc-hubot/module/chart_image')
 
 module.exports = (robot) ->
@@ -93,7 +93,7 @@ module.exports = (robot) ->
         msg.send "#{err.name}: #{err.message}"
       filename = encodeURIComponent(chart.filename)
       msg.send "#{robot.helper.url()}/hubot/charts/#{filename}"
-```
+~~~
 
 ## 気になるところ（今後の拡張）
 

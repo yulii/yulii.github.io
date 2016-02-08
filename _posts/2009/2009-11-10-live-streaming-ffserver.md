@@ -14,18 +14,18 @@ FFmpeg に付属されている FFserver を使用する。配信サーバとWeb
 
 #### /etc/ffserver.conf
 
-```
+~~~
 Port 8090
 BindAddress 0.0.0.0
 MaxClients 1000
 MaxBandwidth 8000
 CustomLog -
 NoDaemon
-```
+~~~
 
 ### フィード設定 (配信するファイル)
 
-```
+~~~
 <Feed feed.ffm>
  File /tmp/feed.ffm>
  FileMaxSize 12M
@@ -55,19 +55,19 @@ NoDaemon
  <Redirect index.html>
  URL http://wiki.yulii.net/ffmpeg
  </Redirect>
-```
+~~~
 
 ### 配信サーバの起動
 
-```sh
+~~~sh
 ffserver -f /etc/ffserver.conf
-```
+~~~
 
 ### ログの保存
 
-```sh
+~~~sh
 ffserver -f /etc/ffserver.conf >> /var/log/ff/streaming.log
-```
+~~~
 
 FFserver の出力するデータがログになるので，リダイレクトで書き込む。間違って上書きしないように ">>" で書き込む。
 
