@@ -14,7 +14,7 @@ Nginx をフロントに立てて、バックエンドをごにょごにょす�
 `proxy_pass` にURI 指定すると、リクエストを転送処理できます。
 必要に応じて `proxy_set_header`, `proxy_hide_header` を指定する事で、転送先サーバーにリクエストヘッダーを送信できます。
 
-```
+~~~
 server {
   listen      80;
   server_name example.com;
@@ -23,7 +23,7 @@ server {
     proxy_pass http://proxy.example.com;
   }
 }
-```
+~~~
 
 
 ### Nginx 内部の名前解決
@@ -36,7 +36,7 @@ AWS のELB やS3 などのエンドポイントのように、一定期間でIP 
 また、デフォルトではDNS のTTL の時間だけキャッシュしてくれるようです。
 `valid` を指定することでキャッシュ時間をNginx 側で制御できます。
 
-```
+~~~
 server {
   listen      80;
   server_name example.com;
@@ -46,7 +46,7 @@ server {
     proxy_pass http://proxy.example.com;
   }
 }
-```
+~~~
 
 _cf. [resolver ディレクティブ](http://nginx.org/en/docs/http/ngx_http_core_module.html#resolver)_
 
@@ -56,7 +56,7 @@ VPC 内のインスタンスであれば、AWS が自動的に割当てたDNS �
 IP アドレスは、VPC ネットワーク範囲のベースに「プラス 2」した IP アドレスです。
 VPC の CIDR 範囲が `10.0.0.0/16` である場合、DNS サーバーの IP アドレスは `10.0.0.2` です。
 
-```
+~~~
 server {
   listen      80;
   server_name example.com;
@@ -66,7 +66,7 @@ server {
     proxy_pass http://proxy.example.com;
   }
 }
-```
+~~~
 
 逆にDNS への問い合わせが不要なら `resolver` は指定せずにNginx のキャッシュ任せ or IP アドレス指定にすると良いと思います。
 

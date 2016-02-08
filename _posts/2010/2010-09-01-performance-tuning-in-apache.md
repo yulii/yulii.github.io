@@ -12,9 +12,9 @@ MMapFile でレギュラーファイルをキャッシュする。ディレク�
 
 ### モジュールの読み込み設定
 
-```
+~~~
 LoadModule file_cache_module modules/mod_file_cache.so
-```
+~~~
 
 キャッシュに設定したファイルを変更した場合は必ず Apache を再起動すること。
 
@@ -22,15 +22,15 @@ LoadModule file_cache_module modules/mod_file_cache.so
 
 出力結果をチェックしてキャッシュするファイルのリストが正しいか確認する。
 
-```sh
+~~~sh
 find /var/www/html/img/ -type f -print | sed -e 's/.*/MMapFile &/'
-```
+~~~
 
 上記の結果をもとに設定ファイルの作成する。
 
-```sh
+~~~sh
 find /var/www/html/img/ -type f -print | sed -e 's/.*/MMapFile &/' > ~/work/conf/mmap.conf
-```
+~~~
 
 `/etc/apache2/conf.d/` 以下に配置して Apache に読み込ませる。
 
@@ -42,11 +42,11 @@ KeepAlive を有効にすることで無駄なリソースを削減する。リ�
 
 リクエストの数とタイムアウトの設定を記述する。
 
-```sh
+~~~sh
 KeepAlive On
 MaxKeepAliveRequests 100
 KeepAliveTimeout 5
-```
+~~~
 
 ## プロセスとスレッド生成のチューニング
 
@@ -56,7 +56,7 @@ KeepAliveTimeout 5
 
 StartServers が多いとサービスダウン時間が大きくなるので注意。 MaxClients がサーバスペックを超えないように・・・。
 
-```sh
+~~~sh
 <IfModule mpm_prefork_module>
     StartServers          5
     MinSpareServers       5
@@ -64,11 +64,11 @@ StartServers が多いとサービスダウン時間が大きくなるので注�
     MaxClients          150
     MaxRequestsPerChild   0
 </IfModule>
-```
+~~~
 
 ### スレッド数の設定
 
-```sh
+~~~sh
 <IfModule mpm_worker_module>
     StartServers          2
     MaxClients          150
@@ -77,5 +77,5 @@ StartServers が多いとサービスダウン時間が大きくなるので注�
     ThreadsPerChild      25
     MaxRequestsPerChild   0
 </IfModule>
-```
+~~~
 

@@ -14,15 +14,15 @@ Web ブラウザ上 (80番ポート) からリポジトリにアクセスする�
 
 必要なライブラリと合わせてインストールする。
 
-```sh
+~~~sh
 sudo apt-get install subversion subversion-tools libapache2-svn
-```
+~~~
 
 ### Apache の設定
 
 ブラウザからレポジトリへアクセスができる様に設定を追加する。必要があればユーザ認証を設定をします。
 
-```sh
+~~~sh
 $ sudo vi /etc/apache2/mods-enabled/dav_svn.conf
 
 <Location /svn>
@@ -38,22 +38,22 @@ $ sudo vi /etc/apache2/mods-enabled/dav_svn.conf
   #ユーザ制限
   # AuthzSVNAccessFile /etc/apache2/dav_svn.authz
 </Location>
-```
+~~~
 
 設定後はApache を再起動する。
 
-```sh
+~~~sh
 sudo /etc/init.d/apache2 restart
-```
+~~~
 
 #### ユーザ設定ファイルの作成
 
 `htpasswd` でベーシック認証用のユーザ設定ファイルを作成する。
 
-```sh
+~~~sh
 $ sudo htpasswd -c /etc/apache2/dav_svn.passwd username
 New password:
 Re-type new password:
 Adding password for user secret
-```
+~~~
 

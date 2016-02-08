@@ -8,7 +8,7 @@ tags: mongodb performance
 
 ## explain() の使い方
 
-```javascript
+~~~javascript
 > db.users.find({ name: "yulii" }).explain()
 {
      "cursor" : "BasicCursor",
@@ -25,7 +25,7 @@ tags: mongodb performance
 
      }
 }
-```
+~~~
 
 ### explain() フィールドの意味
 
@@ -36,7 +36,7 @@ tags: mongodb performance
 
 ## インデックスでパフォーマンス改善
 
-```javascript
+~~~javascript
 > db.users.getIndexes();
 [
      {
@@ -69,7 +69,7 @@ tags: mongodb performance
           "background" : true
      }
 ]
-```
+~~~
 
 ### ensureIndex() の第1引数の意味
 
@@ -78,7 +78,7 @@ tags: mongodb performance
 
 第2引数で `{ background: true }` を指定すると、DBがロックされない。特別な理由がなければ付けておく。
 
-```javascript
+~~~javascript
 > db.users.find({ name: "yulii" }).explain()
 {
      "cursor" : "BtreeCursor name_1",
@@ -100,7 +100,7 @@ tags: mongodb performance
           ]
      }
 }
-```
+~~~
 
 ちなみに、クエリ結果のデータが少ない場合 (4MB以下) ならインデックスなしで `sort()` が使えるが、 `limit()` と `sort()` を一緒に使うのが良いらしい。
 

@@ -16,7 +16,7 @@ tags: munin supervision
 
 #### /etc/munin/munin-node.conf
 
-```sh
+~~~sh
 log_level 4
 log_file /var/log/munin/munin-node.log
 pid_file /var/run/munin/munin-node.pid
@@ -44,17 +44,17 @@ allow ^192\.168\.0\.100$ # Munin サーバーの IP を追加
 host * # Munin サーバーで集計データが受け取れるようにする
 
 port 4949
-```
+~~~
 
 host の設定が解放されていないと、集計データが Munin サーバーで取得できない。
 
 `host 127.0.0.1` を設定した場合に、Munin サーバー側から接続を確認すると、
 
-```sh
+~~~sh
 $ nmap 192.168.0.100 -p 4949
 PORT      STATE  SERVICE
 4949/tcp  closed unknown
-```
+~~~
 
 となり、取得できない。
 
@@ -66,12 +66,12 @@ PORT      STATE  SERVICE
 
 #### vim /etc/munin/conf.d/net.yulii.conf
 
-```sh
+~~~sh
 [yulii.net]
     address 192.168.0.100
     port 4949
     use_node_name yes
-```
+~~~
 
 いったん最小限の設定だが、こんな感じであっさり複数台のリソース監視をまとめられます。
 

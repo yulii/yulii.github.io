@@ -24,9 +24,9 @@ category: tex
 - epic.sty を XyMTeX パッケージの xymtex 内に入れる
 - xymtex ディレクトリを以下のディレクトリ内に保存する
 
-```
+~~~
 %INSTALL_DIR%\share\texmf\tex
-```
+~~~
 
 %INSTALL_DIR% は TeX をインストールしたディレクトリに置き換える。
 
@@ -35,9 +35,9 @@ category: tex
 
 コマンドプロンプト（端末）で以下のコマンドを実行する
 
-```
+~~~
 mktexlsr
-```
+~~~
 
 ## XyMTeXの使い方
 
@@ -47,13 +47,13 @@ mktexlsr
 
 #### 例：ベンゼン環を描く
 
-```tex
+~~~tex
 \documentclass[12pt]{jarticle}
 \usepackage{xymtex}
 \begin{document}
 \bzdrv{}
 \end{document}
-```
+~~~
 
 ### コマンド一覧
 

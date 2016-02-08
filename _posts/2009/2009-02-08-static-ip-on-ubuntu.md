@@ -14,15 +14,15 @@ tags: ubuntu
 
 NetworkManager のバグ等が原因みたいなので削除する。
 
-```sh
+~~~sh
 sudo update-rc.d -f NetworkManager remove
-```
+~~~
 
 ### 固定IP の設定
 
 #### /etc/network/interfaces
 
-```
+~~~
 auto lo
 iface lo inet loopback
 
@@ -33,13 +33,13 @@ netmask 255.255.255.0
 network 192.168.0.0
 broadcast 192.168.0.255
 gateway 192.168.0.254
-```
+~~~
 
 #### /etc/resolv.conf
 
 resolv.conf の所有グループを root に変更する。
 
-```sh
+~~~sh
 sudo chgrp root /etc/resolv.conf
-```
+~~~
 

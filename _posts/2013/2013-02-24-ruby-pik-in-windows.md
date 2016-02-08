@@ -21,7 +21,7 @@ Ruby のバージョン管理 RVM のWindows 版 pik の使い方
 
 コマンドプロンプトから `pik install ruby` でインストールできる。
 
-```
+~~~
 >pik install ruby
 
 There was an error.
@@ -33,32 +33,32 @@ There was an error.
   in: pik/commands/add_command.rb:17:in `add'
   in: pik/commands/add_command.rb:13:in `execute'
   in: pik_runner:27
-```
+~~~
 
 見つからないと怒られたので、ダミーのRuby バージョンを設定ファイルに追加しておく
 
 #### %USERPROFILE%.pik\config.yml
 
-```
+~~~
 ---
 "000: ruby 0.0.0 (dummy ruby for pik)":
   :path: !ruby/object:Pathname
     path: %USERPROFILE%/.pik/dummy
 --- {}
 
-```
+~~~
 設定に追加されたことを list コマンドで確認する
 
-```
+~~~
 >pik list
   000: ruby 0.0.0 (dummy ruby for pik)
-```
+~~~
 
 `pik ls -r` でインストールできるパッケージリストがわかる。
 
 改めて Ruby のインストールを実行する
 
-```
+~~~
 >pik install ruby-1.9.2
 ERROR: You need the 7zip utility to extract this file.
        Run 'pik package 7zip install'
@@ -70,5 +70,5 @@ INFO: Downloading:  http://downloads.sourceforge.net/sevenzip/7za920.zip
 7za920.zip: 100% |ooooooooooooooooooooooooooooo| 375.8KB/375.8KB Time: 00:00:00
 
 >pik use ruby-1.9.2
-```
+~~~
 
