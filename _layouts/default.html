@@ -9,15 +9,11 @@ layout: compress
 {% include header.html %}
 <div class="wrapper">
   {{ content }}
+  {% include breadcrumb.html %}
 </div>
-{% if page.breadcrumb %}
-<div class="wrapper">
-  {% include breadcrumb/{{ page.breadcrumb }}.html %}
-</div>
-{% endif %}
 {% include footer.html %}
-{% if page.schema %}
-  {% for name in page.schema %}
+{% if layout.schema %}
+  {% for name in layout.schema %}
     {% include schema/{{ name }}.json-ld.html %}
   {% endfor %}
 {% endif %}

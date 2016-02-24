@@ -1,12 +1,6 @@
-<ol class="breadcrumb">
-  <li><a href="{{ site.url }}">yulii</a><span>&nbsp;/&nbsp;</span></li>
-  {% if page.category %}
-    <li>
-      <a href="{{ site.url }}/{{ page.category }}.html">
-        {{ site.data.meta[page.category].face }}
-      </a>
-      <span>&nbsp;/&nbsp;</span>
-    </li>
-  {% endif %}
-  <li><strong>{{ page.title | truncate: 30 }}</strong></li>
-</ol>
+<li>
+  <a href="{{ site.url }}/{{ include.category }}.html">
+    {{ site.data.meta[include.category].face }}
+  </a>
+  <span>&nbsp;/&nbsp;</span>
+</li>
