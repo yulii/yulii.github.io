@@ -1,6 +1,6 @@
 <ol class="breadcrumb">
   <li><a href="{{ site.url }}">yulii</a><span>&nbsp;/&nbsp;</span></li>
-  {% if layout.breadcrumb == 'category' %}
+  {% if layout.breadcrumb == 'category' and page.category %}
     {% include breadcrumb/category.html category=page.category %}
   {% endif %}
   <li><strong>{{ page.title | truncate: 30 }}</strong></li>
