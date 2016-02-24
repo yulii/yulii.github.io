@@ -2,6 +2,10 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
+  "mainEntityOfPage":{
+    "@type": "WebPage",
+    "@id": "{{ page.url | prepend: site.url }}"
+  },
   "headline": "{{ page.title | escape }}",
   "image": {
     "@type": "ImageObject",
@@ -18,8 +22,8 @@
     "logo": {
       "@type": "ImageObject",
       "url": "{{ '/img/site/yulii.jpg' | prepend: site.url }}",
-      "width": 100,
-      "height": 100
+      "width": 60,
+      "height": 60
     }
   },
   "author": {
