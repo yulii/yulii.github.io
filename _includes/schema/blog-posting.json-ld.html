@@ -3,11 +3,28 @@
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "{{ page.title | escape }}",
-  "image": [
-  "{{ "/img/icon/apple-touch-icon-256.png" | prepend: site.url }}"
-  ],
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ '/img/icon/apple-touch-icon-256.png' | prepend: site.url }}",
+    "height": 256,
+    "width": 256
+  },
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "articleBody": "{{ page.content | strip_newlines | strip_html | escape }}",
-  "url": "{{ page.url | prepend: site.url }}"
+  "url": "{{ page.url | prepend: site.url }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/img/site/yulii.jpg' | prepend: site.url }}",
+      "width": 100,
+      "height": 100
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author }}"
+  }
 }
 </script>
