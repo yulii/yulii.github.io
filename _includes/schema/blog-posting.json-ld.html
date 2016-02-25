@@ -9,7 +9,7 @@
   "headline": "{{ page.title | escape }}",
   "image": {
     "@type": "ImageObject",
-    "url": "{{ '/img/site/by-and-for-engineers.jpg' | prepend: site.url }}",
+    "url": "{{ site.cover_img_path | prepend: site.url }}",
     "width": 800,
     "height": 450
   },
@@ -22,7 +22,7 @@
     "name": "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ '/img/site/yulii.jpg' | prepend: site.url }}",
+      "url": "{{ site.author_img_path | prepend: site.url }}",
       "width": 60,
       "height": 60
     }
