@@ -102,13 +102,17 @@ note:
   type: category
   face: もやもや
   description: "もやもや思考したことをとっ散らかしておくチラシの裏"
+pdf:
+  type: tag
+  face: PDF
 performance:
   type: tag
   face: パフォーマンスチューニング
   description: "ミドルウェアやアプリケーションのパフォーマンスに影響する設計や設定などのチューニングに関するTips 紹介です。"
-pdf:
-  type: tag
-  face: PDF
+perl:
+  type: category
+  face: Perl
+  description: "Perl プログラミングやワンライナーのコードの技術メモです。"
 php:
   type: category
   face: PHP
