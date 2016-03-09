@@ -6,6 +6,10 @@ aws:
   type: tag
   face: Amazon Web Service
   description: "Amazon Web Service の構築・設計、ツール関連の技術記事です。"
+business:
+  type: category
+  face: ビジネス
+  description: "ビジネスや事業戦略について調べたことやフレームワークをまとめた記事です。"
 c-lang:
   type: category
   face: C言語
@@ -47,6 +51,10 @@ git:
   type: tag
   face: Git
   description: "分散型バージョン管理システムGit に関するメモ"
+growth-hacking:
+  type: tag
+  face: グロースハック
+  description: "サービスの継続的な成長に必要なマインドセットやデータ分析、プロダクトの改善施策"
 haskell:
   type: category
   face: Haskell
