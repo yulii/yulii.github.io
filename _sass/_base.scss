@@ -162,6 +162,7 @@ pre, code {
 }
 
 %photo-box, .photo-box {
+  margin-bottom: $spacing-unit / 2;
   border: 1px solid #ddd;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
