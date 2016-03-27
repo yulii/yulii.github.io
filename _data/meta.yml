@@ -143,6 +143,9 @@ server:
 shell:
   type: tag
   face: シェルスクリプト
+sql:
+  type: tag
+  face: SQL
 subversion:
   type: tag
   face: Subversion
