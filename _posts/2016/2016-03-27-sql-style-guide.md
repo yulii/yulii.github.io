@@ -2,6 +2,7 @@
 layout: post
 title:  "SQL クエリのコーディング規約（スタイルガイド）"
 date:   2016-03-27 19:14:28 UTC+9
+category: database
 tags: sql
 ---
 

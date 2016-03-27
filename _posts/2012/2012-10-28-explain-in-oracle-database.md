@@ -3,7 +3,7 @@ layout: post
 title:  "SQL*Plusで「実行計画」を見える化"
 date:   2012-10-28 01:40:24 UTC+9
 category: database
-tag: performance
+tag: performance sql
 ---
 
 ## Oracle の実行計画 (EXPLAIN)
@@ -34,4 +34,3 @@ EXPLAIN PLAN による実行計画の取得とは異なり DML の処理とフ�
 ~~~
 set autotrace off;
 ~~~
-

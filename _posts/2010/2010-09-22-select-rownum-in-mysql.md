@@ -3,7 +3,7 @@ layout: post
 title:  "MySQL で問い合わせ結果の行番号 ROWNUM を取得する"
 date:   2010-09-22 14:10:09 UTC+9
 category: database
-tags: mysql
+tags: mysql sql
 ---
 
 ## MySQL で擬似的な ROWNUM
@@ -45,4 +45,3 @@ OFFSET
 ~~~
 
 取得するテーブル `<table>` やカラム `<col>` は適宜指定してください。また、ページングに合わせて、取り出す件数 `<limit>` と開始位置 `<offset>` を適宜指定してください。
-

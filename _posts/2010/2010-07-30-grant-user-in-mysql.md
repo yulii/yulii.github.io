@@ -3,7 +3,7 @@ layout: post
 title:  "MySQL ユーザの設定方法"
 date:   2010-07-30 00:30:01 UTC+9
 category: database
-tags: mysql
+tags: mysql sql
 ---
 
 ## MySQL ユーザの設定
@@ -51,4 +51,3 @@ GRANT ALL ON *.* TO <user>@<host> IDENTIFIED BY '<password>' WITH GRANT OPTION;
 GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP ON *.* TO <user>@<host> IDENTIFIED BY '<password>';
 FLUSH PRIVILEGES;
 ~~~
-
