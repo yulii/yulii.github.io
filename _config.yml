@@ -7,16 +7,14 @@ url: "https://yulii.github.io"
 author: Ryo Yoneyama (@yulii)
 copyright: "2008-2015, yulii"
 
-# Config
-timezone: "Asia/Tokyo"
-
 # Common Variables
 author_img_path: "/img/site/yulii.jpg"
 cover_img_path: "/img/site/by-and-for-engineers.jpg"
 
-# Build
-exclude: ["bin", "vendor", "Gemfile", "Gemfile.lock"]
+# Config
+timezone: "Asia/Tokyo"
 permalink: /:title-:year:month:day.html
+exclude: ["bin", "vendor", "Gemfile", "Gemfile.lock"]
 markdown: kramdown
 redcarpet:
   extensions: [

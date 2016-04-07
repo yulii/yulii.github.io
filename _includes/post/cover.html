@@ -1,10 +1,9 @@
-{% assign image_path = include.date | date: '/%Y/%Y-%m-%d-cover.png' | prepend: '/img/posts' %}
-{% for file in site.static_files %}
-  {% if file.path == image_path %}
-    {% if include.url %}
-<a href="{{ include.url }}"><img src="{{ image_path }}" alt=""></a>
-    {% else %}
-<img src="{{ image_path }}" alt="" class="photo-box">
-    {% endif %}
+{% assign cover_img_path = include.date | date: '/img/posts/%Y/%Y-%m-%d-cover.png' %}
+{% assign static_paths = site.static_files | map: 'path' %}
+{% if static_paths contains cover_img_path %}
+  {% if include.url %}
+<a href="{{ include.url }}"><img src="{{ cover_img_path }}" alt=""></a>
+  {% else %}
+<img src="{{ cover_img_path }}" alt="" class="photo-box">
   {% endif %}
-{% endfor %}
+{% endif %}
