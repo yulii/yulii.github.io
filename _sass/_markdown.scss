@@ -12,13 +12,17 @@
     border-top: 1px dashed $border-color-grey;
   }
 
-  ul {
+  ol, ul {
     margin-left: 0;
     margin-bottom: 1em;
     padding-left: 1.5em;
   }
 
-  li {
+  ol > li {
+    list-style: decimal;
+  }
+
+  ul > li {
     list-style: circle;
   }
 
