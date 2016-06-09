@@ -159,6 +159,7 @@ CircleCI は `docker exec` に対応していないので、 `lxc-attach` を使
 
 _cf. [Docker Exec - CircleCI](https://circleci.com/docs/docker/#docker-exec)_
 
+{% raw %}
 ~~~
 machine:
   services:
@@ -174,6 +175,7 @@ test:
   override:
     - sudo lxc-attach -n "$(docker inspect --format '{{.Id}}' ci)" -- /bin/sh -c 'cd /usr/local/provisioning && rake spec'
 ~~~
+{% endraw %}
 
 詳細はよくわかっていないのですが、直接LXC (`lxc-attach`) を使うとDockerfile に定義した `WORKDIR` が反映されないので `cd` しています。
 
@@ -218,6 +220,7 @@ CMD ["rspec"]
 
 `docker inspect` でDocker コンテナのIP アドレスを取得してInfrataster を実行します。
 
+{% raw %}
 ~~~
 docker build -t serverspec  -f serverspec/Dockerfile  --no-cache .
 docker build -t infrataster -f infrataster/Dockerfile --no-cache .
@@ -226,6 +229,7 @@ docker exec -it ci /bin/sh -c 'itamae local roles/ci.rb'
 docker exec -it ci /bin/sh -c 'rake spec'
 docker run --add-host spechost:$(docker inspect --format '{{.NetworkSettings.IPAddress}}' ci) -it infrataster
 ~~~
+{% endraw %}
 
 Infrataster には `spechost` という名称でテスト対象のホスト名を記述しています。`docker run` する時にIP アドレスを `--add-host` オプションで渡しています。
 
@@ -234,6 +238,7 @@ Infrataster には `spechost` という名称でテスト対象のホスト名�
 
 CircleCI 上で試したところ、 `docker inspect` から取得したIP アドレスでは繋がらなかったので `circle.yml` には手を加えています。
 
+{% raw %}
 ~~~
 machine:
   services:
@@ -251,6 +256,7 @@ test:
     - sudo lxc-attach -n "$(docker inspect --format '{{.Id}}' ci)" -- /bin/sh -c 'cd /usr/local/provisioning && rake spec'
     - docker run --add-host spechost:$(sudo lxc-attach -n "$(docker inspect --format '{{.Id}}' ci)" -- /bin/sh -c 'ip -f inet -o addr show eth0 | cut -d\  -f 7 | cut -d/ -f 1') -it infrataster
 ~~~
+{% endraw %}
 
 読みづらいですが、IP アドレスをテスト対象のホストにログインして `ip` コマンドから取得します。
 
