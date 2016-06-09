@@ -177,8 +177,9 @@ test:
 ```
 {% endraw %}
 
-詳細はよくわかっていないのですが、直接LXC (`lxc-attach`) を使うとDockerfile に定義した `WORKDIR` が反映されないので `cd` しています。
+よくわかっていないのですが、LXC (`lxc-attach`) を使うとDockerfile に定義した `WORKDIR` が反映されないので `cd` しています。Docker と LXC は別物なのですが、詳しい説明は下記の記事を参考にすると良いと思います。
 
+_cf. [Docker と LXC](http://qiita.com/Surgo/items/709a07d68c6eafbad267)_
 
 ## Infrataster で振る舞いテストを実行する
 
