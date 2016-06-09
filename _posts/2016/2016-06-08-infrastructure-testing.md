@@ -19,7 +19,7 @@ tags: ci
 
 この記事の設定は下記のディレクトリ構成で実行しています。
 
-~~~
+```sh
 % tree .
 .
 ├── LICENSE.txt
@@ -54,7 +54,7 @@ tags: ci
         ├── matchers
         │   └── have_http_header.rb
         └── spec_helper.rb
-~~~
+```
 
 ## ローカル環境 (OS X) からテストを実行する
 
@@ -69,20 +69,20 @@ Homebrew などで適宜インストールしておいてください。
 
 ローカル環境 (OS X) は、下記のバージョンで実行しています。
 
-~~~
+```sh
 % docker -v
 Docker version 1.10.3, build 20f81dd
 
 % docker-machine -v
 docker-machine version 0.6.0, build e27fb87
-~~~
+```
 
 CircleCI 上のホストでは、下記のバージョンで実行されています。
 
-~~~
+```sh
 ubuntu@box723:~$ docker --version
 Docker version 1.8.2-circleci-cp-workaround, build 4008b9c-dirty
-~~~
+```
 
 _cf. [OS XのネイティブHypervisorを使うxhyveと、ネイティブDockerを立ち上げるdocker-machine-driver-xhyveを作った話](http://qiita.com/zchee/items/cb4bb68a0aab12dfa2c1)_
 
@@ -90,20 +90,20 @@ _cf. [OS XのネイティブHypervisorを使うxhyveと、ネイティブDocker�
 
 Docker Machine を作成して、コンテナを使う準備をします。スペックは適宜調整してください。
 
-~~~
+```sh
 docker-machine create ci\
   --driver xhyve\
   --xhyve-memory-size 2048\
   --xhyve-disk-size 5120\
   --xhyve-cpu-count 1\
   --xhyve-experimental-nfs-share;
-~~~
+```
 
 Docker イメージをダウンロードする際にDNS が欲しいので適当に突っ込みます。
 
-~~~
+```sh
 docker-machine ssh ci "sudo echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
-~~~
+```
 
 あとは、Docker コマンドを扱えるように `docker-machine env ci` を確認して環境変数を設定してください。
 
@@ -120,7 +120,7 @@ SSH 経由で動かすなら下記の記事などを参考にすると良いと�
 
 コンテナ内で Itamae とServerspec を動かすため、Ruby と合わせてインストールします。Itamae のレシピは `COPY` でコンテナ内に配置します。
 
-~~~
+```sh
 FROM alpine
 
 WORKDIR /usr/local/provisioning
@@ -136,7 +136,7 @@ COPY serverspec/.rspec .rspec
 COPY serverspec/spec spec
 
 CMD ["tail", "-f", "/dev/null"]
-~~~
+```
 
 コンテナ自体は特にプロセスを実行する必要が無いので、代わりに `tail -f /dev/null` を実行させてテスト実行まで待機させています。 `RUN` はなるべく1行にまとめて実行したほうが良いですが、読みづらいので分けて書いておきます。
 
@@ -146,12 +146,12 @@ _cf. [Alpine Linux で軽量な Docker イメージを作る](http://qiita.com/p
 
 イメージをビルドして動かした後、 `docker exec` を使ってコンテナ上で Itamae とServerspec を動かすだけです。
 
-~~~
+```sh
 docker build -t serverspec -f serverspec/Dockerfile --no-cache .
 docker run --name ci -it -d serverspec
 docker exec -it ci /bin/sh -c 'itamae local roles/ci.rb'
 docker exec -it ci /bin/sh -c 'rake spec'
-~~~
+```
 
 ## CircleCI でテストを実行する
 
@@ -160,7 +160,7 @@ CircleCI は `docker exec` に対応していないので、 `lxc-attach` を使
 _cf. [Docker Exec - CircleCI](https://circleci.com/docs/docker/#docker-exec)_
 
 {% raw %}
-~~~
+```ruby
 machine:
   services:
     - docker
@@ -174,7 +174,7 @@ test:
     - sudo lxc-attach -n "$(docker inspect --format '{{.Id}}' ci)" -- /bin/sh -c 'cd /usr/local/provisioning && itamae local roles/ci.rb'
   override:
     - sudo lxc-attach -n "$(docker inspect --format '{{.Id}}' ci)" -- /bin/sh -c 'cd /usr/local/provisioning && rake spec'
-~~~
+```
 {% endraw %}
 
 詳細はよくわかっていないのですが、直接LXC (`lxc-attach`) を使うとDockerfile に定義した `WORKDIR` が反映されないので `cd` しています。
@@ -200,7 +200,7 @@ _cf. [Infratasterでリバースプロキシのテストをする](http
 
 Infrataster を実行できれば良いので、必要なソフトウェアをインストールして `rspec` を実行します。
 
-~~~
+```sh
 FROM alpine
 
 WORKDIR /usr/local/provisioning
@@ -213,7 +213,7 @@ COPY infrataster/.rspec .rspec
 COPY infrataster/spec spec
 
 CMD ["rspec"]
-~~~
+```
 
 
 ### ローカル環境 (OS X) で確認する
@@ -221,14 +221,14 @@ CMD ["rspec"]
 `docker inspect` でDocker コンテナのIP アドレスを取得してInfrataster を実行します。
 
 {% raw %}
-~~~
+```sh
 docker build -t serverspec  -f serverspec/Dockerfile  --no-cache .
 docker build -t infrataster -f infrataster/Dockerfile --no-cache .
 docker run --name ci -it -d serverspec
 docker exec -it ci /bin/sh -c 'itamae local roles/ci.rb'
 docker exec -it ci /bin/sh -c 'rake spec'
 docker run --add-host spechost:$(docker inspect --format '{{.NetworkSettings.IPAddress}}' ci) -it infrataster
-~~~
+```
 {% endraw %}
 
 Infrataster には `spechost` という名称でテスト対象のホスト名を記述しています。`docker run` する時にIP アドレスを `--add-host` オプションで渡しています。
@@ -239,7 +239,7 @@ Infrataster には `spechost` という名称でテスト対象のホスト名�
 CircleCI 上で試したところ、 `docker inspect` から取得したIP アドレスでは繋がらなかったので `circle.yml` には手を加えています。
 
 {% raw %}
-~~~
+```ruby
 machine:
   services:
     - docker
@@ -255,14 +255,14 @@ test:
   override:
     - sudo lxc-attach -n "$(docker inspect --format '{{.Id}}' ci)" -- /bin/sh -c 'cd /usr/local/provisioning && rake spec'
     - docker run --add-host spechost:$(sudo lxc-attach -n "$(docker inspect --format '{{.Id}}' ci)" -- /bin/sh -c 'ip -f inet -o addr show eth0 | cut -d\  -f 7 | cut -d/ -f 1') -it infrataster
-~~~
+```
 {% endraw %}
 
 読みづらいですが、IP アドレスをテスト対象のホストにログインして `ip` コマンドから取得します。
 
-~~~
+```sh
 ip -f inet -o addr show eth0 | cut -d\  -f 7 | cut -d/ -f 1
-~~~
+```
 
 `docker exec` が使えないので、上記のコマンドを `lxc-attach` 経由で実行します（結果的にコマンドが長くなり読みづらい :fearful: ）。
 
