@@ -14,7 +14,7 @@ C言語から memcached へデータを保存・取得してみる。
 
 ソースからインストールする。
 
-~~~sh
+```sh
 wget http://download.tangent.org/libmemcached-0.26.tar.gz
 tar zvxf libmemcached-0.26.tar.gz
 cd libmemcached-0.26.tar.gz
@@ -22,17 +22,17 @@ cd libmemcached-0.26.tar.gz
 make
 sudo make install
 sudo ldconfig
-~~~
+```
 
 ### libmemcached の使い方
 
-~~~sh
+```sh
 man 3 libmemcached_examples
-~~~
+```
 
 #### プログラムの雛型
 
-~~~c
+```c
 #include <stdio.h>
 #include <libmemcached/memcached.h>
 
@@ -46,13 +46,13 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-~~~
+```
 
 ### サンプルコード
 
 練習ついでに書いたコード (memc_server_add() が中途半端・・・)
 
-~~~c
+```c
 #include<libmemcached/memcached.h>
 
 /* default */
@@ -156,13 +156,13 @@ int memc_error(struct memcached_st *memc, memcached_return rc) {
     }
     return 0;
 }
-~~~
+```
 
 #### サーバー接続からデータの保存・取得
 
 基本的な使い方と一連の流れを書いてみた。
 
-~~~c
+```c
 int main(int argc, char *argv[]) {
     struct memcached_st *memc;
     struct memcached_server_st *servers;
@@ -212,5 +212,5 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-~~~
+```
 

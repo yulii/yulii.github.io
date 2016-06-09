@@ -14,18 +14,18 @@ tags: yesod
 
 設定が増えたときのために、ファイルを分けて編集する形にした。読み込む順番が分からなかったので、プレフィックスに連番を付けておいた。
 
-~~~sh
+```sh
 # ls -l /etc/sudoers.d/
 total 8
 -r--r----- 1 root root 458 Dec 10 14:33 000_alias
 -r--r----- 1 root root 101 Dec 10 15:02 001_devops
-~~~
+```
 
 #### /etc/sudoers.d/000_alias
 
 設定に利用するエイリアスの定義をまとめておく。対象ユーザ、実行ユーザ、ホスト、コマンドなどを定義する。
 
-~~~sh
+```sh
 # User alias specification
 User_Alias   DEVOPS = yulii
 
@@ -40,15 +40,15 @@ Host_Alias   LO     = 127.0.0.1
 Cmnd_Alias   SH     = /bin/sh, /bin/bash
 Cmnd_Alias   KILL   = /bin/kill
 Cmnd_Alias   APP_YULII = /var/opt/angel/build_yulii_production
-~~~
+```
 
 #### /etc/sudoers.d/001_devops
 
 アカウント単位で、`sudo` 可能なホスト、実行ユーザ、コマンドを制限する。ALL 指定できるが、不要な権限は付与せず、必要なものだけを許可しておく。
 
-~~~sh
+```sh
 DEVOPS    LO = (ANGEL) NOPASSWD: SH, APP_YULII, (SU) PASSWD: KILL
-~~~
+```
 
 エイリアス `DEVOPS` で定義されたユーザに、ホスト `LO` 上で`sudo` 権限を付与した。`ANGEL` 権限で `SH` と `APP_YULII` をパスワード認証なしの実行許可、`SU` 権限で `KILL` をパスワード認証付きの実行許可。
 
@@ -60,7 +60,7 @@ Yesod アプリケーションをビルドするスクリプトを用意する�
 
 `$APP_ROOT` は適宜設定する。
 
-~~~sh
+```sh
 #!/bin/bash
 pull() {
   cd $APP_ROOT && git pull
@@ -83,21 +83,21 @@ case "$1" in
   upgrade)  pull && clean && reinstall && build ;;
   *)        pull && clean && install && build ;;
 esac
-~~~
+```
 
 ### 実行コマンド
 
 #### 通常のビルド
 
-~~~sh
+```sh
 sudo -u angel /var/opt/angel/build_yulii_production
-~~~
+```
 
 #### 依存モジュール変更時のビルド
 
 `cabal update` と `cabal install --force-reinstalls` も一緒に実行する。
 
-~~~sh
+```sh
 sudo -u angel /var/opt/angel/build_yulii_production upgrade
-~~~
+```
 

@@ -12,7 +12,7 @@ Xcode をアップデートするついでに Homebrew を再度入れ直した�
 
 管理者権限でファイル削除するのでコピペ注意!!
 
-~~~sh
+```sh
 sudo port -fp uninstall installed
 sudo rm -rf \
     /opt/local \
@@ -25,36 +25,36 @@ sudo rm -rf \
     /Library/Tcl/darwinports1.0 \
     /Library/Tcl/macports1.0 \
     ~/.macports
-~~~
+```
 
 ### Homebrew のインストール
 
-~~~sh
+```sh
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
-~~~
+```
 
 ### Homebrew を利用する準備
 
 環境チェックを行い問題が無いか確認する。
 
-~~~sh
+```sh
 brew doctor
-~~~
+```
 
 #### osx-gcc-installer の警告
 
-~~~
+```
 Warning: You seem to have osx-gcc-installer installed.
 Homebrew doesn't support osx-gcc-installer. It causes many builds to fail and
 is an unlicensed distribution of really old Xcode files.
 Please install the CLT or Xcode 4.6.3.
-~~~
+```
 
 Xcode を起動して、[Xcode] > [Preferences] メニューを開き、[Downloads] > [Components] 画面から「Command Line Tools」をインストールすればOK.
 
 #### プログラムの重複
 
-~~~
+```
 Warning: /usr/bin occurs before /usr/local/bin
 This means that system-provided programs will be used instead of those
 provided by Homebrew. The following tools exist at both paths:
@@ -69,19 +69,19 @@ provided by Homebrew. The following tools exist at both paths:
 Consider setting your PATH so that /usr/local/bin
 occurs before /usr/bin. Here is a one-liner:
     echo export PATH='/usr/local/bin:$PATH' >> ~/.bash_profile
-~~~
+```
 
 何故か、古いバージョンの git が `/usr/bin` にインストールされていたので削除した。
 
-~~~sh
+```sh
 sudo rm -f /usr/bin/git*
-~~~
+```
 
 メッセージの指示通り、環境変数 `PATH` で /usr/local/bin が優先されるように変更してもOK.
 
 #### requirement エラー
 
-~~~
+```
 Error: Failed to import: composer-requirement
 No available formula for composer-requirement
 Error: Failed to import: homebrew-php-requirement
@@ -92,13 +92,13 @@ Error: Failed to import: phar-requirement
 No available formula for phar-requirement
 Error: Failed to import: php-meta-requirement
 No available formula for php-meta-requirement
-~~~
+```
 
 Formula に関係したバグっぽいが、以下のおまじないで消える。
 
-~~~sh
+```sh
 find $(brew --prefix)/Library/Formula -type l -name "*requirement.rb" -delete
-~~~
+```
 
 これで、`brew update` して使える。
 
@@ -106,7 +106,7 @@ find $(brew --prefix)/Library/Formula -type l -name "*requirement.rb" -delete
 
 `brew --config` でHomebrew の環境を確認できる。
 
-~~~
+```
 HOMEBREW_VERSION: 0.9.5
 ORIGIN: https://github.com/mxcl/homebrew
 HEAD: 3d7f04fdd84b5cfc98d6ae283d0abe7fa9bc4e28
@@ -124,7 +124,7 @@ System Ruby: 1.8.7-358
 Perl: /usr/bin/perl
 Python: /usr/bin/python
 Ruby: /Users/yulii/.rvm/rubies/ruby-2.0.0-p247/bin/ruby
-~~~
+```
 
 参考まで。
 

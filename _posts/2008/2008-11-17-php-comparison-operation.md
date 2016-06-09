@@ -15,23 +15,23 @@ PHP の比較演算子 `==` の結果が直感的でないものや他言語と�
 
 #### true となる比較
 
-~~~php
+```php
 $x == 0
 $x === 0
 $x == null // コレが通ってしまう
-~~~
+```
 
 #### false となる比較
 
-~~~php
+```php
 $x === null
-~~~
+```
 
 #### 比較コード null.php
 
 適当に値を比較してみた。
 
-~~~php
+```php
 <?php
 echo null;
 
@@ -77,17 +77,17 @@ if ($z === null) {
     echo "z === null\n";
 }
 ?>
-~~~
+```
 
 実行結果
 
-~~~sh
+```sh
 $ php null.php
 x == null
 y == 0
 y === 0
 y == null
-~~~
+```
 
 ### 文字列比較
 
@@ -99,7 +99,7 @@ y == null
 
 #### 比較コード string.php
 
-~~~php
+```php
 <?php
 if (0 == 'str') {
     echo "'str' == 0\n";
@@ -111,23 +111,23 @@ if ('str' == 'str') {
     echo "'str' == 'str'\n";
 }
 ?>
-~~~
+```
 
 実行結果
 
-~~~sh
+```sh
 $ php string.php
 'str' == 0
 'str' == true
 'str' == 'str'
-~~~
+```
 
 文字列比較は、以下のような形で比較したほうが良いです。
 
-~~~php
+```php
 $a === $b
 strcmp($a,$b) == 0
-~~~
+```
 
 ### 比較演算 `===`
 
@@ -135,7 +135,7 @@ strcmp($a,$b) == 0
 
 #### 変数の型をチェック
 
-~~~php
+```php
 <?php
 $x = array(
   'p' => '123',
@@ -148,18 +148,18 @@ $y = array(
 var_dump($x == $y);
 var_dump($x === $y);
 ?>
-~~~
+```
 
 実行結果
 
-~~~
+```
 bool(true)
 bool(false)
-~~~
+```
 
 #### 変数の順序をチェック
 
-~~~php
+```php
 <?php
 $x = array(
   'p' => 'a',
@@ -174,12 +174,12 @@ $y = array(
 var_dump($x == $y);
 var_dump($x === $y);
 ?>
-~~~
+```
 
 実行結果
 
-~~~
+```
 bool(true)
 bool(false)
-~~~
+```
 

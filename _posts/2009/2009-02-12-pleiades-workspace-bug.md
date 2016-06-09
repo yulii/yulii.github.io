@@ -9,7 +9,7 @@ tags: eclipse
 
 エラーメッセージ (eclipse/configuration 内のログファイル)
 
-~~~
+```
 !SESSION Wed Feb 11 11:52:16 JST 2009 ------------------------------------------
 !ENTRY org.eclipse.equinox.launcher 4 0 2009-02-11 11:52:16.437
 !MESSAGE Exception launching the Eclipse Platform:
@@ -22,7 +22,7 @@ jp.sourceforge.mergedoc.pleiades.aspect.resource.DynamicTranslationDictionary
         (LauncherTransformer.java:192)
     at org.eclipse.equinox.launcher.Main.basicRun (Main.java:448)
     at org.eclipse.equinox.launcher.Main.run (Main.java:1173)
-~~~
+```
 
 Pleiades のバグでワークスペースの切り替えでワークスペース名が訳されてしまうらしい。
 
@@ -32,9 +32,9 @@ Pleiades のバグでワークスペースの切り替えでワークスペー�
 
 #### コマンドプロンプトから clean オプションで起動する場合
 
-~~~
+```
 eclipse -clean
-~~~
+```
 
 ### 解決策2
 

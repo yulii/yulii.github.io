@@ -10,7 +10,7 @@ tags: nginx
 
 Basic 認証で利用するユーザ名とパスワードの設定ファイルを `auth_basic_user_file` で指定する
 
-~~~
+```
 server {
   listen       80;
   server_name  yulii.net;
@@ -24,18 +24,18 @@ server {
     index index.html index.htm;
   }
 }
-~~~
+```
 
 Basic 認証のアカウント発行は `htpasswd` コマンドが便利。
 
 `htpasswd` コマンドは Apache のパッケージ `apache2-utils` に含まれている。
 
-~~~sh
+```sh
 $ htpasswd -n yulii
 New password:
 Re-type new password:
 yulii:pxX7w0IvuRflQ
-~~~
+```
 
 ### htpasswd コマンドの注意点
 

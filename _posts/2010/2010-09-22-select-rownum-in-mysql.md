@@ -14,7 +14,7 @@ Oracle Database にある ROWNUM を MySQL でやってみた。Oracle Database 
 
 ローカル変数 `@i` を使って問い合わせ結果に1番から始まる連番を振る。変数の初期化は `FROM` 句の中で定義する。
 
-~~~sql
+```sql
 SELECT
   @i:=@i+1 AS ROWNUM
 , <col>
@@ -22,7 +22,7 @@ FROM
   (SELECT @i:=0) AS INDEX_NUM
 , <table>
 ;
-~~~
+```
 
 取得するテーブル `<table>` やカラム `<col>` は適宜指定してください。
 
@@ -30,7 +30,7 @@ FROM
 
 ページングで `LIMIT` と `OFFSET` を指定する場合のクエリは `@i` にあらかじめ `OFFSET` を設定しておく。
 
-~~~sql
+```sql
 SELECT
   @i:=@i+1 AS ROWNUM
 , <col>
@@ -42,6 +42,6 @@ LIMIT
 OFFSET
   <offset>
 ;
-~~~
+```
 
 取得するテーブル `<table>` やカラム `<col>` は適宜指定してください。また、ページングに合わせて、取り出す件数 `<limit>` と開始位置 `<offset>` を適宜指定してください。

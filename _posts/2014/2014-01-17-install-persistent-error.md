@@ -11,7 +11,7 @@ category: haskell
 
 ### Persistent::MySQL のインストール
 
-~~~sh
+```sh
 # cabal install persistent-mysql-1.2.1
 Resolving dependencies...
 Configuring pcre-light-0.4...
@@ -27,11 +27,11 @@ mysql-simple-0.2.2.4 depends on pcre-light-0.4 which failed to install.
 pcre-light-0.4 failed during the configure step. The exception was:
 ExitFailure 1
 persistent-mysql-1.2.1 depends on pcre-light-0.4 which failed to install.
-~~~
+```
 
 `pcre-light` が必要らしいので `cabal` からインストールを実行する。
 
-~~~
+```
 # cabal install pcre-light-0.4
 Resolving dependencies...
 Configuring pcre-light-0.4...
@@ -45,13 +45,13 @@ Failed to install pcre-light-0.4
 cabal: Error: some packages failed to install:
 pcre-light-0.4 failed during the configure step. The exception was:
 ExitFailure 1
-~~~
+```
 
 足りない依存ライブラリでエラーが起きているので、下記のコマンドでライブラリをインストールする。
 
-~~~
+```
 yum install pcre-devel
-~~~
+```
 
 再度 `cabal install` を実行すればOK.
 

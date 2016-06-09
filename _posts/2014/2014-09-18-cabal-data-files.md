@@ -15,13 +15,13 @@ pkgname.cabal で `data-files` もしくは `data-dir` を指定する。`data-f
 
 `data-files` のフルパスを取得する関数が用意されている
 
-~~~
+```
 getDataFileName :: FilePath -> IO FilePath
-~~~
+```
 
 利用するときは `import Paths_pkgname` する必要がある
 
-~~~
+```
 import Paths_pkgname
 import qualified Data.ByteString.Lazy.Char8 as BS
 
@@ -29,7 +29,7 @@ getContent = do
   fp <- getDataFileName "data/hoge.txt"
   content <- BS.readFile fp
   return content
-~~~
+```
 
 参考) _[Accessing data files from package code](http://www.haskell.org/cabal/users-guide/developing-packages.html#accessing-data-files-from-package-code)_
 

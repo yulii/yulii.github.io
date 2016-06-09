@@ -11,13 +11,13 @@ tags: rails
 メール送信自体のテストする際に、メーラーやビューを定義しなくても `ActionMailer::Base` でそのまま送信できる。
 SMTP サーバーの接続先を変更したり、ミドルウェアの変更に伴う問題の切り分けなどで使うと便利。
 
-~~~ruby
+```ruby
 ActionMailer::Base.mail(to: 'to@example.com', from: 'from@example.com', subject: '件名', body: 'メール本文').deliver
-~~~
+```
 
 もちろん、以下のようにActionMailer を定義してあれば、コンソール上でただ実行すれば良い。
 
-~~~ruby
+```ruby
 class TestMailer < ActionMailer::Base
   default from: 'from@example.com'
 
@@ -25,7 +25,7 @@ class TestMailer < ActionMailer::Base
     mail(to: 'to@example.com', subject: '件名', body: 'メール本文')
   end
 end
-~~~
+```
 
 ## perform_deliveries オプション
 
@@ -36,7 +36,7 @@ end
 ただ、特定条件下でメール送信を止めたいときは、`perform_deliveries = false` すると良い。
 共通の親クラスを定義し、コールバックの `after_action` で制御すると便利。
 
-~~~ruby
+```ruby
 class ApplicationMailer < ActionMailer::Base
   default from: 'from@example.com'
   layout 'mailer'
@@ -48,7 +48,7 @@ class ApplicationMailer < ActionMailer::Base
     message.perform_deliveries = false if @user.nil?
   end
 end
-~~~
+```
 
 コールバックのメソッド内で、自身のメールオブジェクトは `message` 変数で参照する。
 
@@ -57,7 +57,7 @@ end
 `ActionMailer::Base.new` できないので、インスタンスメソッドを直接テスト書くのが難しい。
 ActionMailer の機能ではないが、 `new` の代わりに `allocate` が使える。
 
-~~~ruby
+```ruby
 describe ApplicationMailer do
   describe '#prevent_delivery' do
     subject { mailer.perform_deliveries }
@@ -88,11 +88,11 @@ describe ApplicationMailer do
     end
   end
 end
-~~~
+```
 
 今回の例はコールバックで呼ばれる予定のインスタンスメソッドなので、Spec 内でテスト用のActionMailer クラスを定義しても良い。
 
-~~~ruby
+```ruby
 let(:mailer) do
   Class.new(ApplicationMailer) do
     default(from: 'from@example.com')
@@ -102,5 +102,5 @@ let(:mailer) do
     end
   end
 end
-~~~
+```
 

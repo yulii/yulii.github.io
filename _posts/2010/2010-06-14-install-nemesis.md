@@ -20,7 +20,7 @@ category: network
 
 ソースからインストールする。
 
-~~~sh
+```sh
 cd /usr/local/src
 wget ftp://ftp.ru/pub/sunfreeware/SOURCES/libnet-1.0.2a.tar.gz
 tar xzvf libnet-1.0.2a.tar.gz
@@ -28,18 +28,18 @@ cd Libnet-1.0.2a
 ./configure
 make
 make install
-~~~
+```
 
 #### nemesis 本体インストール
 
 こちらもソースからインストールする。
 
-~~~sh
+```sh
 cd /usr/local/src
 wget http://prdownloads.sourceforge.net/nemesis/nemesis-1.4.tar.gz?download
 cd nemesis-1.4
 ./configure
 make
 make install
-~~~
+```
 

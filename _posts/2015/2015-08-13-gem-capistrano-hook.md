@@ -15,15 +15,15 @@ tags: ci
 
 `Gemfile` に下記を追加する。
 
-~~~ruby
+```ruby
 gem 'capistrano-hook'
-~~~
+```
 
 `Capfile` に下記を追加する。
 
-~~~ruby
+```ruby
 require 'capistrano/hook'
-~~~
+```
 
 ### Slack への通知設定
 
@@ -31,9 +31,9 @@ require 'capistrano/hook'
 作成した後に発行される Webhook URL を `:webhook_url` に指定する。
 定義するファイルは `config/deploy.rb` でも個別環境ごとの `config/deploy/production.rb` などでも良い。
 
-~~~ruby
+```ruby
 set :webhook_url, 'https://hooks.slack.com/services/XXXXXXXX'
-~~~
+```
 
 各デプロイタスクで通知が必要な場合に適宜下記の変数を定義する。
 変数を定義しなければ通知はスキップされます。
@@ -42,33 +42,33 @@ set :webhook_url, 'https://hooks.slack.com/services/XXXXXXXX'
 
 #### デプロイ開始時の通知設定
 
-~~~ruby
+```ruby
 set :webhook_starting_payload, {
   username:   'Capistrano',
   icon_emoji: ':{{ "monkey_face" }}:',
   text:       'Now, deploying...'
 }
-~~~
+```
 
 #### デプロイ終了時の通知設定
 
-~~~ruby
+```ruby
 set :webhook_finished_payload, {
   username:   'Capistrano',
   icon_emoji: ':{{ "monkey_face" }}:',
   text:       'Deployment has been completed!'
 }
-~~~
+```
 
 #### デプロイ失敗時の通知設定
 
-~~~ruby
+```ruby
 set :webhook_failed_payload, {
   username:   'Capistrano',
   icon_emoji: ':{{ "monkey_face" }}:',
   text:       'Oops! something went wrong.'
 }
-~~~
+```
 
 Hubot などを使って通知をしても良いが、Incoming Webhook を使うとSlack のチャンネル名を変更するときもSlack 側の変更だけで済むので楽だと思う。
 
@@ -96,11 +96,11 @@ _cf. [Capistrano - Flow](http://capistranorb.com/documentation/getting-started/f
 Capistrano のタスクに対して、`before`, `after` フックを定義できます。
 `capistrano-hook` は下記のタスクをフックしています。
 
-~~~ruby
+```ruby
 before 'deploy:starting',  'webhook:post:starting'
 after  'deploy:finishing', 'webhook:post:finished'
 after  'deploy:failed',    'webhook:post:failed'
-~~~
+```
 
 `webhook:post:*` のタスクは `capistrano-hook` 内で定義しているタスクです。
 

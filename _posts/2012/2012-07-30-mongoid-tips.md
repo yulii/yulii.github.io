@@ -12,13 +12,13 @@ Mongoid で発行されるクエリを最適化するために知っておきた
 
 取得するフィールドを `Mongoid::Criteria#only` で絞れる
 
-~~~ruby
+```ruby
 Users.only(:name)
-~~~
+```
 
 MongoDB の `find()` クエリの第２引数の指定に相当する。
 
-~~~javascript
+```javascript
 > db.users.find({});
 {
   "_id"      : ObjectId("501676ca7f8e725b9caa7c31"),
@@ -32,7 +32,7 @@ MongoDB の `find()` クエリの第２引数の指定に相当する。
   "_id"      : ObjectId("501676ca7f8e725b9caa7c31"),
   "name"     : "yulii"
 }
-~~~
+```
 
 クエリ実行時間が劇的に速くなるわけではないが、データ通信量を減らすためにやっておくと良い。
 
@@ -40,16 +40,16 @@ MongoDB の `find()` クエリの第２引数の指定に相当する。
 
 どうしても Relation が必要なら、`Mongoid::Criteria#includes` で Eager Loading すると良い。
 
-~~~ruby
+```ruby
 Users.includes(:friend)
-~~~
+```
 
 Relation じゃないときは、クエリを2回に分けて実行する。`Mongoid::Criteria#only` で `id` を取得して、欲しいデータを取得する
 
-~~~ruby
+```ruby
 ids = Users.find().only(:id).map(&:id)
 friends = Friends.find(ids)
-~~~
+```
 
 ## 参考URL
 

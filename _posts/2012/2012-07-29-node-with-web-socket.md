@@ -10,37 +10,37 @@ tags: nodejs websocket
 
 Mac でやったけど、おそらくLinux 系でも同様にいけるはず。
 
-~~~sh
+```sh
 cd /usr/local/src/
 git clone git://github.com/ry/node.git
 cd node
 ./configure
 make
 sudo make install
-~~~
+```
 
 ### Node パッケージ管理 npm のインストール
 
-~~~sh
+```sh
 curl http://npmjs.org/install.sh | sh
-~~~
+```
 
 ### Node で Hello World!
 
-~~~javascript
+```javascript
 var http = require('http');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('Hello World!\n');
 }).listen(8124, "127.0.0.1");
 console.log('Server running at http://127.0.0.1:8124/');
-~~~
+```
 
 hello.js など適当に保存して実行
 
-~~~sh
+```sh
 node hello.js
-~~~
+```
 
 ブラウザなどで http://127.0.0.1:8124/ へアクセスして “Hello World!” が表示されたらOK.
 
@@ -48,9 +48,9 @@ node hello.js
 
 WebSocket 用の Node ライブラリ Socket.IO をインストールする
 
-~~~sh
+```sh
 npm install socket.io
-~~~
+```
 
 本家のサンプルをとりあえず動かしてみる
 
@@ -58,7 +58,7 @@ npm install socket.io
 
 app.js として、以下のコードをコピペ保存する
 
-~~~javascript
+```javascript
 var app = require('http').createServer(handler)
   , io = require('socket.io').listen(app)
   , fs = require('fs')
@@ -84,13 +84,13 @@ io.sockets.on('connection', function (socket) {
     console.log(data);
   });
 });
-~~~
+```
 
 ### Client 側のView を作成
 
 index.html として、以下のコードをコピペ保存する
 
-~~~html
+```html
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -108,15 +108,15 @@ index.html として、以下のコードをコピペ保存する
 </script>
 </body>
 </html>
-~~~
+```
 
 ### Node.js で WebSocket を動かしてみる
 
 まずは、Node アプリケーションを実行&起動
 
-~~~sh
+```sh
 node app.js
-~~~
+```
 
 ブラウザで http://127.0.0.1:8124/ へアクセスする。画面が真っ白ならOK. Node を起動したコンソール上にログっぽいメッセージが流れるはず。
 
@@ -130,7 +130,7 @@ Node のデフォルト出力 “Hello Node.js” とテキスト (HTML でな�
 
 初回はただの HTTP リクエストを送る。
 
-~~~
+```
 GET / HTTP/1.1
 Host: 127.0.0.1:8124
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:14.0) Gecko/20100101 Firefox/14.0.1
@@ -138,11 +138,11 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: ja,en-us;q=0.7,en;q=0.3
 Accept-Encoding: gzip, deflate
 Connection: keep-alive
-~~~
+```
 
 HTTP 通信から WebSocket 通信への切り替えリクエストを送る。
 
-~~~
+```
 GET /socket.io/1/websocket/X-8776MBmRib_qXjzMFO HTTP/1.1
 Host: 127.0.0.1:8124
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:14.0) Gecko/20100101 Firefox/14.0.1
@@ -156,18 +156,18 @@ Sec-WebSocket-Key: bmxxAd1YiaYzLLnDb9pAEg==
 Pragma: no-cache
 Cache-Control: no-cache
 Upgrade: websocket
-~~~
+```
 
 `Upgrade: websocket` なるヘッダー情報が入っている。その他、WebSocket のハンドシェイクを開始するために、 `Sec-WebSocket-Key` などが必要となる。
 
 接続確立すると `101 Switching Protocols` のレスポンスが返ってくる。
 
-~~~
+```
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Accept: sk85MqSFg1CGhAYRlSvctpzSALA=
-~~~
+```
 
 レスポンスヘッダーの中には、`Sec-WebSocket-Accept` なるセッション確立したことを示すデータが含まれる。
 

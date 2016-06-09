@@ -14,21 +14,21 @@ Maven の `archetype:generate` で DBFlute のオプションを指定する。
 
 SAStruts の雛形に DBFlute オプションを追加すると、必要な設定を含め雛形が出来る。
 
-~~~
+```
 mvn archetype:generate -DarchetypeRepository=https://www.seasar.org/maven/maven2/ \
     -DarchetypeGroupId=org.seasar.sastruts \
     -DarchetypeArtifactId=sa-struts-archetype -DarchetypeVersion=1.0.4-sp7 \
     -DgroupId=entity.app -DartifactId=entity -Dversion=0.1.0 \
     -Duse-dbflute=true -Ddbflute-version=0.9.6.1 -Ddbflute-plugin-version=0.3.0
-~~~
+```
 
 #### Eclipse プロジェクトに適応させる
 
 プロジェクトのROOT ディレクトリ内で、`eclipse:eclipse` タスクを実行する。
 
-~~~
+```
 mvn eclipse:eclipse
-~~~
+```
 
 m2eclipse プラグインの場合は `eclipse:m2eclipse`
 
@@ -37,7 +37,7 @@ m2eclipse プラグインの場合は `eclipse:m2eclipse`
 
 `pom.xml` にデータベースへの接続設定を追加する。
 
-~~~xml
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
@@ -226,16 +226,16 @@ m2eclipse プラグインの場合は `eclipse:m2eclipse`
         </dependency>
 
         <!-- 以下略 -->
-~~~
+```
 
 #### DBflute の設定
 
 プロジェクトのルートディレクトリで以下のコマンドを実行する。
 
-~~~
+```
 mvn dbflute:download
 mvn dbflute:create-client
-~~~
+```
 
 以上でプロジェクトの準備完了です。
 

@@ -33,7 +33,7 @@ A/B テスト自体はGoogle Analytics を使ったりしています。
 
 こんな感じのデプロイスクリプトを用意しています。
 
-~~~
+```
 #!/bin/sh
 S3_BUCKET="yulii.github.io" # S3 のバケット名を入れてください
 
@@ -76,7 +76,7 @@ then
   echo "[EXECUTE] $DEPLOY_CMD $BUILD_DIR $DEPLOY_URL"
   $DEPLOY_CMD $BUILD_DIR $DEPLOY_URL
 fi
-~~~
+```
 
 デプロイ自体は `middleman build` して `s3cmd put` するだけの作りになっています。アップロードする先のS3 のパスを現在作業中のGit ブランチ名から補完しています。本番反映されるので、一応の確認が入るようになっています。
 

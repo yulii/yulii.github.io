@@ -15,15 +15,15 @@ category: server
 
 #### root ユーザによる直接ログインを不許可
 
-~~~
+```
 PermitRootLogin no
-~~~
+```
 
 #### パスワード認証を不許可
 
-~~~
+```
 PasswordAuthentication no
-~~~
+```
 
 ## Match 構文
 

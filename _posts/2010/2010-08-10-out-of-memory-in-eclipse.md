@@ -18,11 +18,11 @@ tags: eclipse tomcat
 
 以下のパラメータを設定する。
 
-~~~
+```
 -XX:MaxPermSize=256m
 -Xmx512m
 -Xms256m
-~~~
+```
 
 RAMの容量を考慮して、適宜メモリを割り当てる。
 

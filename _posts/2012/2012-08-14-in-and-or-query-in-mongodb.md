@@ -10,7 +10,7 @@ tags: mongodb
 
 条件オペレータ `$in` について試してみた。
 
-~~~sh
+```sh
 > db.animals.find({}).count();
 100248
 > db.animals.getIndexes();
@@ -33,11 +33,11 @@ tags: mongodb
           "background" : true
      }
 ]
-~~~
+```
 
 インデックスを張った "type" フィールドに対して `$in` オペレーターで絞り込みする。
 
-~~~sh
+```sh
 > db.animals.find({ type: { $in: ["dog", "cat"] } }).explain();
 {
      "cursor" : "BtreeCursor type_1 multi",
@@ -62,11 +62,11 @@ tags: mongodb
           ]
      }
 }
-~~~
+```
 
 配列指定の条件となるがインデックスが効くのでそこそこ速い。ためしに、否定形の `$nin` オペレーターで絞り込みしてみる。
 
-~~~sh
+```sh
 > db.animals.find({ type: { $nin: ["bird", "monkey"] } }).explain();
 {
      "cursor" : "BasicCursor",
@@ -82,13 +82,13 @@ tags: mongodb
 
      }
 }
-~~~
+```
 
 インデックスが効かず、全ドキュメントを走査して残念な感じになった。Oracle, MySQL などのRDB でも INDEX (B-Tree) カラムに対してNOT 演算が入るとインデックスが使用されない。
 
 ためしついでに、`$in` 条件と同等の `$or` 条件で検索してみると・・・
 
-~~~sh
+```sh
 > db.animals.find({ $or: [{ type: "dog" }, { type: "cat" }] }).explain();
 {
      "clauses" : [
@@ -136,7 +136,7 @@ tags: mongodb
      "n" : 3144,
      "millis" : 247
 }
-~~~
+```
 
 実際のクエリであれば、単一フィールド条件で `$or` を使うことはないと思うが、ソート条件などと組み合わさるとインデックスが効かなくなって全ドキュメントを走査し始めるので注意。
 

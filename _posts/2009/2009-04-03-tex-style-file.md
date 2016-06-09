@@ -15,14 +15,14 @@ category: tex
 
 #### 例: pifont.sty の呼び出し
 
-~~~text
+```text
 \documentclass[12pt]{jarticle}
 % プリアンブル
 \usepackage{pifont}
 \begin{document}
  % 本文
 \end{document}
-~~~
+```
 
 ## 独自のスタイルファイル作成
 
@@ -40,17 +40,17 @@ category: tex
 
 #### Linux (Ubuntu)
 
-~~~
+```
 /usr/share/texmf/ptex/platex/
-~~~
+```
 
 #### Windows
 
 `%INSTALL_DIR%` はインストールしたディレクトリです。
 
-~~~
+```
 %INSTALL_DIR%/share/texmf/tex/
-~~~
+```
 
 サブディレクトリも検索してくれるので、配下に自分のスタイルファイルを保存するディレクトリを新しく作っても良いです。
 
@@ -58,14 +58,14 @@ category: tex
 
 以下のコマンドを実行すると、保存したファイルをコンパイラが認識してくれます。
 
-~~~
+```
 mktexlsr
-~~~
+```
 
 ### スタイルファイルの作成例
 
 {% raw %}
-~~~tex
+```tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ファイルの詳細（省略可）
 \def\j@urnalname{myset} \def\journalID{myset}
@@ -121,6 +121,6 @@ mktexlsr
 \makeatother
 
 \endinput
-~~~
+```
 {% endraw %}
 
