@@ -94,8 +94,9 @@ p {
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
+    margin-bottom: $spacing-unit;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
+    font-size: 1em;
     letter-spacing: -1px;
     font-style: italic;
 
