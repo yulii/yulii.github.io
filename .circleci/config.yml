@@ -13,4 +13,4 @@ jobs:
         paths:
           - vendor/bundle
 
-      - run: bundle outdated
+      - run: bundle exec jekyll build
