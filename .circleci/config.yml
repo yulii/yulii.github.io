@@ -5,12 +5,66 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - type: cache-restore
-        key: yulii-github-io-{{ checksum "Gemfile.lock" }}
-      - run: bundle install --path vendor/bundle --jobs=4
-      - type: cache-save
-        key: yulii-github-io-{{ checksum "Gemfile.lock" }}
-        paths:
-          - vendor/bundle
+      - restore_cache:
+          key: yulii-github-io-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install dependencies
+          command: bundle install --path vendor/bundle --jobs=4
+      - save_cache:
+          key: yulii-github-io-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
 
-      - run: bundle exec jekyll build
+      - run:
+          name: Build jekyll templates
+          command: bundle exec jekyll build
+
+  update:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - run:
+          name: Checkout code
+          command: git clone -b master --depth 1 https://${FORK_REPO_TOKEN}@github.com/yulii-bot/yulii.github.io.git .
+      - run:
+          name: Syncing fork
+          command: |
+            git remote add upstream https://github.com/yulii/yulii.github.io.git
+            git fetch upstream
+            git checkout master
+            git merge upstream/master
+      - run:
+          name: Update dependencies
+          command: bundle update
+      - run:
+          name: Commit auto update file
+          command: |
+            BRANCH="bundle-update-$(sha1sum Gemfile.lock | cut -d' ' -f1)"
+            test -n "$(git ls-remote origin ${BRANCH} 2> /dev/null)" && echo "Already committed." && exit 0
+            git config --local user.email yone.info@gmail.com
+            git config --local user.name 'yulii via ci'
+            git add Gemfile.lock
+            git commit -m 'Bundle update'
+            git branch -M ${BRANCH}
+            git push origin ${BRANCH}
+      - run:
+          name: Send auto update pull request
+          command: |
+            BRANCH="bundle-update-$(sha1sum Gemfile.lock | cut -d' ' -f1)"
+            curl -H "Authorization: token ${FORK_REPO_TOKEN}" \
+                 -X POST -H "Content-Type: application/json" \
+                 -d "{ \"title\": \"Bundle update\", \"body\": \"Auto update pull request!\", \"head\": \"yulii-bot:${BRANCH}\", \"base\": \"master\" }" \
+                 "https://api.github.com/repos/yulii/yulii.github.io/pulls" | tee /tmp/create-pull-request.log.json
+            test -n "$(cat /tmp/create-pull-request.log.json | jq -r 'select(.errors == null)')"
+
+workflows:
+  version: 2
+  build_and_update:
+    jobs:
+      - build
+      - update:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
