@@ -51,6 +51,7 @@ jobs:
           name: Send auto update pull request
           command: |
             BRANCH="bundle-update-$(sha1sum Gemfile.lock | cut -d' ' -f1)"
+            test -z "$(git ls-remote origin ${BRANCH} 2> /dev/null)" && echo "No update branch." && exit 0
             curl -H "Authorization: token ${FORK_REPO_TOKEN}" \
                  -X POST -H "Content-Type: application/json" \
                  -d "{ \"title\": \"Bundle update\", \"body\": \"Auto update pull request!\", \"head\": \"yulii-bot:${BRANCH}\", \"base\": \"master\" }" \
