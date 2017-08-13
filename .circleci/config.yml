@@ -39,10 +39,11 @@ jobs:
       - run:
           name: Commit auto update file
           command: |
+            test -z "$(git status -s Gemfile.lock 2> /dev/null)" && echo 'No update.' && exit 0
             BRANCH="bundle-update-$(sha1sum Gemfile.lock | cut -d' ' -f1)"
-            test -n "$(git ls-remote origin ${BRANCH} 2> /dev/null)" && echo "Already committed." && exit 0
-            git config --local user.email yone.info@gmail.com
-            git config --local user.name 'yulii via ci'
+            test -n "$(git ls-remote origin ${BRANCH} 2> /dev/null)" && echo 'Already committed.' && exit 0
+            git config --local user.email 'yuliinfo+bot@gmail.com'
+            git config --local user.name 'yulii-bot'
             git add Gemfile.lock
             git commit -m 'Bundle update'
             git branch -M ${BRANCH}
@@ -51,11 +52,14 @@ jobs:
           name: Send auto update pull request
           command: |
             BRANCH="bundle-update-$(sha1sum Gemfile.lock | cut -d' ' -f1)"
-            test -z "$(git ls-remote origin ${BRANCH} 2> /dev/null)" && echo "No update branch." && exit 0
+            test -z "$(git ls-remote origin ${BRANCH} 2> /dev/null)" && echo "Update branch not found." && exit 0
+            git fetch origin ${BRANCH}
+            test -z "$(git diff upstream/master...FETCH_HEAD)" && echo "No changes." && exit 0
             curl -H "Authorization: token ${FORK_REPO_TOKEN}" \
                  -X POST -H "Content-Type: application/json" \
                  -d "{ \"title\": \"Bundle update\", \"body\": \"Auto update pull request!\", \"head\": \"yulii-bot:${BRANCH}\", \"base\": \"master\" }" \
-                 "https://api.github.com/repos/yulii/yulii.github.io/pulls" | tee /tmp/create-pull-request.log.json
+                 "https://api.github.com/repos/yulii/yulii.github.io/pulls" \
+                 | tee /tmp/create-pull-request.log.json
             test -n "$(cat /tmp/create-pull-request.log.json | jq -r 'select(.errors == null)')"
 
 workflows:
