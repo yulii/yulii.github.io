@@ -29,6 +29,6 @@ paginate: 5
 paginate_path: /:num/
 
 # Gem
-gems:
+plugins:
   - jekyll-paginate
   - jemoji
