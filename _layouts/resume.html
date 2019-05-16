@@ -1,0 +1,19 @@
+---
+layout: default
+schema:
+  - breadcrumb
+---
+<article class="content">
+  <header>
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <section class="markdown">
+    {{ content }}
+  </section>
+
+  <footer>
+    {% assign url = page.url | prepend: site.url %}
+    {% include plugins/share-buttons.html url=url %}
+  </footer>
+</article>
