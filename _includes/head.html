@@ -1,19 +1,18 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="msvalidate.01" content="6E81753B125323D79D85D7F71BE6E8DB">
-  <title>{% if page.title %}{{ page.title }} :: {{ site.title }}{% else %}{{ site.title }}{% endif %}{% if paginator.page > 1 %} (p. {{ paginator.page }}){% endif %}</title>
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}{% if paginator.page > 1 %} (p. {{ paginator.page }}){% endif %}">
-  {% elsif page.content != blank %}
-  <meta name="description" content="{{ page.content | strip_newlines | strip_html | truncate: 96 | xml_escape }}">
-  {% endif %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="msvalidate.01" content="6E81753B125323D79D85D7F71BE6E8DB">
+<title>{% if page.title %}{{ page.title }} :: {{ site.title }}{% else %}{{ site.title }}{% endif %}{% if paginator.page > 1 %} (p. {{ paginator.page }}){% endif %}</title>
+{% if page.description %}
+<meta name="description" content="{{ page.description }}{% if paginator.page > 1 %} (p. {{ paginator.page }}){% endif %}">
+{% elsif page.content != blank %}
+<meta name="description" content="{{ page.content | strip_newlines | strip_html | truncate: 96 | xml_escape }}">
+{% endif %}
 
-  {% include meta/ogp.html %}
+{% include meta/ogp.html %}
 
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="256x256" href="/img/icon/apple-touch-icon-256.png">
-</head>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="256x256" href="/img/icon/apple-touch-icon-256.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">

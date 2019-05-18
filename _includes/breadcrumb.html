@@ -1,9 +1,11 @@
 {% if page.title %}
-<ol class="breadcrumb">
-  <li><a href="{{ site.url }}">yulii</a></li>
-  {% if layout.breadcrumb == 'category' and page.category %}
-    {% include breadcrumb/category.html category=page.category %}
-  {% endif %}
-  <li><span>&nbsp;/&nbsp;</span><strong>{{ page.title | truncate: 30 }}</strong></li>
-</ol>
+<nav>
+  <ol class="breadcrumb">
+    <li><a href="{{ site.url }}">yulii</a></li>
+    {% if layout.breadcrumb == 'category' and page.category %}
+      {% include breadcrumb/category.html category=page.category %}
+    {% endif %}
+    <li><span>&nbsp;/&nbsp;</span><strong>{{ page.title | truncate: 30 }}</strong></li>
+  </ol>
+</nav>
 {% endif %}
