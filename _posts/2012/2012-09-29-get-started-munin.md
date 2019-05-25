@@ -2,8 +2,8 @@
 layout: post
 title:  "Munin ではじめるサーバ監視"
 date:   2012-09-29 08:13:48 UTC+9
-category: server
-tags: munin supervision
+category: engineering
+tags: server munin supervision
 ---
 
 ## リソース監視ツール Munin
@@ -68,4 +68,3 @@ port 54949
 ```
 
 Cron で5分毎にサマリが HTML で出力されるので、適宜Web サーバでファイルが見れるように設定したら終わり。デフォルト設定では `/var/www/html/munin` 以下に出力される。
-

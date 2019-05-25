@@ -2,7 +2,7 @@
 layout: post
 title:  "会議の生産性を上げるために気をつけていること"
 date:   2017-11-19 01:15:34 UTC+9
-category: business
+category: culture
 tags: communication
 ---
 

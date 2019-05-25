@@ -2,7 +2,8 @@
 layout: post
 title:  "うっかりさんのための Cabal Hell プロテクター"
 date:   2014-09-06 13:21:30 UTC+9
-category: haskell
+category: engineering
+tags: haskell
 ---
 
 Haskell を使うときは Cabal だよね。でも、`cabal` でパッケージをインストールするときに、依存の解消がイマイチでハマりがち。
@@ -67,4 +68,3 @@ cabal() {
 ```
 
 これで、`cabal install cabal-install` するときに確認してくれます。Happy Haskelling and Happy Holidays!
-

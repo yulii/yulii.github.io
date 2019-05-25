@@ -1,7 +1,7 @@
 ---
-layout: category
+layout: tag
 title: JavaScript
 description: JavaScript プログラミングのスニペット、コーディングや高速化のTips まとめ。
-category: javascript
-permalink: /javascript.html
+tag: javascript
+permalink: /tags/javascript.html
 ---

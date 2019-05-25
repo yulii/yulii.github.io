@@ -2,8 +2,8 @@
 layout: post
 title:  "Subversion とApache の連携設定"
 date:   2009-04-08 02:32:54 UTC+9
-category: server
-tags: apache subversion
+category: engineering
+tags: server apache subversion
 ---
 
 ## Apache との連携
@@ -56,4 +56,3 @@ New password:
 Re-type new password:
 Adding password for user secret
 ```
-

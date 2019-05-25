@@ -2,6 +2,7 @@
 layout: post
 title:  "Re:dash に登録実行されているクエリを整理する"
 date:   2018-05-28 23:57:35 UTC+9
+category: engineering
 tag: sql
 ---
 

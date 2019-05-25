@@ -2,7 +2,8 @@
 layout: post
 title:  "TeX スタイルファイルの使い方と書き方"
 date:   2009-04-03 06:29:43 UTC+9
-category: tex
+category: engineering
+tags: tex
 ---
 
 ## TeX スタイルファイル
@@ -123,4 +124,3 @@ mktexlsr
 \endinput
 ```
 {% endraw %}
-

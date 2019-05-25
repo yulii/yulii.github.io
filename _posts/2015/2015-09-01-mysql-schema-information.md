@@ -2,8 +2,8 @@
 layout: post
 title:  "MySQL でテーブルやカラムの情報を確認する方法まとめ"
 date:   2015-09-01 23:42:42 UTC+9
-category: database
-tags: mysql sql
+category: engineering
+tags: database mysql sql
 ---
 
 MySQL で作成済みのテーブルやカラムの定義を調べる方法をまとめました。知っておくといろいろ捗るかも。

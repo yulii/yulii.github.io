@@ -2,8 +2,8 @@
 layout: post
 title:  "コマンド実行結果のdiff を取るといろいろ捗る"
 date:   2015-06-27 23:08:12 UTC+9
-category: unix
-tags: dns shell
+category: engineering
+tags: unix dns shell
 ---
 
 たまに必要になる diff コマンドのTips メモです。
@@ -54,5 +54,3 @@ dig @ns.example.com example.com a +short
 ```
 
 複数の値が設定されている場合があるので、 `sort` して差分が出ないようにして `diff` へ渡すと設定内容に問題が無いかチェックできる。
-
-

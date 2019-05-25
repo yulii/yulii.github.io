@@ -2,7 +2,8 @@
 layout: post
 title:  "カッコいいグラフを描けるJavaScript ライブラリまとめ"
 date:   2014-12-14 15:10:54 UTC+9
-category: javascript
+category: engineering
+tags: javascript
 ---
 
 [40 JavaScript Chart and Graph Libraries](http://jqueryhouse.com/javascript-chart-and-graph-libraries/) からいくつかピックアップ
@@ -26,4 +27,3 @@ category: javascript
 ### [Highcharts](http://www.highcharts.com/)
 
 デザインがイケているので、昔はよく使ってました。商用ライセンスです。
-

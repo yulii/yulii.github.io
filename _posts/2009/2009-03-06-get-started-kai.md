@@ -2,7 +2,8 @@
 layout: post
 title:  "分散Key/ValueストアKai のインストール"
 date:   2009-03-06 07:59:46 UTC+9
-category: database
+category: engineering
+tags: database
 ---
 
 ## 分散Key/ValueストアKai の始め方
@@ -116,4 +117,3 @@ erl -pa ebin -config kai -kai n 1 -kai r 1 -kai w 1
 ```
 
 ok と出力が返ってくれば動作確認完了です。
-

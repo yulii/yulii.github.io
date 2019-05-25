@@ -2,7 +2,8 @@
 layout: post
 title:  "Cabal パッケージに外部ファイルを埋め込む"
 date:   2014-09-18 17:53:23 UTC+9
-category: haskell
+category: engineering
+tags: haskell
 ---
 
 Cabal パッケージで実行時に必要な外部ファイル埋め込む方法について
@@ -32,4 +33,3 @@ getContent = do
 ```
 
 参考) _[Accessing data files from package code](http://www.haskell.org/cabal/users-guide/developing-packages.html#accessing-data-files-from-package-code)_
-

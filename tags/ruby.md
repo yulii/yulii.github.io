@@ -1,7 +1,7 @@
 ---
-layout: category
+layout: tag
 title: Ruby
 description: Ruby でのプログラミングや環境構築のメモ書き
-category: ruby
-permalink: /ruby.html
+tag: ruby
+permalink: /tags/ruby.html
 ---

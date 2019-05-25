@@ -2,8 +2,8 @@
 layout: post
 title:  "Capistrano のデプロイ実行を通知するGem を作った"
 date:   2015-08-13 21:01:08 UTC+9
-category: ruby
-tags: ci
+category: engineering
+tags: ruby ci
 ---
 
 今のところ、Webhook にしか対応していない。とりあえず、Slack は連携できます。
@@ -110,4 +110,3 @@ after  'deploy:failed',    'webhook:post:failed'
 Capistrano タスクのテストはどうしたら良いのか？
 
 `capistrano-bundler` や`capistrano-rbenv` などを読んだけど、テストが無かった :disappointed_relieved:
-

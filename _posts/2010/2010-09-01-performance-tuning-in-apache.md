@@ -2,8 +2,8 @@
 layout: post
 title:  "Apache のパフォーマンスチューニング設定"
 date:   2010-09-01 01:38:18 UTC+9
-category: server
-tags: apache
+category: engineering
+tags: server apache performance
 ---
 
 ## MMapFile でキャッシュの設定
@@ -78,4 +78,3 @@ StartServers が多いとサービスダウン時間が大きくなるので注�
     MaxRequestsPerChild   0
 </IfModule>
 ```
-

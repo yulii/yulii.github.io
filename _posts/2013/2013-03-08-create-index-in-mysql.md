@@ -2,8 +2,8 @@
 layout: post
 title:  "MySQL でインデックスのチューニング入門"
 date:   2013-03-08 06:43:05 UTC+9
-category: database
-tags: mysql performance
+category: engineering
+tags: database mysql performance
 ---
 
 ## MySQL でクエリのチューニング
@@ -116,4 +116,3 @@ mysql> SHOW INDEX FROM purchases;
 ```
 
 参考例が分析用でそもそもSQL 自体にちょっとよろしくない部分があるので、`EXPLAIN` を見ながらどんなインデックスを設定するか考える参考になれば・・・。
-

@@ -2,8 +2,8 @@
 layout: post
 title:  "rails runner を使わないバッチ処理を実装してみた"
 date:   2012-12-23 03:10:59 UTC+9
-category: ruby
-tags: rails
+category: engineering
+tags: ruby rails
 ---
 
 `rails runner` みたいに環境を読み込んでバッチ処理したい。けど、単独で処理するので `lib/` とかに入れて Rails アプリケーション自体にはロードしたくない。的なノリで Batch 処理を作ってみた。

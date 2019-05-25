@@ -2,8 +2,8 @@
 layout: post
 title:  "Action Mailer で覚えておくと便利な機能"
 date:   2015-08-08 20:12:46 UTC+9
-category: ruby
-tags: rails
+category: engineering
+tags: ruby rails
 ---
 
 ## Rails Console でメール送信確認
@@ -103,4 +103,3 @@ let(:mailer) do
   end
 end
 ```
-

@@ -2,7 +2,8 @@
 layout: post
 title:  "Linux でメモリの使用状況をチェックする"
 date:   2013-03-06 14:43:12 UTC+9
-category: unix
+category: engineering
+tags: unix
 ---
 
 ## Linux でメモリの使用量を調べるコマンド
@@ -44,4 +45,3 @@ ps aux --sort -rss
 ```sh
 ps aux --sort -vsize
 ```
-

@@ -1,7 +1,7 @@
 ---
-layout: category
+layout: tag
 title: C言語
 description: C言語プログラミングの技術メモやスニペットコードをまとめた記事です。
-category: c-lang
-permalink: /c-lang.html
+tag: c-lang
+permalink: /tags/c-lang.html
 ---

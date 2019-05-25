@@ -2,8 +2,8 @@
 layout: post
 title:  "プロセス監視とデーモン化ツールまとめ"
 date:   2014-01-17 15:15:23 UTC+9
-category: server
-tags: supervision
+category: engineering
+tags: server supervision
 ---
 
 ## プロセス監視ツール
@@ -121,4 +121,3 @@ id:3:initdefault:
 Web サービスの監視 HTTP (S) や `ping`, ポートの監視が出来る。メールやTwitter へのアラート設定ができる。プロセスの自動復帰はできないけど、アラートだけ飛ばすなら簡単に使える。
 
 Uptime Robot [http://uptimerobot.com/](http://uptimerobot.com/)
-

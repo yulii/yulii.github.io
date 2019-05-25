@@ -2,8 +2,8 @@
 layout: post
 title:  "オンメモリKVS のmemcached の使い方"
 date:   2009-04-19 12:30:21 UTC+9
-category: server
-tags: memcached
+category: engineering
+tags: server memcached
 ---
 
 ## memcached とは？
@@ -170,4 +170,3 @@ get key
 VALUE key 0 5
 value
 ```
-

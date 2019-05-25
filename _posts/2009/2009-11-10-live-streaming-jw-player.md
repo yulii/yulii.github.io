@@ -2,8 +2,8 @@
 layout: post
 title:  "ライブ配信サーバー構築 〜 Web サーバー (JW Player) の設定 〜"
 date:   2009-11-10 07:34:33 UTC+9
-category: javascript
-tags: ffmpeg
+category: engineering
+tags: javascript ffmpeg
 ---
 
 ## ライブ映像を表示する Web サーバーの設定
@@ -30,4 +30,3 @@ window.onload = function() {
     fs.write('flashStreaming');
 };
 ```
-

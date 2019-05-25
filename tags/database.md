@@ -1,7 +1,7 @@
 ---
-layout: category
+layout: tag
 title: データベース
 description: リレーショナルデータベースやNoSQL などストレージに関するTips や設計思想メモ
-category: database
-permalink: /database.html
+tag: database
+permalink: /tags/database.html
 ---

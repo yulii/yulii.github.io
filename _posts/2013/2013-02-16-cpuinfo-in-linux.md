@@ -2,7 +2,8 @@
 layout: post
 title:  "CPU (コア、プロセッサ) の数を調べる @Linux"
 date:   2013-02-16 09:10:44 UTC+9
-category: unix
+category: engineering
+tags: unix
 ---
 
 ## コマンドで簡単にCPU の数を調べる方法
@@ -35,4 +36,3 @@ physical id     : 0
 ```
 
 `physical id` の値の種類が1つなので、物理CPU は1個
-

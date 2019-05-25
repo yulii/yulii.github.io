@@ -1,7 +1,7 @@
 ---
-layout: category
+layout: tag
 title: Perl
 description: Perl プログラミングやワンライナーのコードの技術メモです。
-category: perl
-permalink: /perl.html
+tag: perl
+permalink: /tags/perl.html
 ---

@@ -2,7 +2,8 @@
 layout: post
 title:  "カスタマーサポートの心構え"
 date:   2018-08-01 19:54:12 UTC+9
-category: note
+category: culture
+tags: customer-service
 ---
 
 ゼロからカスタマーサポートを作る中で、カスタマーサポートとは何なのか？

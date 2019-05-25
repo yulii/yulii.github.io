@@ -2,8 +2,8 @@
 layout: post
 title:  "Node.js + WebSocket で双方向通信をはじめる"
 date:   2012-07-29 18:43:21 UTC+9
-category: javascript
-tags: nodejs websocket
+category: engineering
+tags: javascript nodejs websocket
 ---
 
 ## Node.js のインストール
@@ -172,4 +172,3 @@ Sec-WebSocket-Accept: sk85MqSFg1CGhAYRlSvctpzSALA=
 レスポンスヘッダーの中には、`Sec-WebSocket-Accept` なるセッション確立したことを示すデータが含まれる。
 
 細かい仕様は、[RFC6455 The WebSocket Protocol](http://tools.ietf.org/html/rfc6455) で。
-

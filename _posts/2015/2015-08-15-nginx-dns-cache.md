@@ -2,8 +2,8 @@
 layout: post
 title:  "Nginx のDNS 名前解決とS3 やELB へのリバースプロキシ"
 date:   2015-08-15 17:51:23 UTC+9
-category: server
-tags: nginx aws
+category: engineering
+tags: server nginx aws
 ---
 
 Nginx をフロントに立てて、バックエンドをごにょごにょするといろいろ捗ると思います。
@@ -69,4 +69,3 @@ server {
 ```
 
 逆にDNS への問い合わせが不要なら `resolver` は指定せずにNginx のキャッシュ任せ or IP アドレス指定にすると良いと思います。
-

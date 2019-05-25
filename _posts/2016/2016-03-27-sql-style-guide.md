@@ -2,8 +2,8 @@
 layout: post
 title:  "SQL クエリのコーディング規約（スタイルガイド）"
 date:   2016-03-27 19:14:28 UTC+9
-category: database
-tags: sql
+category: engineering
+tags: database sql
 ---
 
 SQLを読みやすくするためのインデントや記法に関するガイドです。個人的なルールかつ、厳格に決めていないので読みやすさを意識して調整したりします。各サンプルのクエリはMySQL で実行確認しています。

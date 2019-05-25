@@ -1,184 +1,130 @@
 apache:
-  type: tag
   face: Apache
   description: "Webサーバソフトウェア Apacheのインストール方法から動作確認、メンテナンス、チューニング方法などの解説記事です。"
 aws:
-  type: tag
   face: Amazon Web Service
   description: "Amazon Web Service の構築・設計、ツール関連の技術記事です。"
-business:
-  type: category
-  face: ビジネス
-  description: "ビジネスや事業戦略について調べたことやフレームワークをまとめた記事です。"
 c-lang:
-  type: category
   face: C言語
   description: "C言語プログラミングの技術メモやスニペットコードをまとめた記事です。"
 centos:
-  type: tag
   face: CentOS
   description: "CentOS に関する設定やサーバー構築メモ"
 ci:
-  type: tag
   face: "継続的インテグレーション (CI)"
   description: "テスト自動化、コード静的解析ツールなど継続的インテグレーション (Continuous Integration) に関連した技術基盤の記事です。"
 code-review:
-  type: tag
   face: "コードレビュー"
 communication:
-  type: tag
   face: "コミュニケーション"
-culture:
-  type: category
-  face: "エンジニアリング・カルチャー"
-  description: "ハッカー文化、開発チームビルディングに関する記事です。開発ワークフローやコードレビューのコミュニケーションなどをまとめました。"
+customer-service:
+  face: "カスタマーサービス"
+  description: "CS職（カスタマーサクセスやカスタマーサポート）のナレッジや組織創りの記事です。"
 database:
-  type: category
   face: "データベース"
   description: "リレーショナルデータベースやNoSQL などストレージに関するTips や設計思想メモ"
 dns:
-  type: tag
   face: "DNS"
 eclipse:
-  type: tag
   face: Eclipse
   description: "統合開発環境 IDE のEclipse に関する設定やショートカットキーまとめ"
 ffmpeg:
-  type: tag
   face: FFmpeg
   description: "FFmpeg / FFserver による動画エンコードやライブストリーミング配信サーバーの構築メモ"
 git:
-  type: tag
   face: Git
   description: "分散型バージョン管理システムGit に関するメモ"
 growth-hacking:
-  type: tag
   face: グロースハック
   description: "サービスの継続的な成長に必要なマインドセットやデータ分析、プロダクトの改善施策"
 haskell:
-  type: category
   face: Haskell
   description: "純粋関数型言語のHaskell についての技術メモ"
 hubot:
-  type: tag
   face: Hubot
   description: "Github 社製のBot フレームワークで作ったもの"
 http:
-  type: tag
   face: HTTP
 java:
-  type: category
   face: Java
   description: "Java プログラミングのスニペットや環境構築のメモ"
 javascript:
-  type: category
   face: JavaScript
   description: "JavaScript プログラミングのスニペット、コーディングや高速化のTips まとめ。"
 maven:
-  type: tag
   face: Maven
   description: "プロジェクトのライフサイクル全体を管理できる Maven の利用方法ドキュメントです。Maven は Project Object Model (POM) に基づき、プロジェクトのビルド、テスト、ドキュメンテーション、成果物の配備が出来ます。"
 memcached:
-  type: tag
   face: memcached
   description: "分散メモリキャッシュシステム memcached の使い方や設定の技術記事です。memcached を利用した開発メモをまとめました。"
 mongodb:
-  type: tag
   face: MongoDB
   description: "ドキュメント指向データベース MongoDB の使い方や設定方法からクエリチューニングに関する記事です。"
 munin:
-  type: tag
   face: Munin
   description: "リソース監視ツール Munin の設定やカスタマイズについての記事まとめ"
 mysql:
-  type: tag
   face: MySQL
   description: "MySQL の設定やSQL チューニング、インデックス設計など気になった事をまとめました。"
 network:
-  type: category
   face: ネットワーク
   description: "インターネットの基礎技術に関連した話題。ネットワーク周りの勉強資料まとめ。"
 nginx:
-  type: tag
   face: Nginx
   description: "WebサーバのNginx (エンジンエックス) の設定方法まとめ。処理性能・高い並行性・省メモリがNginx 特徴らしい。"
 nodejs:
-  type: tag
   face: Node.js
   description: "Node.js でのアプリケーション開発や npm パッケージについての記事です。"
-note:
-  type: category
-  face: もやもや
-  description: "もやもや思考したことをとっ散らかしておくチラシの裏"
 pdf:
-  type: tag
   face: PDF
 performance:
-  type: tag
   face: パフォーマンスチューニング
   description: "ミドルウェアやアプリケーションのパフォーマンスに影響する設計や設定などのチューニングに関するTips 紹介です。"
 perl:
-  type: category
   face: Perl
   description: "Perl プログラミングやワンライナーのコードの技術メモです。"
 php:
-  type: category
   face: PHP
   description: "PHP プログラミングの技術メモやスニペットコードをまとめた記事です。"
 rails:
-  type: tag
   face: Ruby on Rails
   description: "Ruby on Rails の機能やアプリケーション開発の際の設計などを紹介した記事です。"
 ruby:
-  type: category
   face: Ruby
   description: "Ruby でのプログラミングや環境構築のメモ書き"
 security:
-  type: tag
   face: セキュリティー・脆弱性
 server:
-  type: category
   face: サーバー
   description: "サーバー構築作業や設定方法の技術メモ"
 shell:
-  type: tag
   face: シェルスクリプト
 sql:
-  type: tag
   face: SQL
 subversion:
-  type: tag
   face: Subversion
   description: "バージョン管理システム Subversion の使い方やサーバー設定についての技術ドキュメントです。"
 supervision:
-  type: tag
   face: システム監視
   description: "死活監視やリソース監視などのシステム監視ツールの導入、設定の紹介です。"
 tex:
-  type: category
   face: TeX
   description: "TeX の書き方やスタイルファイルによる独自マクロ作成などTeX による文章作成のための記事です。"
 tomcat:
-  type: tag
   face: Tomcat
   description: "Java サーブレット、JSP を処理するアプリケーションサーバ Tomcat の使い方や設定方法の備忘録です。"
 ubuntu:
-  type: tag
   face: Ubuntu
   description: "Ubuntu の設定に関するメモやサーバー構築ノウハウ"
 unix:
-  type: category
   face: Unix / Linux
   description: "UNIXやLinuxでのサーバー設定やコマンドに関する各種メモ書き"
 websocket:
-  type: tag
   face: WebSocket
   description: "双方向通信を実現するためのプロトコル WebSocket の技術メモ"
 windows:
-  type: category
   face: Windows
   description: "Windows の設定や環境構築についての記事です。バッチファイルの記述方法の技術ドキュメントをまとめました。"
 yesod:
-  type: tag
   face: Yesod
   description: "Haskell で書かれたWebフレームワーク Yesod の開発について"

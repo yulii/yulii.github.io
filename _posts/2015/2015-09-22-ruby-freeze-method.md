@@ -2,7 +2,8 @@
 layout: post
 title:  "Ruby の定数やfreeze の扱い方が難しい"
 date:   2015-09-22 16:49:21 UTC+9
-category: ruby
+category: engineering
+tags: ruby
 ---
 
 Ruby の定数はミュータブルのため、目立たないバグを埋め込む可能性がある。
@@ -162,4 +163,3 @@ RuntimeError: can't modify frozen String
 ```
 
 一行で定義できなくて、そろそろツライ。
-

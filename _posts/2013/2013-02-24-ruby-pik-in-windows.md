@@ -2,7 +2,7 @@
 layout: post
 title:  "Windows で Ruby のバージョン管理 (pik) を使う"
 date:   2013-02-24 11:19:23 UTC+9
-category: ruby
+category: engineering
 ---
 
 ## Windows 版 RVM
@@ -71,4 +71,3 @@ INFO: Downloading:  http://downloads.sourceforge.net/sevenzip/7za920.zip
 
 >pik use ruby-1.9.2
 ```
-

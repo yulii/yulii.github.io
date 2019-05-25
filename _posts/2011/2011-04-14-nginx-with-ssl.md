@@ -2,8 +2,8 @@
 layout: post
 title:  "Nginx に SSL 証明書を入れて HTTPS の設定"
 date:   2011-04-14 16:34:24 UTC+9
-category: server
-tags: nginx
+category: engineering
+tags: server nginx
 ---
 
 ## Nginx で SSL 証明書の設定
@@ -58,4 +58,3 @@ cat server.cer cacert.cer > cert.pem
 [中間証明書]
 -----END CERTIFICATE-----
 ```
-

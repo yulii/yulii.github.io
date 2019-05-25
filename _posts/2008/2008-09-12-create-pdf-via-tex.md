@@ -2,8 +2,8 @@
 layout: post
 title:  "TeX で PDF ファイルを生成する"
 date:   2008-09-12 12:43:01 UTC+9
-category: tex
-tags: pdf
+category: engineering
+tags: tex pdf
 ---
 
 ## TeX ドキュメントのコンパイル
@@ -34,4 +34,3 @@ dvipdfmx hoge.dvi
 ```sh
 platex -kanji=euc hoge.tex
 ```
-

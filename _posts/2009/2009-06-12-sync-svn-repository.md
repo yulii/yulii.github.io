@@ -2,8 +2,8 @@
 layout: post
 title:  "Subversion リポジトリの同期設定"
 date:   2009-06-12 16:56:13 UTC+9
-category: server
-tags: subversion
+category: engineering
+tags: server subversion
 ---
 
 ## svnsync でリポジトリの同期
@@ -52,4 +52,3 @@ svnsync sync file:///home/svn/backup
 ```
 
 あとはCron などで定期的に `sync` タスクを実行すればOK.
-

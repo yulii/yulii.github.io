@@ -2,8 +2,8 @@
 layout: post
 title:  "Amazon S3 をコマンドラインから操作する s3cmd"
 date:   2014-09-04 19:51:15 UTC+9
-category: server
-tags: aws
+category: engineering
+tags: server aws
 ---
 
 Amazon S3 に対する作業は Management Console や AWS SDK (PHP, Java, Ruby, .NET) で行うことができる。ただ、バックアップ処理やFTP っぽくファイルサーバー扱いするときはコマンドラインで使える `s3cmd` が便利。
@@ -85,4 +85,3 @@ s3cmd put -r build/ s3://<bucket-name>/path/to/file
 ```
 
 適宜シェルスクリプトにまとめて置くなどすると運用が楽。
-

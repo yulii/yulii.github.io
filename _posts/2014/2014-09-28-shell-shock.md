@@ -2,8 +2,8 @@
 layout: post
 title:  "Bash 脆弱性の対応 #ShellShock (Mac OS X)"
 date:   2014-09-28 14:47:54 UTC+9
-category: unix
-tags: shell security
+category: engineering
+tags: unix shell security
 ---
 
 Bash に含まれる深刻なバグ (通称: ShellShock) の対応方法について
@@ -120,4 +120,3 @@ There is NO WARRANTY, to the extent permitted by law.
 - [GNU bash の脆弱性に関する注意喚起](https://www.jpcert.or.jp/at/2014/at140037.html)
 - [bashの脆弱性(CVE-2014-6271) #ShellShock の関連リンクをまとめてみた](http://d.hatena.ne.jp/Kango/20140925/1411612246)
 - [閲覧でウイルス感染も「ｂａｓｈ」に重大欠陥](http://www3.nhk.or.jp/news/html/20140927/k10014922101000.html)
-

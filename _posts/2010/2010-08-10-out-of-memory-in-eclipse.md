@@ -2,8 +2,8 @@
 layout: post
 title:  "java.lang.OutOfMemoryError: PermGen space の対処法"
 date:   2010-08-10 01:32:52 UTC+9
-category: java
-tags: eclipse tomcat
+category: engineering
+tags: java eclipse tomcat
 ---
 
 ## java.lang.OutOfMemoryError: PermGen space
@@ -25,4 +25,3 @@ tags: eclipse tomcat
 ```
 
 RAMの容量を考慮して、適宜メモリを割り当てる。
-

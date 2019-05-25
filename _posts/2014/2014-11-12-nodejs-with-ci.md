@@ -2,8 +2,8 @@
 layout: post
 title:  "Travis CI + Coverall + Node.js (Hubot) で継続的インテグレーションしてみる"
 date:   2014-11-12 17:02:15 UTC+9
-category: javascript
-tags: nodejs hubot ci
+category: engineering
+tags: javascript nodejs hubot ci
 ---
 
 Hubot スクリプトのために、CI 環境を整えてみた。説明用にコードを切り出したりしているので、全体の設定は今回使っている [libinc/hubot-scripts](https://github.com/libinc/hubot-scripts) を見てください。
@@ -143,4 +143,3 @@ after_success:
 [![Build Status](https://api.travis-ci.org/libinc/hubot-scripts.png)](https://travis-ci.org/libinc/hubot-scripts)
 [![Coverage Status](https://img.shields.io/coveralls/libinc/hubot-scripts.svg)](https://coveralls.io/r/libinc/hubot-scripts?branch=master)
 [![Dependencies Status](https://david-dm.org/libinc/hubot-scripts.png)](https://david-dm.org/libinc/hubot-scripts)
-

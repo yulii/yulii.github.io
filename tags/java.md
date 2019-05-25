@@ -1,7 +1,7 @@
 ---
-layout: category
+layout: tag
 title: Java
 description: Java プログラミングのスニペットや環境構築のメモ
-category: java
-permalink: /java.html
+tag: java
+permalink: /tags/java.html
 ---

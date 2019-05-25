@@ -2,8 +2,8 @@
 layout: post
 title:  "Apache でサーバーの状態を表示する"
 date:   2010-08-21 14:10:02 UTC+9
-category: server
-tags: apache
+category: engineering
+tags: server apache
 ---
 
 ## サイトの動作のスナップショットの取得
@@ -31,4 +31,3 @@ ExtendedStatus On
 ```
 
 `/server-status` にアクセスするとみられる。ExtenedStatus ディレクティブを On にすると詳細を表示できる。
-

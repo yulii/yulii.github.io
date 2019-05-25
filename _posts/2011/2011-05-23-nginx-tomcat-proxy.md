@@ -2,8 +2,8 @@
 layout: post
 title:  "Nginx で Tomcat へリクエストを繋げる設定"
 date:   2011-05-23 14:42:21 UTC+9
-category: server
-tags: nginx tomcat
+category: engineering
+tags: server nginx tomcat
 ---
 
 ## Tomcat と Nginxの連携
@@ -44,4 +44,3 @@ server {
     }
 }
 ```
-

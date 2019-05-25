@@ -2,7 +2,8 @@
 layout: post
 title:  "SSH のセキュリティ設定メモ"
 date:   2010-07-13 18:59:27 UTC+9
-category: server
+category: engineering
+tags: server security
 ---
 
 ## SSH のセキュリティ設定について
@@ -58,4 +59,3 @@ FQDN は対象サーバ内での名前解決結果に依存、 `/etc/hosts` フ�
 - X11DisplayOffset
 - X11Forwarding
 - X11UseLocalHost
-

@@ -2,8 +2,8 @@
 layout: post
 title:  "SQL*Plusで「実行計画」を見える化"
 date:   2012-10-28 01:40:24 UTC+9
-category: database
-tag: performance sql
+category: engineering
+tag: database performance sql
 ---
 
 ## Oracle の実行計画 (EXPLAIN)

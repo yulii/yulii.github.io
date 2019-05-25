@@ -2,8 +2,8 @@
 layout: post
 title:  "Ubuntu の固定IPアドレス設定方法"
 date:   2009-02-08 05:45:03 UTC+9
-category: unix
-tags: ubuntu
+category: engineering
+tags: unix ubuntu
 ---
 
 ## 固定IP アドレスの設定
@@ -42,4 +42,3 @@ resolv.conf の所有グループを root に変更する。
 ```sh
 sudo chgrp root /etc/resolv.conf
 ```
-

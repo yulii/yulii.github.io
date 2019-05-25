@@ -2,11 +2,10 @@
 
 require 'yaml'
 
-config = YAML.load_file(File.expand_path('../../_data/meta.yml', __FILE__))
-config.each do |key, value|
-  case value['type']
-  when 'category'
-    page = <<-"EOS"
+# category
+categories = YAML.load_file(File.expand_path('../../_data/categories.yml', __FILE__))
+categories.each do |key, value|
+  page = <<-"EOS"
 ---
 layout: category
 title: #{value['face']}
@@ -14,11 +13,14 @@ description: #{value['description']}
 category: #{key}
 permalink: /#{key}.html
 ---
-    EOS
-    file = File.expand_path("../../categories/#{key}.md", __FILE__)
-    File.write(file, page)
-  when 'tag'
-    page = <<-"EOS"
+  EOS
+  file = File.expand_path("../../categories/#{key}.md", __FILE__)
+  File.write(file, page)
+end
+
+tags = YAML.load_file(File.expand_path('../../_data/tags.yml', __FILE__))
+tags.each do |key, value|
+  page = <<-"EOS"
 ---
 layout: tag
 title: #{value['face']}
@@ -26,11 +28,7 @@ description: #{value['description']}
 tag: #{key}
 permalink: /tags/#{key}.html
 ---
-    EOS
-    file = File.expand_path("../../tags/#{key}.md", __FILE__)
-    File.write(file, page)
-  else
-    raise StandardError
-  end
+  EOS
+  file = File.expand_path("../../tags/#{key}.md", __FILE__)
+  File.write(file, page)
 end
-

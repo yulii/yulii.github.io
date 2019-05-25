@@ -2,8 +2,8 @@
 layout: post
 title:  "個人情報保護のためのHTTP キャッシュ設定まとめ"
 date:   2013-12-21 06:55:43 UTC+9
-category: network
-tags: http
+category: engineering
+tags: network http
 ---
 
 ## キャッシュコントロール設定
@@ -96,4 +96,3 @@ HTTP レスポンスヘッダーと同様に HTML の meta タグで設定でき
 - ***HTTP リクエストで毎回サーバーに送信しない***
 - JavaScript からアクセス可能
 - ***有効期限はブラウザを閉じるまで***
-

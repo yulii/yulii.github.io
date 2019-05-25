@@ -2,8 +2,8 @@
 layout: post
 title:  "Haskell 製 WebフレームワークYesod はじめました"
 date:   2013-10-25 13:03:12 UTC+9
-category: haskell
-tags: yesod
+category: engineering
+tags: haskell yesod
 ---
 
 ## Yesod の環境準備
@@ -56,4 +56,3 @@ cabal-dev ghci
 
 Yesod 関連のモジュールを読み込んだ状態で GHCi が起動する。
 `import Import` すれば、Model やHandler などを使って実行できる。
-

@@ -2,8 +2,8 @@
 layout: post
 title:  "ライブ配信サーバー構築 (FFmpeg/FFserver)"
 date:   2009-11-10 08:01:04 UTC+9
-category: server
-tags: ffmpeg ubuntu
+category: engineering
+tags: server ffmpeg ubuntu
 ---
 
 ## Flash Player 向けのライブ配信サーバー構築

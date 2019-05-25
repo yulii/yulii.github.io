@@ -2,8 +2,8 @@
 layout: post
 title:  "Maven から SAStruts + DBFlute のプロジェクトを新規作成"
 date:   2010-07-14 06:16:19 UTC+9
-category: java
-tags: maven eclipse
+category: engineering
+tags: java maven eclipse
 ---
 
 ## DBFlute (SAStruts ベース) プロジェクトの雛形生成
@@ -238,4 +238,3 @@ mvn dbflute:create-client
 ```
 
 以上でプロジェクトの準備完了です。
-

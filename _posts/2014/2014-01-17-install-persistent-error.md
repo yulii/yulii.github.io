@@ -2,7 +2,8 @@
 layout: post
 title:  "Persistent インストールエラー対処 #Haskell"
 date:   2014-01-17 13:03:32 UTC+9
-category: haskell
+category: engineering
+tags: haskell
 ---
 
 ## Haskell の Persistent インストール
@@ -54,4 +55,3 @@ yum install pcre-devel
 ```
 
 再度 `cabal install` を実行すればOK.
-

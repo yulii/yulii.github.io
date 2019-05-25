@@ -2,8 +2,8 @@
 layout: post
 title:  "ライブ配信サーバー構築 〜 配信サーバー (FFserver) の設定 〜"
 date:   2009-11-10 08:04:03 UTC+9
-category: server
-tags: ffmpeg centos
+category: engineering
+tags: server ffmpeg centos
 ---
 
 ## 配信サーバの設定 (CentOS 5.4)
@@ -70,4 +70,3 @@ ffserver -f /etc/ffserver.conf >> /var/log/ff/streaming.log
 ```
 
 FFserver の出力するデータがログになるので，リダイレクトで書き込む。間違って上書きしないように ">>" で書き込む。
-

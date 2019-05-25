@@ -2,8 +2,8 @@
 layout: post
 title:  "Mongoid のクエリを最適化する"
 date:   2012-07-30 21:22:08 UTC+9
-category: ruby
-tags: mongodb performance
+category: engineering
+tags: ruby mongodb performance
 ---
 
 Mongoid で発行されるクエリを最適化するために知っておきたい機能

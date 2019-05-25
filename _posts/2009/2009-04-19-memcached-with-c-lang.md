@@ -2,8 +2,8 @@
 layout: post
 title:  "C言語で memcached をいじってみる"
 date:   2009-04-19 12:26:00 UTC+9
-category: c-lang
-tags: memcached
+category: engineering
+tags: c-lang memcached
 ---
 
 ## C言語クライアントライブラリ libmemcached
@@ -213,4 +213,3 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-

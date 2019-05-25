@@ -2,8 +2,8 @@
 layout: post
 title:  "MongoDB の実行計画 explain() を読んでみる"
 date:   2012-06-27 16:48:23 UTC+9
-category: database
-tags: mongodb performance
+category: engineering
+tags: database mongodb performance
 ---
 
 ## explain() の使い方
@@ -103,4 +103,3 @@ tags: mongodb performance
 ```
 
 ちなみに、クエリ結果のデータが少ない場合 (4MB以下) ならインデックスなしで `sort()` が使えるが、 `limit()` と `sort()` を一緒に使うのが良いらしい。
-

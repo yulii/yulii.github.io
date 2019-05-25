@@ -2,8 +2,8 @@
 layout: post
 title:  "sudoers でプロセス起動専用ユーザと一般ユーザの権限管理"
 date:   2013-12-11 14:31:40 UTC+9
-category: unix
-tags: yesod
+category: engineering
+tags: unix yesod
 ---
 
 ## sudoers 設定
@@ -100,4 +100,3 @@ sudo -u angel /var/opt/angel/build_yulii_production
 ```sh
 sudo -u angel /var/opt/angel/build_yulii_production upgrade
 ```
-

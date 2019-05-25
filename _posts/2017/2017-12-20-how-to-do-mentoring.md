@@ -2,7 +2,7 @@
 layout: post
 title:  "1on1ミーティングにおけるメンターの対話手法"
 date:   2017-12-20 23:27:09 UTC+9
-category: business
+category: culture
 tags: communication
 ---
 

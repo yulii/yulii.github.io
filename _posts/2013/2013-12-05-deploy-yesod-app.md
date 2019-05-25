@@ -2,8 +2,8 @@
 layout: post
 title:  "Yesod アプリケーションの本番環境デプロイ"
 date:   2013-12-05 04:22:12 UTC+9
-category: haskell
-tags: yesod
+category: engineering
+tags: haskell yesod
 ---
 
 ## デプロイ手順書
@@ -157,4 +157,3 @@ su - -s /bin/bash angel -c "nohup angel $CONFIG_FILE > $LOG_DIR/angel.stdout.log
 ```
 
 リロードするときは、アプリケーションをビルドした後、Angel ではなくアプリケーションのプロセスを `kill` すると立ち上げ直してくれる。
-

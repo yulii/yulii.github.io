@@ -2,8 +2,8 @@
 layout: post
 title:  "Maven から SAStruts のプロジェクトを新規作成"
 date:   2010-06-18 14:27:02 UTC+9
-category: java
-tags: eclipse maven
+category: engineering
+tags: java eclipse maven
 ---
 
 ## SAStruts プロジェクトの雛形生成
@@ -24,4 +24,3 @@ mvn eclipse:eclipse
 ```
 
 m2eclipse プラグインの場合は `eclipse:m2eclipse` を利用する。
-

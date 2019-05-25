@@ -2,8 +2,8 @@
 layout: post
 title:  "Apache ログの出力をカスタマイズする"
 date:   2010-06-21 02:32:10 UTC+9
-category: server
-tags: apache
+category: engineering
+tags: server apache
 ---
 
 ## ログ出力のカスタマイズ設定
@@ -77,4 +77,3 @@ CustomLog "| /usr/sbin/rotatelogs /var/log/apache2/crawler_log.%Y%m%d 86400" com
 ```
 CustomLog "| /usr/sbin/rotatelogs /var/log/apache2/access_log.%Y%m%d 86400" combined env=!no_log
 ```
-

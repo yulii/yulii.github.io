@@ -2,8 +2,8 @@
 layout: post
 title:  "ライブ配信サーバー構築 〜 エンコーダ (FFmpeg) の設定 〜"
 date:   2009-11-10 08:16:32 UTC+9
-category: server
-tags: ffmpeg ubuntu
+category: engineering
+tags: server ffmpeg ubuntu
 ---
 
 ## エンコーダの準備 (Ubuntu 8.10 Server)
@@ -272,4 +272,3 @@ sudo dvgrab --format dv2 - | ffmpeg -f dvvideo -s 320x240 -f pcm_s16le -i - -ar 
 ```
 
 ハイフン "-" で標準入力出力を扱える。たまに固まるが パイプの前の sudo の認証が切れているのが原因。sudo vi など適当に sudo をいったん認証通してから再度実行。
-

@@ -2,8 +2,8 @@
 layout: post
 title:  "Apache Tomcat のインストールと設定"
 date:   2011-02-16 03:26:09 UTC+9
-category: server
-tags: tomcat
+category: engineering
+tags: server tomcat
 ---
 
 ## Apache Tomcat インストール&設定
@@ -69,4 +69,3 @@ cd commons-daemon-1.0.5-native-src/unix/
 make
 cp jsvc /opt/tomcat/tomcat_webapp/bin
 ```
-

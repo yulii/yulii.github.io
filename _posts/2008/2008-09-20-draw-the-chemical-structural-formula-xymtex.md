@@ -2,7 +2,8 @@
 layout: post
 title:  "XyMTeX で化学構造式を描く"
 date:   2008-09-20 15:32:32 UTC+9
-category: tex
+category: engineering
+tags: tex
 ---
 
 ## 化学構造式のスタイルパッケージ XyMTeX
@@ -71,4 +72,3 @@ Google Drive にファイルを共有しています。
 #### hetarom.sty
 
 ベンゼン環にNとかOとかくっ付いてる奴（名前がわからない）
-

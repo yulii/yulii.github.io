@@ -2,8 +2,8 @@
 layout: post
 title:  "他人のコードを読むための7つの便利なEclipse ショートカットキー"
 date:   2012-08-14 03:06:12 UTC+9
-category: java
-tags: eclipse
+category: engineering
+tags: java eclipse
 ---
 
 ## 他人のコードをナナメ読み
@@ -37,4 +37,3 @@ F3 でソースの奥深くへ入っていくと行き止まり、「メソッ�
 ### リソースを開く： Ctrl + Shift + R
 
 SQL ファイルや DI 設定 (.dicon) など Java ソース以外のファイルを参照したいときに便利なショートカットキー。いちいちプロジェクト・エクスプローラーで探すのはめんどくさい。Ctrl + Shift + R を叩いて、ファイル名を入力すればサクッと開ける。
-

@@ -2,8 +2,8 @@
 layout: post
 title:  "Munin ではじめる複数台構成のサーバ監視"
 date:   2013-03-27 15:53:14 UTC+9
-category: server
-tags: munin supervision
+category: engineering
+tags: server munin supervision
 ---
 
 ## 複数台のサーバをまとめてリソース監視
@@ -74,4 +74,3 @@ PORT      STATE  SERVICE
 ```
 
 いったん最小限の設定だが、こんな感じであっさり複数台のリソース監視をまとめられます。
-

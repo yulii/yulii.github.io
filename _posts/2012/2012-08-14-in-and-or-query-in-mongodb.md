@@ -2,8 +2,8 @@
 layout: post
 title:  "MongoDB のクエリ $in と $or について調べてみた"
 date:   2012-08-14 01:44:42 UTC+9
-category: database
-tags: mongodb
+category: engineering
+tags: database mongodb
 ---
 
 ## MongoDB クエリ最適化
@@ -141,4 +141,3 @@ tags: mongodb
 実際のクエリであれば、単一フィールド条件で `$or` を使うことはないと思うが、ソート条件などと組み合わさるとインデックスが効かなくなって全ドキュメントを走査し始めるので注意。
 
 MongoDB のインデックスは B-Tree で実装されているようなので，RDB を扱ったことがあれば SQL でインデックスが使用されるために注意しなければいけない点とほぼ同様だと思われる。
-

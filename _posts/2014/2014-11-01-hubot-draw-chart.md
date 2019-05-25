@@ -2,8 +2,8 @@
 layout: post
 title:  "Hubot にグラフを描かせてみた (PhantomJS + Chart.js => PNG 画像化)"
 date:   2014-11-01 14:40:23 UTC+9
-category: javascript
-tags: nodejs hubot
+category: engineering
+tags: javascript nodejs hubot
 ---
 
 
@@ -103,4 +103,3 @@ module.exports = (robot) ->
     - `ChartImage` 内で画像のURL を返却できるようにしたい
 
 とかとか、気の利かない部分が多々あるので粛々と対応するつもり (誰かプルリクくれないかな)
-

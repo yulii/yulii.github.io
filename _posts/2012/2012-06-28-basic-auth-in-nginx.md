@@ -2,8 +2,8 @@
 layout: post
 title:  "Nginx でBasic 認証の設定"
 date:   2012-06-28 08:20:54 UTC+9
-category: server
-tags: nginx
+category: engineering
+tags: server nginx
 ---
 
 ## Basic 認証の設定方法
@@ -49,4 +49,3 @@ yulii:pxX7w0IvuRflQ
 - s : パスワードを SHA でハッシュ化
 
 基本は n オプションで標準出力させた方が無難。面倒だけど手動でファイルに追加する。
-
