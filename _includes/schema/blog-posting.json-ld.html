@@ -6,7 +6,7 @@
     "@type": "WebPage",
     "@id": "{{ page.url | prepend: site.url }}"
   },
-  "headline": "{{ page.title | escape }}",
+  "headline": {{ page.title | jsonify }},
   "image": {
     "@type": "ImageObject",
     "url": "{{ site.cover_img_path | prepend: site.url }}",
@@ -15,11 +15,11 @@
   },
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified":  "{{ page.date | date_to_xmlschema }}",
-  "articleBody": "{{ page.content | strip_newlines | strip_html | replace: ' :', ' : ' | escape }}",
+  "articleBody": {{ page.content | strip_html | replace: ' :', ' : ' | jsonify }},
   "url": "{{ page.url | prepend: site.url }}",
   "publisher": {
     "@type": "Organization",
-    "name": "{{ site.title }}",
+    "name": {{ site.title | jsonify }},
     "logo": {
       "@type": "ImageObject",
       "url": "{{ site.author_img_path | prepend: site.url }}",
@@ -29,7 +29,7 @@
   },
   "author": {
     "@type": "Person",
-    "name": "{{ site.author }}"
+    "name": {{ site.author | jsonify }}
   }
 }
 </script>
