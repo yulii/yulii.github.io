@@ -15,7 +15,7 @@
   },
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified":  "{{ page.date | date_to_xmlschema }}",
-  "articleBody": "{{ page.content | strip_newlines | strip_html | escape }}",
+  "articleBody": "{{ page.content | strip_newlines | strip_html | replace: ' :', ' : ' | escape }}",
   "url": "{{ page.url | prepend: site.url }}",
   "publisher": {
     "@type": "Organization",
