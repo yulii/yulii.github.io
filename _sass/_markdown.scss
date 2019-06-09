@@ -82,6 +82,11 @@
 
     li {
       list-style: decimal inside;
+
+      p {
+        display: inline-block;
+        margin: 0;
+      }
     }
   }
 }
