@@ -3,6 +3,7 @@ layout: post
 title:  "公平なデータ分析には「斜にかまえる」もう一人の自分が必要"
 date:   2019-03-31 22:38:47 UTC+9
 category: note
+tags: analysis
 ---
 
 面白い実験で、すぐに真似できそうな話。
