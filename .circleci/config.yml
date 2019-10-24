@@ -67,7 +67,6 @@ jobs:
             test -n "$(cat /tmp/create-pull-request.log.json | jq -r 'select(.errors == null)')"
 
 workflows:
-  version: 2
   build_and_update:
     jobs:
       - build
