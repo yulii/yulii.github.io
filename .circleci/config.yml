@@ -1,8 +1,13 @@
-version: 2
-jobs:
-  build:
+version: 2.1
+
+executors:
+  ruby:
     docker:
       - image: circleci/ruby:2.4.1
+
+jobs:
+  build:
+    executor: ruby
     steps:
       - checkout
       - restore_cache:
@@ -20,8 +25,7 @@ jobs:
           command: bundle exec jekyll build
 
   update:
-    docker:
-      - image: circleci/ruby:2.4.1
+    executor: ruby
     steps:
       - run:
           name: Checkout code
@@ -63,7 +67,6 @@ jobs:
             test -n "$(cat /tmp/create-pull-request.log.json | jq -r 'select(.errors == null)')"
 
 workflows:
-  version: 2
   build_and_update:
     jobs:
       - build
