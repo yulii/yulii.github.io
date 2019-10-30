@@ -1,14 +1,13 @@
 version: 2.1
 
 executors:
-  ruby:
+  default:
     docker:
       - image: circleci/ruby:2.6.3
 
 jobs:
   build:
-    executor:
-      - name: ruby
+    executor: default
     steps:
       - checkout
       - restore_cache:
@@ -26,8 +25,7 @@ jobs:
           command: bundle exec jekyll build
 
   update:
-    executor:
-      - name: ruby
+    executor: default
     steps:
       - run:
           name: Checkout code
