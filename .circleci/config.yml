@@ -7,7 +7,8 @@ executors:
 
 jobs:
   build:
-    executor: ruby
+    executor:
+      - name: ruby
     steps:
       - checkout
       - restore_cache:
@@ -25,7 +26,8 @@ jobs:
           command: bundle exec jekyll build
 
   update:
-    executor: ruby
+    executor:
+      - name: ruby
     steps:
       - run:
           name: Checkout code
