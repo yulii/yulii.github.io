@@ -7,5 +7,8 @@ bundle:
 serve: bundle
 	docker-compose up
 
+generate:
+	docker-compose run app bin/generate
+
 clean:
 	docker-compose down --rmi all --volumes
