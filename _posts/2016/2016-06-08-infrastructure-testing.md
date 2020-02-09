@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Docker + Serverspec + Infrataster を使ってCircleCI 上でインフラのテストを実行する"
-date:   2016-06-08 20:43:06 UTC+9
+date:   2016-06-08T20:43:06+0900
 category: engineering
 tags: server ci
 ---

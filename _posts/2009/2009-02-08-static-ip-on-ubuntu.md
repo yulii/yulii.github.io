@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ubuntu の固定IPアドレス設定方法"
-date:   2009-02-08 05:45:03 UTC+9
+date:   2009-02-08T05:45:03+0900
 category: engineering
 tags: unix ubuntu
 ---

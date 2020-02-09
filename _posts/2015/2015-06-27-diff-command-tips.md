@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "コマンド実行結果のdiff を取るといろいろ捗る"
-date:   2015-06-27 23:08:12 UTC+9
+date:   2015-06-27T23:08:12+0900
 category: engineering
 tags: unix dns shell
 ---

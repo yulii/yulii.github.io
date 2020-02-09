@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "TeX で PDF ファイルを生成する"
-date:   2008-09-12 12:43:01 UTC+9
+date:   2008-09-12T12:43:01+0900
 category: engineering
 tags: tex pdf
 ---

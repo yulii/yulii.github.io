@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "CSを立ち上げて1年が経った振り返り"
-date:   2019-10-23 22:15:03 UTC+9
+date:   2019-10-23T22:15:03+0900
 category: business
 tags: customer-service
 ---

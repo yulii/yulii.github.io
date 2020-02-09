@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Capistrano のデプロイ実行を通知するGem を作った"
-date:   2015-08-13 21:01:08 UTC+9
+date:   2015-08-13T21:01:08+0900
 category: engineering
 tags: ruby ci
 ---

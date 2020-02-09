@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Maven から SAStruts のプロジェクトを新規作成"
-date:   2010-06-18 14:27:02 UTC+9
+date:   2010-06-18T14:27:02+0900
 category: engineering
 tags: java eclipse maven
 ---

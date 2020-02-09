@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Apache ログの出力をカスタマイズする"
-date:   2010-06-21 02:32:10 UTC+9
+date:   2010-06-21T02:32:10+0900
 category: engineering
 tags: server apache
 ---

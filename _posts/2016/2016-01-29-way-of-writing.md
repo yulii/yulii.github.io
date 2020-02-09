@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "「仕事の文章」に感情はいらない"
-date:   2016-01-29 22:13:32 UTC+9
+date:   2016-01-29T22:13:32+0900
 category: note
 tags: communication
 ---

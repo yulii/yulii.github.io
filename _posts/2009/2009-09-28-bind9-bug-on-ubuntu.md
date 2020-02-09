@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "BIND9 動作不具合の対処方法 #Ubuntu Bug #289060"
-date:   2009-09-28 00:43:03 UTC+9
+date:   2009-09-28T00:43:03+0900
 tags: ubuntu
 ---
 

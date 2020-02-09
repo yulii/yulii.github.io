@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ruby の定数やfreeze の扱い方が難しい"
-date:   2015-09-22 16:49:21 UTC+9
+date:   2015-09-22T16:49:21+0900
 category: engineering
 tags: ruby
 ---

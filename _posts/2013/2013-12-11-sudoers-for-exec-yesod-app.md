@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "sudoers でプロセス起動専用ユーザと一般ユーザの権限管理"
-date:   2013-12-11 14:31:40 UTC+9
+date:   2013-12-11T14:31:40+0900
 category: engineering
 tags: unix yesod
 ---

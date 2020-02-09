@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "「ユーザーの声」を聞いてみよう"
-date:   2016-07-23 18:50:04 UTC+9
+date:   2016-07-23T18:50:04+0900
 category: culture
 tags: communication
 ---

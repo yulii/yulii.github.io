@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A/B テストを始める前に知っておきたいグロースハックの考え方"
-date:   2016-03-09 23:32:51 UTC+9
+date:   2016-03-09T23:32:51+0900
 category: business
 tags: growth-hacking
 ---

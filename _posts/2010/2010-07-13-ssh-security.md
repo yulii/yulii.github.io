@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SSH のセキュリティ設定メモ"
-date:   2010-07-13 18:59:27 UTC+9
+date:   2010-07-13T18:59:27+0900
 category: engineering
 tags: server security
 ---

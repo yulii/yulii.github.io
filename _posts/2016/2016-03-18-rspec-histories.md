@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "テストコードの変遷とテストを書く文化創りのためにやったこと"
-date:   2016-03-18 23:02:01 UTC+9
+date:   2016-03-18T23:02:01+0900
 category: culture
 tags: ci rails
 ---

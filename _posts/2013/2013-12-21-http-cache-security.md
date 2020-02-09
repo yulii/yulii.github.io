@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "個人情報保護のためのHTTP キャッシュ設定まとめ"
-date:   2013-12-21 06:55:43 UTC+9
+date:   2013-12-21T06:55:43+0900
 category: engineering
 tags: network http
 ---

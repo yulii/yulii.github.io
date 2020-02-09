@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "CPU (コア、プロセッサ) の数を調べる @Linux"
-date:   2013-02-16 09:10:44 UTC+9
+date:   2013-02-16T09:10:44+0900
 category: engineering
 tags: unix
 ---

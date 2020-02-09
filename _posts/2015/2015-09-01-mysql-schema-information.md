@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MySQL でテーブルやカラムの情報を確認する方法まとめ"
-date:   2015-09-01 23:42:42 UTC+9
+date:   2015-09-01T23:42:42+0900
 category: engineering
 tags: database mysql sql
 ---

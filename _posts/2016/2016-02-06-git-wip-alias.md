@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Git コマンドにWIP エイリアスを設定したら便利だった"
-date:   2016-02-06 13:55:06 UTC+9
+date:   2016-02-06T13:55:06+0900
 tags: ci git
 ---
 

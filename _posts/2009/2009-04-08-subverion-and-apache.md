@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Subversion とApache の連携設定"
-date:   2009-04-08 02:32:54 UTC+9
+date:   2009-04-08T02:32:54+0900
 category: engineering
 tags: server apache subversion
 ---

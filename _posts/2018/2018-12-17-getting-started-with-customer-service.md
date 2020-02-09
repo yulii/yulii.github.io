@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "エンジニアがカスタマーサービス (CS) 組織を立ち上げてみた"
-date:   2018-12-17 23:46:05 UTC+9
+date:   2018-12-17T23:46:05+0900
 category: culture
 tags: customer-service
 ---

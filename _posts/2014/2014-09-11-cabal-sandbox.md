@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mac で Cabal Sandbox 環境を整える"
-date:   2014-09-11 08:40:30 UTC+9
+date:   2014-09-11T08:40:30+0900
 category: engineering
 tags: haskell
 ---

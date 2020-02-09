@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pull Request に「もやもや」で思いの丈を綴るとコードレビューが捗る"
-date:   2015-11-08 13:14:01 UTC+9
+date:   2015-11-08T13:14:01+0900
 category: culture
 tags: code-review communication
 ---

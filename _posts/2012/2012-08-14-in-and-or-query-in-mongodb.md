@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MongoDB のクエリ $in と $or について調べてみた"
-date:   2012-08-14 01:44:42 UTC+9
+date:   2012-08-14T01:44:42+0900
 category: engineering
 tags: database mongodb
 ---

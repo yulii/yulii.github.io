@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mongoid のクエリを最適化する"
-date:   2012-07-30 21:22:08 UTC+9
+date:   2012-07-30T21:22:08+0900
 category: engineering
 tags: ruby mongodb performance
 ---

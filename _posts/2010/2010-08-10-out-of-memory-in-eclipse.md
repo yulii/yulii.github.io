@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "java.lang.OutOfMemoryError: PermGen space の対処法"
-date:   2010-08-10 01:32:52 UTC+9
+date:   2010-08-10T01:32:52+0900
 category: engineering
 tags: java eclipse tomcat
 ---

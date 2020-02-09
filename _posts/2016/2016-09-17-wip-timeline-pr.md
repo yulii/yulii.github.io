@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "困りごとを共有しながら進める独り言のPull Request"
-date:   2016-09-17 22:56:28 UTC+9
+date:   2016-09-17T22:56:28+0900
 category: culture
 tags: code-review communication
 ---

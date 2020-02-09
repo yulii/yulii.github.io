@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Apache でサーバーの状態を表示する"
-date:   2010-08-21 14:10:02 UTC+9
+date:   2010-08-21T14:10:02+0900
 category: engineering
 tags: server apache
 ---

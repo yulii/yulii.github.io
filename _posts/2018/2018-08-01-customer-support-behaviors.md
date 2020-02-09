@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "カスタマーサポートの心構え"
-date:   2018-08-01 19:54:12 UTC+9
+date:   2018-08-01T19:54:12+0900
 category: culture
 tags: customer-service
 ---

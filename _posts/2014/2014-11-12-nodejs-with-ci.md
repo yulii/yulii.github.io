@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Travis CI + Coverall + Node.js (Hubot) で継続的インテグレーションしてみる"
-date:   2014-11-12 17:02:15 UTC+9
+date:   2014-11-12T17:02:15+0900
 category: engineering
 tags: javascript nodejs hubot ci
 ---

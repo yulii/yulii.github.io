@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "1on1 ミーティングの目的"
-date:   2017-06-08 23:07:35 UTC+9
+date:   2017-06-08T23:07:35+0900
 category: note
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Middleman とAmazon S3 でLP 改善インフラを作る"
-date:   2016-02-23 17:55:06 UTC+9
+date:   2016-02-23T17:55:06+0900
 tags: git
 ---
 

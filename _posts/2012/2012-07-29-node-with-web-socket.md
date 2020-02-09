@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Node.js + WebSocket で双方向通信をはじめる"
-date:   2012-07-29 18:43:21 UTC+9
+date:   2012-07-29T18:43:21+0900
 category: engineering
 tags: javascript nodejs websocket
 ---

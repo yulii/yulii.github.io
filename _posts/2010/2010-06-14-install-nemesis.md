@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "パケット生成ツール nemesis のインストール"
-date:   2010-06-14 10:34:46 UTC+9
+date:   2010-06-14T10:34:46+0900
 category: engineering
 tags: network
 ---

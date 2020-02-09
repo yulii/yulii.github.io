@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SQL クエリの結果を外部ファイルへ出力する方法"
-date:   2010-11-12 01:19:07 UTC+9
+date:   2010-11-12T01:19:07+0900
 category: engineering
 tags: database mysql sql
 ---

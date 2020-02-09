@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "エンジニアの生産性を上げるための非効率な雑談"
-date:   2015-08-30 14:04:32 UTC+9
+date:   2015-08-30T14:04:32+0900
 category: culture
 tags: communication
 ---

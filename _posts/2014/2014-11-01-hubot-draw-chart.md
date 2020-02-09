@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hubot にグラフを描かせてみた (PhantomJS + Chart.js => PNG 画像化)"
-date:   2014-11-01 14:40:23 UTC+9
+date:   2014-11-01T14:40:23+0900
 category: engineering
 tags: javascript nodejs hubot
 ---

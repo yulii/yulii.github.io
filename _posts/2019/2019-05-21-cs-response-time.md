@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "チャットサポート対応に顧客が期待していること"
-date:   2019-05-21 23:50:12 UTC+9
+date:   2019-05-21T23:50:12+0900
 category: business
 tags: customer-service
 ---

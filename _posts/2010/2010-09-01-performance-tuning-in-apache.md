@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Apache のパフォーマンスチューニング設定"
-date:   2010-09-01 01:38:18 UTC+9
+date:   2010-09-01T01:38:18+0900
 category: engineering
 tags: server apache performance
 ---

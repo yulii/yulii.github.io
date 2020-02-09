@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SQL*Plusで「実行計画」を見える化"
-date:   2012-10-28 01:40:24 UTC+9
+date:   2012-10-28T01:40:24+0900
 category: engineering
 tag: database performance sql
 ---

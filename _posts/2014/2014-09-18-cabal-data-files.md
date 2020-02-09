@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Cabal パッケージに外部ファイルを埋め込む"
-date:   2014-09-18 17:53:23 UTC+9
+date:   2014-09-18T17:53:23+0900
 category: engineering
 tags: haskell
 ---

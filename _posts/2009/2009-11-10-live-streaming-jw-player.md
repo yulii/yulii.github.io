@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ライブ配信サーバー構築 〜 Web サーバー (JW Player) の設定 〜"
-date:   2009-11-10 07:34:33 UTC+9
+date:   2009-11-10T07:34:33+0900
 category: engineering
 tags: javascript ffmpeg
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "TeX スタイルファイルの使い方と書き方"
-date:   2009-04-03 06:29:43 UTC+9
+date:   2009-04-03T06:29:43+0900
 category: engineering
 tags: tex
 ---

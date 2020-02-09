@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "「数字に強くなる」なるためにはどうすれば良いのか？"
-date:   2017-07-12 23:42:38 UTC+9
+date:   2017-07-12T23:42:38+0900
 category: note
 tags: analysis
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Nginx でBasic 認証の設定"
-date:   2012-06-28 08:20:54 UTC+9
+date:   2012-06-28T08:20:54+0900
 category: engineering
 tags: server nginx
 ---

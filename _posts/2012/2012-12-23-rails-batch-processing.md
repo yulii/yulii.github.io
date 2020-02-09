@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "rails runner を使わないバッチ処理を実装してみた"
-date:   2012-12-23 03:10:59 UTC+9
+date:   2012-12-23T03:10:59+0900
 category: engineering
 tags: ruby rails
 ---

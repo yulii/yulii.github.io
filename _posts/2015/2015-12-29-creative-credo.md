@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "クリエイティブな働き方を支える6つの指針"
-date:   2015-12-29 14:21:01 UTC+9
+date:   2015-12-29T14:21:01+0900
 category: culture
 ---
 

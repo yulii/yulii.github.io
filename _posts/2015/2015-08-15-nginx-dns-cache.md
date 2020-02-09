@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Nginx のDNS 名前解決とS3 やELB へのリバースプロキシ"
-date:   2015-08-15 17:51:23 UTC+9
+date:   2015-08-15T17:51:23+0900
 category: engineering
 tags: server nginx aws
 ---

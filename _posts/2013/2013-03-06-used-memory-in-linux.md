@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Linux でメモリの使用状況をチェックする"
-date:   2013-03-06 14:43:12 UTC+9
+date:   2013-03-06T14:43:12+0900
 category: engineering
 tags: unix
 ---

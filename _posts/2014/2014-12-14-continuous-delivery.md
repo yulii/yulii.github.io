@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "管理画面のデリバリーにおける「テスト」"
-date:   2014-12-14 06:39:33 UTC+9
+date:   2014-12-14T06:39:33+0900
 category: note
 ---
 
