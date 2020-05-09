@@ -9,14 +9,14 @@ build:  ## Build docker images
 bundle:  ## Install dependencies
 	docker-compose run app bundle
 
-generate:
-	docker-compose run app bin/generate
-
-serve: bundle generate  ## Run server
+serve: bundle  ## Run server
 	docker-compose up
 
 timestamp:
 	date '+%Y-%m-%dT%H:%M:%S%z'
+
+generate:  ## Generate category and tag pages
+	docker-compose run app bin/generate
 
 clean:  ## Remove all images and volumes
 	docker-compose down --rmi all --volumes
