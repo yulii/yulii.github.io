@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ryo Yoneyama
+title: 米山 諒 (Ryo Yoneyama)
 ---
 
 ## プロフィール
