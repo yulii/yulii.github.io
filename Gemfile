@@ -1,4 +1,5 @@
-source 'https://rubygems.org' do
-  gem 'github-pages'
-  gem 'jemoji'
-end
+source 'https://rubygems.org'
+
+gem 'github-pages'
+gem 'webrick'
+gem 'jemoji'
